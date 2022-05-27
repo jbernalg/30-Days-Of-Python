@@ -28,3 +28,30 @@ print('Length name: ', len(name))
 #Compare the length of your first and last name
 print(f'''Length name: {len(name)}
 Length last name: {len(last_name)}''')
+
+#Declara 5 como num_one y 4 como num_two
+num_one = 5
+num_two = 4
+
+#sumar num_one y num_two
+sum_total = num_one + num_two
+
+#restar num_two a num_one
+sust_total = num_one - num_two
+
+#multplicar num_one por num_two
+mult = num_one*num_two
+
+#dividir num_one entre num_two
+divis = num_one//num_two
+
+#Use la división de módulo para encontrar num_two dividido por num_one
+rest = num_two % num_one
+
+#calcule num_one a la potencia de num_two
+expo = num_one**num_two
+
+#Encuentre la división de piso de num_one por num_two
+divfloat = num_one/num_two
+
+
