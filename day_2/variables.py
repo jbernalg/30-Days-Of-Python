@@ -1,5 +1,8 @@
 # Dia 2. 30 dia  de programacion en python
 
+from cmath import pi
+
+
 name = 'Jeinfferson'
 last_name = 'Bernal'
 name_complet = 'Jose Gimenez'
@@ -53,5 +56,20 @@ expo = num_one**num_two
 
 #Encuentre la división de piso de num_one por num_two
 divfloat = num_one/num_two
+
+# El radio de un círculo es de 30 metros. Calcule el área de un círculo y asigne el valor a un nombre 
+# de variable de area_of_circle
+r = 30
+area_of_circle = pi*r**2
+print(area_of_circle)
+
+# Calcule la circunferencia del círculo y asigne el valor a una variable con el nombre de circum_of_circle
+circum_of_circle = 2*pi*r
+print(circum_of_circle)
+
+# Tome el radio como entrada del usuario y calcule el área.
+r = int(input('Ingrese el radio del circulo para calular el area: '))
+area_circle = pi*r**2
+print(f'El area del circulo es {area_circle}')
 
 
