@@ -72,4 +72,10 @@ r = int(input('Ingrese el radio del circulo para calular el area: '))
 area_circle = pi*r**2
 print(f'El area del circulo es {area_circle}')
 
-
+# Use la función de entrada incorporada para obtener el nombre, el apellido, 
+# el país y la edad de un usuario y almacene el valor en sus nombres de variables correspondientes
+nombre = input('Ingrese el nombre: ')
+apellido = input('Ingrse el apellido: ')
+pais = input('Ingrese pais de origen: ')
+edad = input('Ingrese la edad: ')
+print(f'Nombre: {nombre}, Apellido: {apellido}, Pais: {pais}, Edad: {edad}')
