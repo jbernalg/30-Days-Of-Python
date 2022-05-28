@@ -1,5 +1,6 @@
 # Dia 2. 30 dia  de programacion en python
 
+from ast import keyword
 from cmath import pi
 
 
@@ -79,3 +80,5 @@ apellido = input('Ingrse el apellido: ')
 pais = input('Ingrese pais de origen: ')
 edad = input('Ingrese la edad: ')
 print(f'Nombre: {nombre}, Apellido: {apellido}, Pais: {pais}, Edad: {edad}')
+
+help('keyword')
