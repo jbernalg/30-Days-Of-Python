@@ -21,3 +21,16 @@ sideb = int(input('side b: '))
 sidec = int(input('side c: '))
 perimetro = sidea + sideb + sidec
 print(f'El perimetro del triangulo es {perimetro}')
+
+#Obtenga la longitud y el ancho de un rectángulo usando el indicador. 
+#Calcula su área (área = largo x ancho) y perímetro (perímetro = 2 x (largo + ancho))
+length = float(input('longitud del rectangulo: '))
+width = float(input('Ancho del rectangulo: '))
+areaR = length*width
+perimetro = 2*(length + width)
+print(f'Area: {areaR}. Perimetro: {perimetro}')
+
+
+
+
+
