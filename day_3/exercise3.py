@@ -30,7 +30,11 @@ areaR = length*width
 perimetro = 2*(length + width)
 print(f'Area: {areaR}. Perimetro: {perimetro}')
 
-
-
+#Obtenga el radio de un círculo usando el indicador. Calcula el área (área = pi xrxr) 
+#y la circunferencia (c = 2 x pi xr) donde pi = 3,14.r
+ratio = float(input('Radio del circulo: '))
+areaC = 3.14*ratio**2
+c = 2*3.14*ratio
+print(f'Area del circulo: {areaC} , Circunferencia del circulo: {c}')
 
 
