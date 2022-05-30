@@ -37,4 +37,11 @@ areaC = 3.14*ratio**2
 c = 2*3.14*ratio
 print(f'Area del circulo: {areaC} , Circunferencia del circulo: {c}')
 
+#Calcule la pendiente, la intersección x y la intersección y de y = 2x -2
+print('Ecuacion de una recta: y = 2x - 2')
+pendiente = 2
+interY = -2
+interX = 1
+print(f'Pendiente {pendiente}, interseccion en el eje x: {interX}, interseccion en el eje y: {interY}')
+
 
