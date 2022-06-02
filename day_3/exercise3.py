@@ -70,6 +70,9 @@ print(f'jargon is found in the sentence: {verified3}')
 verified4 = ('on' is not 'python') and ('on' is not 'dragon')
 print(f'on is not found in python and dragon?: {verified4}')
 
-
-
+#Find the length of the text python and convert the value to float and convert it to string
+lenWord3 = len('python')
+size = float(lenWord3)
+Wstring = str(size)
+print(Wstring)
 
