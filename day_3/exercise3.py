@@ -76,3 +76,11 @@ size = float(lenWord3)
 Wstring = str(size)
 print(Wstring)
 
+#Even numbers are divisible by 2 and the remainder is zero. 
+#How do you check if a number is even or not using python?
+number1 = int(input('Ingrese un numero entero: '))
+verify = number1%2
+show = verify == 0
+print(f'{number1} is even number? : {show}')
+
+
