@@ -44,4 +44,25 @@ interY = -2
 interX = 1
 print(f'Pendiente {pendiente}, interseccion en el eje x: {interX}, interseccion en el eje y: {interY}')
 
+#Slope is (m = y2-y1/x2-x1). Find the slope and Euclidean distance between point (2, 2) and point (6,10)
+m = (10 - 2)/(6 - 2)
+print(m)
+
+#Compare the slopes of the previous exercises.
+print(f'Exercise 1: slope = {pendiente}. Exercise 2: slope = {m}. Ambas son iguales')
+
+#Find the length of 'python' and 'dragon' and make a falsy comparison statement.
+lenWord1 = len('python')
+lenWord2 = len('dragon')
+print(lenWord1 == lenWord2)
+
+#Use a operator to check if 'on' is found in both 'python' and 'dragon'
+verified = 'on' in 'python'
+verified2 = 'on' in 'dragon'
+print(f'on is found in python: {verified}')
+print(f'on is found in dragon: {verified2}')
+
+#I hope this course is not full of jargon. Use in operator to check if jargon is in the sentence.
+verified3 = 'jargon' in 'I hope this course is not full of jargon'
+print(f'jargon is found in the sentence: {verified3}')
 
