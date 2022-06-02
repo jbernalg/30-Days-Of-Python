@@ -66,3 +66,10 @@ print(f'on is found in dragon: {verified2}')
 verified3 = 'jargon' in 'I hope this course is not full of jargon'
 print(f'jargon is found in the sentence: {verified3}')
 
+#There is no 'on' in both dragon and python
+verified4 = ('on' is not 'python') and ('on' is not 'dragon')
+print(f'on is not found in python and dragon?: {verified4}')
+
+
+
+
