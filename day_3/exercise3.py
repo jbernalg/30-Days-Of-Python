@@ -90,3 +90,7 @@ print(int(9.8) == 10)
 hours = int(input('Ingrese las horas trabajadas: '))
 rate =  float(input('Ingrese la tarifa por hora: '))
 print(f'Tus ganancias semanales son de: {hours*rate}')
+
+#Write a script that prompts the user to enter number of years. Calculate the number of seconds a person can live. Assume a person can live hundred years
+year = int(input('Ingrese el numero de años: '))
+print(f'El numero de segundos vividos es de: {year*365*24*60*60}')
