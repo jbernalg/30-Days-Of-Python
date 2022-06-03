@@ -1,4 +1,4 @@
-#Escape Sequences in String
+#------------------Escape Sequences in String-------------------------
 #new line
 print('I am Happy.\nAnd you?')
 
@@ -12,7 +12,7 @@ print('This is a backslash symbol (\\)')
 #Single quote
 print('En cada lenguaje de rogramacion se comienza con  \"Hello Word\"')
 
-#String formatting
+#-----------------------String formatting---------------------------------
 #old style string formatting
 #only string
 first_name ='Jose'
@@ -55,5 +55,28 @@ print('El area del circulo con radio {} es {:.2f}'.format(radius, area))
 #f-Strings
 print(f'{a}/{b} = {a / b:.3f}')
 print(f'{a}**{b} = {a**b:.2f}')
+
+#-----------------Python string as sequences of characters------------------------------
+#unpacking characters
+language = 'python'
+a,b,c,d,e,f = language
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)
+print(f)
+
+#Accessing characters in string by index
+first_letter = language[0]
+print(first_letter)
+
+last_letter = language[-1]
+print(last_letter)
+
+#Slicing  python string
+print(language[3:6])
+
+print(language[-3:])
 
 
