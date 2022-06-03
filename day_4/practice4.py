@@ -49,3 +49,11 @@ b = 3
 print('{} + {} = {}'.format(a, b, a + b))
 print('{} / {} = {:.4f}'.format(a, b, a / b))
 
+#Strings and numbers
+print('El area del circulo con radio {} es {:.2f}'.format(radius, area))
+
+#f-Strings
+print(f'{a}/{b} = {a / b:.3f}')
+print(f'{a}**{b} = {a**b:.2f}')
+
+
