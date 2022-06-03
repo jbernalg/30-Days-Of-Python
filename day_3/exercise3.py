@@ -86,3 +86,7 @@ print('10' == 10)
 #Check if int('9.8') is equal to 10
 print(int(9.8) == 10)
 
+#Write a script that prompts the user to enter hours and rate per hour. Calculate pay of the person?
+hours = int(input('Ingrese las horas trabajadas: '))
+rate =  float(input('Ingrese la tarifa por hora: '))
+print(f'Tus ganancias semanales son de: {hours*rate}')
