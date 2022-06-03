@@ -52,29 +52,23 @@ print(m)
 print(f'Exercise 1: slope = {pendiente}. Exercise 2: slope = {m}. Ambas son iguales')
 
 #Find the length of 'python' and 'dragon' and make a falsy comparison statement.
-lenWord1 = len('python')
-lenWord2 = len('dragon')
-print(lenWord1 == lenWord2)
+print(len('python') == len('dragon'))
 
 #Use a operator to check if 'on' is found in both 'python' and 'dragon'
-verified = 'on' in 'python'
-verified2 = 'on' in 'dragon'
-print(f'on is found in python: {verified}')
-print(f'on is found in dragon: {verified2}')
+print('on' in 'python')
+print('on' in 'dragon')
 
 #I hope this course is not full of jargon. Use in operator to check if jargon is in the sentence.
-verified3 = 'jargon' in 'I hope this course is not full of jargon'
-print(f'jargon is found in the sentence: {verified3}')
+print('jargon' in 'I hope this course is not full of jargon')
 
 #There is no 'on' in both dragon and python
-verified4 = ('on' is not 'python') and ('on' is not 'dragon')
-print(f'on is not found in python and dragon?: {verified4}')
+a = 'on'
+b = 'dragon'
+c = 'python'
+print((a is b) and (a is c))
 
 #Find the length of the text python and convert the value to float and convert it to string
-lenWord3 = len('python')
-size = float(lenWord3)
-Wstring = str(size)
-print(Wstring)
+print(str(float(len('python'))))
 
 #Even numbers are divisible by 2 and the remainder is zero. 
 #How do you check if a number is even or not using python?
@@ -83,4 +77,12 @@ verify = number1%2
 show = verify == 0
 print(f'{number1} is even number? : {show}')
 
+#Check if the floor division of 7 by 3 is equal to the int converted value of 2.7.
+print(int(7/3) == 2.7)
+
+#Check if type of '10' is equal to type of 10
+print('10' == 10)
+
+#Check if int('9.8') is equal to 10
+print(int(9.8) == 10)
 
