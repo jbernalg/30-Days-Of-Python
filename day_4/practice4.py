@@ -121,3 +121,13 @@ print(challenge.rindex('of'))
 
 #isalnum(): Checks alphanumeric character
 print(challenge.isalnum())
+challenge = '30daysofpython'
+print(challenge.isalnum())
+challenge = 'DaysThirtyOfPython'
+print(challenge.isalnum())
+
+#isalpha(): Checks if all string elementsare alphabet character(a - z)
+print(challenge.isalpha())
+challenge = '123'
+print(challenge.isalpha())
+
