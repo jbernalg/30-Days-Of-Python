@@ -90,6 +90,23 @@ print(greeting[0:10:2])
 challenge = 'thirty days of python'
 print(challenge.capitalize())
 
+#count(): return occurrences of substring in string. count(substring,start,end)
+print(challenge.count('y'))
+print(challenge.count('y',7,14))
+print(challenge.count('th'))
 
+#endswith(): Checks if a string ends with a specified ending
+print(challenge.endswith('on'))
+print(challenge.endswith('ty'))
+
+#expandtabs(): Replaces tab character with spaces, default tab size is 8.
+challenge = 'thirty\tdays\tof\tpython'
+print(challenge.expandtabs())
+print(challenge.expandtabs(10))
+
+#find(): Return the index of the first occurrence of a substring
+challenge = 'thirty days of python'
+print(challenge.find('y'))
+print(challenge.find('da'))
 
 
