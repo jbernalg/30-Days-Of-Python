@@ -109,4 +109,15 @@ challenge = 'thirty days of python'
 print(challenge.find('y'))
 print(challenge.find('da'))
 
+#rfind(): Return the index of the last occurence oh a substring
+print(challenge.rfind('y'))
 
+#index(): Returns the lowest index of a substring, additional arguments indicate starting and ending index 
+print(challenge.index('of'))
+print(challenge.index('of',8))
+
+#rindex(): Returns the highest index of a substring, additional arguments indicate starting and ending index
+print(challenge.rindex('of'))
+
+#isalnum(): Checks alphanumeric character
+print(challenge.isalnum())
