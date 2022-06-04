@@ -126,8 +126,39 @@ print(challenge.isalnum())
 challenge = 'DaysThirtyOfPython'
 print(challenge.isalnum())
 
-#isalpha(): Checks if all string elementsare alphabet character(a - z)
+#isalpha(): Checks if all string elements are alphabet character(a - z). space not allowed
 print(challenge.isalpha())
 challenge = '123'
 print(challenge.isalpha())
+
+#isdecimal(): Checks if all string elements are decimal (0 - 9)
+print(challenge.isdecimal())
+challenge = 'ThirtyDaysOfPython'
+print(challenge.isdecimal())
+
+#isdigit(): Checks if all characters in a string are numbers (0-9 and some other unicode characters for numbers)
+challenge = 'two'
+print(challenge.isdigit())
+challenge = '10021'
+print(challenge.isdigit())
+
+#isnumeric(): Checks if al characters in a string are numbers or number related (just like isdigit(), just accepts more symbols, like ½)
+num = '12'
+print(num.isnumeric())
+num = '\u00BD'
+print(num.isnumeric())
+
+#isidentifier(): Checks for a valid identifier - it checks if a string is a valid variable name
+challenge = '30daysofpython'
+print(challenge.isidentifier())
+challenge = 'thirtydaysofython'
+print(challenge.isidentifier())
+
+#isupper(): Checks if all alphabet characters in the string are uppercase
+print(challenge.isupper())
+
+#islower(): Checks if all alphabet characters in the string are lowercase
+print(challenge.islower())
+
+
 
