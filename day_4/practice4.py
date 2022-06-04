@@ -76,7 +76,20 @@ print(last_letter)
 
 #Slicing  python string
 print(language[3:6])
-
 print(language[-3:])
+
+#Reversing a string
+greeting = 'Hello Word'
+print(greeting[::-1])
+
+#Skipping Characters While Slicing
+print(greeting[0:10:2])
+
+#----------------String Methods-----------------------
+#capitalize(): Converts the first charactersof the string to capital letter
+challenge = 'thirty days of python'
+print(challenge.capitalize())
+
+
 
 
