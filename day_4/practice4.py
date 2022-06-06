@@ -160,5 +160,7 @@ print(challenge.isupper())
 #islower(): Checks if all alphabet characters in the string are lowercase
 print(challenge.islower())
 
-
+#join(): Returns a concatenated string
+web_tech = ['HTML', 'CSS', 'Javascript', 'React']
+print(' '.join(web_tech))
 
