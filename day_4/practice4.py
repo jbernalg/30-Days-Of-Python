@@ -181,3 +181,7 @@ print(challenge.title())
 #swapcase(): Converts all uppercase characters to lowercase and all lowercase characters to uppercase characters
 print(challenge.swapcase())
 
+#startswith(): Checks if String Starts with the Specified String
+print(challenge.startswith('thirty'))
+print(challenge.startswith('30'))
+
