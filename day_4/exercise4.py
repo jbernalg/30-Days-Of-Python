@@ -38,7 +38,8 @@ print(company.replace('Coding', 'Python'))
 
 #Change Python for Everyone to Python for All using the replace method or other methods.
 company2 = company.replace('Coding', 'Python')
-print(company2.replace('All', 'Everyone'))
+company2 = company2.replace('All', 'Everyone')
+print(company2)
 
 #Split the string 'Coding For All' using space as the separator (split()) .
 print(company.split())
@@ -55,5 +56,19 @@ print(len(company) - 1)
 
 #What character is at index 10 in "Coding For All" string.
 print(company[10:11])
+
+#Create an acronym or an abbreviation for the name 'Python For Everyone'.
+acompany2 = company2[0:1] + company2[7:8] + company2[11:12]
+print(acompany2)
+
+#Create an acronym or an abbreviation for the name 'Coding For All'.
+acompany = company[0:1] + company[7:8] + company[11:12]
+print(acompany)
+
+#Use index to determine the position of the first occurrence of C in Coding For All.
+print(company.index('C'))
+
+#Use index to determine the position of the first occurrence of F in Coding For All.
+print(company.index('F'))
 
 
