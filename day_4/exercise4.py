@@ -47,6 +47,13 @@ print(company.split())
 tech = 'Facebook,Google,Microsoft,Apple,IBM,Oracle,Amazon'
 print(tech.split(','))
 
+#What is the character at index 0 in the string Coding For All.
+print(company[:1])
 
+#What is the last index of the string Coding For All.
+print(len(company) - 1)
+
+#What character is at index 10 in "Coding For All" string.
+print(company[10:11])
 
 
