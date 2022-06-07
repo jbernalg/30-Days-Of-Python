@@ -175,6 +175,9 @@ print(challenge.replace('python', 'coding'))
 #split(): Splits the string, using given string or space as a separator
 print(challenge.split())
 
+#title(): Returns a title cased string
+print(challenge.title())
 
-
+#swapcase(): Converts all uppercase characters to lowercase and all lowercase characters to uppercase characters
+print(challenge.swapcase())
 
