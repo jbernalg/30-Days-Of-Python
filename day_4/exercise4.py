@@ -33,5 +33,20 @@ print(company[7:])
 print(company.index('Coding'))
 print(company.find('Coding'))
 
+#Replace the word coding in the string 'Coding For All' to Python.
+print(company.replace('Coding', 'Python'))
+
+#Change Python for Everyone to Python for All using the replace method or other methods.
+company2 = company.replace('Coding', 'Python')
+print(company2.replace('All', 'Everyone'))
+
+#Split the string 'Coding For All' using space as the separator (split()) .
+print(company.split())
+
+#"Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon" split the string at the comma.
+tech = 'Facebook,Google,Microsoft,Apple,IBM,Oracle,Amazon'
+print(tech.split(','))
+
+
 
 
