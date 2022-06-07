@@ -164,3 +164,17 @@ print(challenge.islower())
 web_tech = ['HTML', 'CSS', 'Javascript', 'React']
 print(' '.join(web_tech))
 
+#strip(): Removes all given characters starting from the beginning and end of the string
+challenge = 'thirty days of pythooon'
+print(challenge.strip('noth'))
+
+#replace(): Replaces substring with a given string
+challenge = 'thirty days of python'
+print(challenge.replace('python', 'coding'))
+
+#split(): Splits the string, using given string or space as a separator
+print(challenge.split())
+
+
+
+
