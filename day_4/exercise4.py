@@ -92,3 +92,7 @@ print(sentence.index('because'))
 company = 'Coding For All'
 print(company.startswith('Coding'))
 
+#Does 'Coding For All' end with a substring coding?
+print(company.endswith('coding'))
+
+
