@@ -82,5 +82,8 @@ print(sentence.find('because'))
 #Use rindex to find the position of the last occurrence of the word because in the following sentence:
 print(sentence.rindex('because'))
 
+#Slice out the phrase 'because because because' in the following sentence:
+print(sentence[31:55])
+
 
 
