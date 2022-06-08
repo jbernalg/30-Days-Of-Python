@@ -85,5 +85,10 @@ print(sentence.rindex('because'))
 #Slice out the phrase 'because because because' in the following sentence:
 print(sentence[31:55])
 
+#Find the position of the first occurrence of the word 'because' in the following sentence:
+print(sentence.index('because'))
 
+#Does ''Coding For All' start with a substring Coding?
+company = 'Coding For All'
+print(company.startswith('Coding'))
 
