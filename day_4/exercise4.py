@@ -112,5 +112,7 @@ print('#'.join(libraries))
 #Use the new line escape sequence to separate the following sentences.
 print('I am enjoying this challenge. \nI just wonder what is next.')
 
+#Use a tab escape sequence to write the following lines.
+print('Name\tAge\tCountry\tCity\nAsabenh\t250\tFinland\tHelsinki')
 
 
