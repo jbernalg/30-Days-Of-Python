@@ -115,4 +115,12 @@ print('I am enjoying this challenge. \nI just wonder what is next.')
 #Use a tab escape sequence to write the following lines.
 print('Name\tAge\tCountry\tCity\nAsabenh\t250\tFinland\tHelsinki')
 
+#Use the string formatting method to display the following:
+radius = 10
+area = 3.14 * radius ** 2
+print(f'The area of a circle with radius {radius} is {area:.0f} meters square')
+
+
+
+
 
