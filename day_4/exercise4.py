@@ -95,4 +95,19 @@ print(company.startswith('Coding'))
 #Does 'Coding For All' end with a substring coding?
 print(company.endswith('coding'))
 
+#'   Coding For All      '  , remove the left and right trailing spaces in the given string.
+sentence = '   Coding For All      ' 
+print(sentence.strip(' '))
+
+#Which one of the following variables return True when we use the method isidentifier():
+sentence = '30DaysOfPython'
+sentence1 = 'Thirty_days_of_python'
+print(sentence.isidentifier())
+print(sentence1.isidentifier())
+
+#Join the following list with a hash with space string.
+libraries = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+print('#'.join(libraries))
+
+
 
