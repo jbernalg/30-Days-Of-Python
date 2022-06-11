@@ -41,6 +41,28 @@ print(last_index)
 print(fruits[-4])
 print(fruits[-2])
 
+#-------------------------Unpacking items list-----------------------------------
+lista = ['item','item2','item3', 'item4', 'item5']
+first_item, second_item, third_item, *rest = lista # * resto de los elementos 
+print(first_item)
+print(second_item)
+print(third_item)
+print(rest)
+
+first, second, third,*rest, tenth = [1,2,3,4,5,6,7,8,9,10]
+print(first)          
+print(second)         
+print(third)          
+print(rest)           
+print(tenth)
+
+#-------------------------Slicing items from list------------------------
+print(fruits[1:])
+print(fruits[::2])
+print(fruits[-3:])
+
+print(fruits[::-2])
+
 
 
 
