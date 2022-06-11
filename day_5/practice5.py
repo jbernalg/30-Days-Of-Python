@@ -107,6 +107,16 @@ print(fruits)
 
 del fruits #to delete the list completely
 
+#Clearing list items
+fruits = ['banana', 'orange', 'mango', 'lemon']
+print(fruits)
+fruits.clear()
+print(fruits)
 
+#---------------------Copying a list----------------------
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits_copy = fruits.copy()
+print(fruits_copy)
 
+#---------------------Joining list------------------------
 
