@@ -92,5 +92,21 @@ print(fruits)
 fruits.remove('mango')
 print(fruits)
 
+#Removing items using pop
+fruits.pop()  #remove last item
+print(fruits)
+fruits.pop(1)
+print(fruits)
+
+#Removing items using Del
+del fruits[2]
+print(fruits)
+
+del fruits[1:]
+print(fruits)
+
+del fruits #to delete the list completely
+
+
 
 
