@@ -119,4 +119,32 @@ fruits_copy = fruits.copy()
 print(fruits_copy)
 
 #---------------------Joining list------------------------
+#operator plus
+positive_number = [1,2,3,4,5]
+zero = [0]
+negative_number = [-5,-4,-3,-2,-1]
+integer = negative_number + zero + positive_number
+print(integer)
+
+#joining using extend() method
+num1 = [0,1,2,3]
+num2 = [4,5,6]
+num1.extend(num2)
+print('Numbers: ', num1)
+
+#--------------------Counting items in a list----------------
+ages = [22, 19, 24, 25, 26, 24, 25, 24]
+print(ages.count(24))
+
+#--------------------Finding index of an item------------------
+fruits = ['banana', 'orange', 'mango', 'lemon']
+print(fruits.index('orange'))
+
+#--------------------Reversing a list-------------------------
+fruits.reverse()
+print(fruits)
+
+
+
+
 
