@@ -73,6 +73,24 @@ print('banana' in fruits)
 exist = 'lemon' in fruits
 print(exist)
 
+#-----------------------Adding items to a list--------------------------
+fruits.append('mango')
+print(fruits)
+fruits.append('cereza')
+print(fruits)
+
+#inserting items into a list
+fruits.insert(2, 'apple')
+print(fruits)
+fruits.insert(3, 'lime')
+print(fruits)
+
+#-----------------------Removing item from list------------------------
+#remove the item first ocurrence
+fruits.remove('apple')
+print(fruits)
+fruits.remove('mango')
+print(fruits)
 
 
 
