@@ -60,9 +60,18 @@ print(tenth)
 print(fruits[1:])
 print(fruits[::2])
 print(fruits[-3:])
-
 print(fruits[::-2])
 
+#--------------------------Modifying lists------------------------------
+fruits[0] = 'Aguacate'
+print(fruits)
+fruits[1] = 'Apple'
+print(fruits)
+
+#------------------------Checking items in a list-----------------------
+print('banana' in fruits)
+exist = 'lemon' in fruits
+print(exist)
 
 
 
