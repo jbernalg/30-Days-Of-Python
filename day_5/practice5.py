@@ -144,7 +144,20 @@ print(fruits.index('orange'))
 fruits.reverse()
 print(fruits)
 
+#--------------------Sorting list items----------------------
+#sort(): modifica la lista original
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits.sort()
+print(fruits)
+fruits.sort(reverse=True)
+print(fruits)
 
+#sorted(): devuelve la lista ordenanda sin modificar la original
+print(sorted(fruits))
+
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits = sorted(fruits, reverse=True)
+print(fruits)
 
 
 
