@@ -103,4 +103,13 @@ back_end = ['Node', 'Express', 'MongoDB']
 skill = front_end + back_end
 print(skill)
 
+#Copy the joined list and assign it to a variable full_stack.
+full_stack = skill.copy()
+print(full_stack)
+
+#Insert Python and SQL after Redux
+full_stack.insert(5,'Python')
+full_stack.insert(6, 'SQL')
+print(full_stack)
+
 
