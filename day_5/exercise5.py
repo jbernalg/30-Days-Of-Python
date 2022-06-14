@@ -36,4 +36,16 @@ print(it_companies)
 it_companies.append('IT')
 print(it_companies)
 
+#Insert an IT company in the middle of the companies list
+it_companies.insert(3, 'Ryzen')
+print(it_companies)
+
+#Change one of the it_companies names to uppercase (IBM excluded!)
+it_companies[3] = 'RYZEN'
+it_companies.remove('IT')
+print(it_companies)
+
+#Join the it_companies with a string '#;  '
+print('#; '.join(it_companies))
+
 
