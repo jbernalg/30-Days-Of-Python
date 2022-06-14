@@ -57,3 +57,10 @@ print(it_companies)
 
 print(sorted(it_companies, reverse=True))
 
+#Reverse the list in descending order using reverse() method
+it_companies.reverse()
+print(it_companies)
+
+
+
+
