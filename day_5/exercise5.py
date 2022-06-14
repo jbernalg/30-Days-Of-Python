@@ -73,9 +73,21 @@ print(it_companies[len(it_companies) - 3:])
 #Slice out the middle IT company or companies from the list
 print(it_companies[3:6])
 
-it_companies.sort()
+#Remove the first IT company from the list
+it_companies.pop(0)
 print(it_companies)
 
+#Remove the middle IT company or companies from the list
+it_companies =['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+it_companies.pop(3)
+print(it_companies)
 
+#Remove the last IT company from the list
+it_companies =['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+it_companies.pop(len(it_companies) - 1)
+print(it_companies)
 
-
+#Remove all IT companies from the list
+it_companies =['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+it_companies.clear()
+print(it_companies)
