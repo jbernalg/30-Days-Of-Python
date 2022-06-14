@@ -48,4 +48,12 @@ print(it_companies)
 #Join the it_companies with a string '#;  '
 print('#; '.join(it_companies))
 
+#Check if a certain company exists in the it_companies list.
+print('IBM' in it_companies)
+
+#Sort the list using sort() method
+it_companies.sort()
+print(it_companies)
+
+print(sorted(it_companies, reverse=True))
 
