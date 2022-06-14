@@ -112,4 +112,33 @@ full_stack.insert(5,'Python')
 full_stack.insert(6, 'SQL')
 print(full_stack)
 
+#-----------------------Exercises  Level 2------------------------------
+#the following is a list of 10students ages:
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25,24]
+
+#Sort the list and find the min and max age
+ages.sort()
+print(f'Min age: {ages[0]}. Max age: {ages[len(ages) - 1]}')
+
+#Add the min age and the max age again to the list
+min = ages[0]
+max = ages[len(ages) - 1]
+ages.append(min)
+ages.append(max)
+print(ages)
+
+#Find the median age (one middle item or two middle items divided by two)
+media = (ages[(len(ages) - 1)//2] + ages[((len(ages) - 1)//2) - 1])//2
+print(media)
+
+#Find the average age (sum of all items divided by their number )
+print(ages)
+suma = 0
+
+for i in range(0, len(ages) - 1):
+    suma += ages[i] 
+
+average = suma//len(ages)
+print(average)
+
 
