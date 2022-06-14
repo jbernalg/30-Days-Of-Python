@@ -91,3 +91,16 @@ print(it_companies)
 it_companies =['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
 it_companies.clear()
 print(it_companies)
+
+#Destroy the IT companies list
+it_companies =['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+del it_companies
+
+#Join the following lists:
+front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+back_end = ['Node', 'Express', 'MongoDB']
+
+skill = front_end + back_end
+print(skill)
+
+
