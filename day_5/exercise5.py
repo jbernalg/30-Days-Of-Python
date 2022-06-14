@@ -20,3 +20,20 @@ print(mixed_data_types)
 it_companies =['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
 print(it_companies)
 
+#Print the number of companies in the list
+print(len(it_companies))
+
+#Print the first, middle and last company
+print(it_companies[0])
+print(it_companies[3])
+print(it_companies[len(it_companies) - 1])
+
+#Print the list after modifying one of the companies
+it_companies[4] = 'Acer'
+print(it_companies)
+
+#Add an IT company to it_companies
+it_companies.append('IT')
+print(it_companies)
+
+
