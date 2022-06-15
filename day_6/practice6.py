@@ -46,9 +46,6 @@ vegetable = ('Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot')
 fruits_vegetable = fruits + vegetable
 print(fruits_vegetable)
 
-
-
-
-
-
+#----------------Delete tuples--------------------
+del fruits
 
