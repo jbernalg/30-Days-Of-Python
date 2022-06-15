@@ -139,6 +139,13 @@ for i in range(0, len(ages) - 1):
     suma += ages[i] 
 
 average = suma//len(ages)
-print(average)
+print('Average = ',average)
+
+#Find the range of the ages (max minus min)
+range = max - min
+print(range)
+
+#Compare the value of (min - average) and (max - average), use abs() method
+print(f'min - average = {abs(min - average)}. max - average = {abs(max - average)}')
 
 
