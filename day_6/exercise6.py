@@ -22,4 +22,18 @@ siblings.append('Jose')
 siblings = tuple(siblings)
 print(siblings)
 
+#------------------------Level 2------------------------------------
+#Unpack siblings and parents from family_members
+siblings = list(siblings)
+siblings1, siblings2, siblings3, siblings4,siblings5, *parents = siblings
+print(parents)
+
+#Create fruits, vegetables and animal products tuples. Join the three tuples and assign it to a variable called food_stuff_tp
+fruits = ('banana', 'Apple', 'Uvas', 'Pera')
+vegetables = ('tomato', 'potatos', 'Cilantre')
+animal = ('dog', 'cat', 'tigger', 'lion', 'delphin')
+food_stuff_tp = fruits + vegetables + animal
+print(food_stuff_tp)
+
+
 
