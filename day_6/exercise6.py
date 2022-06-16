@@ -35,5 +35,19 @@ animal = ('dog', 'cat', 'tigger', 'lion', 'delphin')
 food_stuff_tp = fruits + vegetables + animal
 print(food_stuff_tp)
 
+#Change the about food_stuff_tp tuple to a food_stuff_lt list
+food_stuff_lt = list(food_stuff_tp)
+print(food_stuff_lt)
+
+#Slice out the middle item or items from the food_stuff_tp tuple or food_stuff_lt list.
+middle = len(food_stuff_lt)//2
+food_stuff_lt1 = food_stuff_lt[:middle]
+food_stuff_lt2 = food_stuff_lt[middle:]
+print(food_stuff_lt1)
+print(food_stuff_lt2)
+
+#Slice out the first three items and the last three items from food_staff_lt list
+print(food_stuff_lt[3:9])
+
 
 
