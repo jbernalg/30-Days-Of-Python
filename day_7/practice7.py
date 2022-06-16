@@ -44,4 +44,6 @@ fruits.discard('piña') #This method deosn't raise any errors if the item is not
 print(fruits)
 
 #Using pop() method. Remove a random item a list and it return the removed item
-
+remove_item = fruits.pop()
+print(fruits)
+print(remove_item)
