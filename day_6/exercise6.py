@@ -49,5 +49,12 @@ print(food_stuff_lt2)
 #Slice out the first three items and the last three items from food_staff_lt list
 print(food_stuff_lt[3:9])
 
+#Delete the food_staff_tp tuple completely
+del food_stuff_tp
+
+#Check if an item exists in tuple: Check if 'Estonia' is a nordic country. Check if 'Iceland' is a nordic country
+nordic_countries = ('Denmark', 'Finland', 'Iceland', 'Norway', 'Sweden')
+print('Estonia' in nordic_countries)
+print('Iceland' in nordic_countries)
 
 
