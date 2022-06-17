@@ -66,9 +66,20 @@ fruits = set(fruits)
 print(fruits)
 
 #--------------Joining Sets--------------------
-#Using union() method
+#Using union() method. Return a new set
 fruits = {'banana', 'orange', 'mango', 'lemon'}
 vegetables = {'tomato', 'potato', 'cabbage','onion', 'carrot'}
+print(fruits.union(vegetables))
+
+#Using Update() method. Insert a set into a given set
+fruits.update(vegetables)
+print(fruits)
+
+#--------------finding intersection items-----------------
+#Intersection return a set of items which are in both the set
+whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+even_numbers = {0, 2, 4, 6, 8, 10}
+print(whole_numbers.intersection(even_numbers))
 
 
 
