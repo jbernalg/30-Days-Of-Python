@@ -40,10 +40,36 @@ print(fruits)
 #Using discard(). This method doesn't raise any errors
 fruits.discard('potato')
 print(fruits)
-fruits.discard('piña') #This method deosn't raise any errors if the item is not exist
+fruits.discard('piña') #This method doesn't raise any errors if the item is not exist
 print(fruits)
 
 #Using pop() method. Remove a random item a list and it return the removed item
 remove_item = fruits.pop()
 print(fruits)
 print(remove_item)
+
+#-------------Clearing items in a set------------------
+#clear() method. Clear or empty the set
+fruits.clear()
+print(fruits)
+
+#-------------Delete a Set-----------------
+fruits = {'banana', 'orange', 'mango', 'lemon'}
+del fruits
+
+#-------------Converting list to set------------------
+fruits = {'banana', 'orange', 'mango', 'lemon'}
+fruits = list(fruits)
+print(fruits)
+
+fruits = set(fruits)
+print(fruits)
+
+#--------------Joining Sets--------------------
+#Using union() method
+fruits = {'banana', 'orange', 'mango', 'lemon'}
+vegetables = {'tomato', 'potato', 'cabbage','onion', 'carrot'}
+
+
+
+
