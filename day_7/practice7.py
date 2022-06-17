@@ -81,6 +81,23 @@ whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 even_numbers = {0, 2, 4, 6, 8, 10}
 print(whole_numbers.intersection(even_numbers))
 
+#--------------Checking the difference between two Sets-----------------
+#Return a set with the difference between two sets
+print(whole_numbers.difference(even_numbers))
+
+#--------------Finding symmetric difference between two sets-----------------
+#Return a set that contains all items from both sets, except items that 
+#are present in both sets.
+whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+some_numbers = {1, 2, 3, 4, 5, 11}
+print(whole_numbers.symmetric_difference(some_numbers))
+
+#-------------Disjoint Sets-------------------
+#If two sets do not have a common item we call them disjoint sets
+#We can check if two sets are joint or disjoint using isdisjoint() method
+even_numbers = {0, 2, 4 ,6, 8}
+odd_numbers = {1, 3, 5, 7, 9}
+print(even_numbers.isdisjoint(odd_numbers))
 
 
 
