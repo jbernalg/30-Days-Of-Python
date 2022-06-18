@@ -16,4 +16,15 @@ new_companies = {'Whatsapp', 'Lenovo', 'Sony', 'Tik Tok'}
 it_companies.update(new_companies)
 print(it_companies)
 
+#Remove one of the companies from the set it_companies
+remove_company = it_companies.pop()
+print(it_companies)
+print(remove_company)
+
+#What is the difference between remove and discard
+#Remove elimina un elemento del set siempre y cuando tal elemento exista en el set
+#De lo contrario, el metodo arroja error.
+#Discard elimina un elemento del set exista o no exista en el set. 
+#No devuelve un error
+
 
