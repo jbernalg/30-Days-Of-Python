@@ -43,4 +43,23 @@ print(A.isdisjoint(B))
 print(A.union(B))
 print(B.union(A))
 
+#What is the symmetric difference between A and B?
+print(A.symmetric_difference(B))
+
+#Delete the sets completely
+del A
+
+#Convert the ages to a set and compare the length of the list and the set, which one is bigger?
+length_list = len(age)
+age = set(age)
+length_set = len(age)
+print(f'{length_list}, {length_set}')
+
+#Explain the difference between the following data types: string, list, tuple and set
+
+#I am a teacher and I love to inspire and teach people. How many unique words have been used in the sentence? Use the split methods and set to get the unique words.
+sentence = 'I am a teacher and I love to inspire and teach people'
+sentence = set(sentence.split())
+print(len(sentence))
+
 
