@@ -41,6 +41,16 @@ print(person.get('job_title'))
 person['skills'].append('HTML')
 print(person['skills'])
 
+#-----------Modifying items in a dictionary-------------
+person['first_name'] = 'Jose'
+print(person['first_name'])
+
+person['age'] = '20'
+print(person)
+
+#-----------Checking keys in a dictionary------------
+print('skills' in person)
+print('Color' in person)
 
 
 
