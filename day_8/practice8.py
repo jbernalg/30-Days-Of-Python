@@ -71,3 +71,23 @@ print(person)
 #-----------Changing dictionary to a list of items--------------
 #using items()
 print(person.items())
+
+#-----------Clearing a dictionary--------------
+#using clear() method to remove all item 
+print(person.clear())
+
+#-----------Deleting a dictionary------------
+del person
+
+#-----------Copy a dictionary-------------
+#using copy() method. We can avoid mutation of the original dictionary.
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+dct_copy = dct.copy()
+print(dct_copy)
+
+#-----------Getting dictionary keys as a list----------------
+#using keys() method
+keys = dct.keys()
+print(keys)
+
+
