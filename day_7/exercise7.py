@@ -27,4 +27,10 @@ print(remove_company)
 #Discard elimina un elemento del set exista o no exista en el set. 
 #No devuelve un error
 
+#Join A and B
+print(A.union(B))
+
+#Find A intersection B
+print(A.intersection(B))
+
 
