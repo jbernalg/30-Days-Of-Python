@@ -52,6 +52,22 @@ print(person)
 print('skills' in person)
 print('Color' in person)
 
+#-----------Removing key and value pairs from a dictionary---------------
+#using pop(key) method. Removes the item with the specified key name
+person.pop('first_name')
+print(person)
 
+#using popitem() method. Removes the last item
+person.popitem()
+print(person)
 
+#using del. Removes an item with specified key name
+del person['is_marred']
+print(person)
 
+person.pop('skills')
+print(person)
+
+#-----------Changing dictionary to a list of items--------------
+#using items()
+print(person.items())
