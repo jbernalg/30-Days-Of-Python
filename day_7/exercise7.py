@@ -33,4 +33,14 @@ print(A.union(B))
 #Find A intersection B
 print(A.intersection(B))
 
+#Is A subset of B?
+print(A.difference(B))
+
+#Are A and B disjoint sets
+print(A.isdisjoint(B))
+
+#Join A with B and B with A
+print(A.union(B))
+print(B.union(A))
+
 
