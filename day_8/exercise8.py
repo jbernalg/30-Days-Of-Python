@@ -16,6 +16,14 @@ print(dog)
 student = {'first_name': 'Jose', 'last_name': 'Vergara', 'gender': 'Male', 'age': 23, 'marital_status': 'married', 'skills': ['Pyhon', 'HTML', 'CSS'], 'country': 'Viena', 'address': 'calle 23, Av Libertad'}
 print(student)
 
+#Get the length of the student dictionary
+print(len(student))
+
+#Get the value of skills and check the data type, it should be a list
+print(student['skills'])
+
+ 
+
 
 
 
