@@ -22,7 +22,9 @@ print(len(student))
 #Get the value of skills and check the data type, it should be a list
 print(student['skills'])
 
- 
+#Modify the skills values by adding one or two skills
+student['skills'].append('Git', 'Java')
+print(student['skills'])
 
 
 
