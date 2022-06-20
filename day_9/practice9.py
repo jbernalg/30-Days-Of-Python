@@ -27,3 +27,16 @@ else:
 # code if condition else code
 print(f'{a} is positive') if a > 0 else print(f'{a} is negative')
 
+#------------Nerted conditions----------------
+a = 0
+if a > 0:
+    if  a % 2 == 0:
+        print(f'{a} is a positive and even integer')
+    else:
+        print(f'{a} is a positive number')
+elif a == 0:
+    print(f'{a} is Zero')
+else:
+    print('{a} is a negative number')
+
+
