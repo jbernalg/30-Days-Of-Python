@@ -90,4 +90,7 @@ print(dct_copy)
 keys = dct.keys()
 print(keys)
 
+#-----------Getting dictionary values as a list--------------
+values = dct.values()
+print(values)
 
