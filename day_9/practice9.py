@@ -39,4 +39,17 @@ elif a == 0:
 else:
     print('{a} is a negative number')
 
+#-----------if conditions and logical operators--------------
+# if condition and condition:
+#   code
+
+a = 4
+if a > 0 and a % 2 == 0:
+    print(f'{a} is an even and positive number')
+elif a > 0 and a % 2 != 0:
+    print(f'{a} is a positive integer')
+elif a == 0:
+    print(f'{a} is Zero')
+else:
+    print(f'{a} is negative')
 
