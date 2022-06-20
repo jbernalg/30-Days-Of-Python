@@ -23,10 +23,18 @@ print(len(student))
 print(student['skills'])
 
 #Modify the skills values by adding one or two skills
-student['skills'].append('Git', 'Java')
+student['skills'].append('Git')
+student['skills'].append('Java')
 print(student['skills'])
 
+#Get the dictionary keys as a list
+print(student.keys())
 
+#Get the dictionary values as a list
+print(student.values())
+
+#Change the dictionary to a list of tuples using items() method
+print(student.items())
 
 
 
