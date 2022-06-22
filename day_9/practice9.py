@@ -53,3 +53,14 @@ elif a == 0:
 else:
     print(f'{a} is negative')
 
+#-----------If and Or logical operators----------------
+# if condition or condition:
+#   code
+user = 'James'
+acces_level = 3
+if user == 'admin' or acces_level >= 4:
+    print('Acces granted')
+else:
+    print('Acces denied')
+
+
