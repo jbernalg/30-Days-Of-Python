@@ -35,6 +35,23 @@ elif a < b:
 else:
     print('a is equal to b')
 
+#Write a code which gives grade to students according to theirs scores:
+score = 70
+
+if score >= 0 and score <= 49:
+    print('F')
+elif score > 49 and score <= 59:
+    print('D')
+elif score > 59 and score <= 69:
+    print('C')
+elif score > 69 and score <= 89:
+    print('B')
+elif score > 89 and score <= 100:
+    print('A')
+else:
+    print('Enter a score correct!')
+
+
 
 
 
