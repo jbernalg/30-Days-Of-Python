@@ -51,6 +51,25 @@ elif score > 89 and score <= 100:
 else:
     print('Enter a score correct!')
 
+#Check if the season is Autumn, Winter, Spring or Summer. If the user input is: September, October or November, the season is Autumn. December, January or February, the season is Winter. March, April or May, the season is Spring June, July or August, the season is Summer
+
+season = input('Enter a month: ').lower()
+
+if  season == 'september' or season == 'october' or season == 'november':
+    print('the season is Autumn')
+
+elif season == 'december' or season == 'january' or season == 'february':
+    print('The season is Winter')
+
+elif season == 'march' or season == 'april' or season == 'may':
+    print('The season is Spring')
+
+elif season == 'june' or season == 'july' or season == 'august':
+    print('The season is Summer')
+
+else:
+    print('Enter a month correct')
+
 
 
 
