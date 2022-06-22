@@ -15,12 +15,25 @@ print('Who is older me or you?')
 age = int(input('Enter your age: '))
 
 if age > 0:
-    if abs(age - 28) == 1:
-        print('The differences is de one years')
-    else:
-        print('the differences is more that two years')
+    if age > 28:
+        print(f'You are {age - 28} years older than me!')
+    if age < 28:
+        print(f'You are {28 - age} years younger than me!')
+    if age == 28:
+        print(f'We are the same age!')
 else:
     print('Enter a correct ages')
+
+#Get two numbers from the user using input prompt. If a is greater than b return a is greater than b, if a is less b return a is smaller than b, else a is equal to b.
+a = int(input('Enter a integer number A: '))
+b = int(input('Enter a integer number B: '))
+
+if a > b:
+    print('a is greater than b')
+elif a < b:
+    print('a is smaller than b')
+else:
+    print('a is equal to b')
 
 
 
