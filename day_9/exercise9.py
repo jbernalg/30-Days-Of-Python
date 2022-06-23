@@ -100,11 +100,34 @@ person={
 
 if 'skills' in person:
     list_skills = person['skills']
-    print(len(list_skills))
-    print(list_skills[1:2])
     middle = (len(list_skills) - 1) // 2
-    print(middle)
-    print(list_skills[middle:middle + 1])
+    print(list_skills[middle])
+else:
+    print('skills is not in person')
+
+#Check if the person dictionary has skills key, if so check if the person has 'Python' skill and print out the result.
+
+if  'skills' in person:
+    list_skills = person['skills']
+    if 'Python' in list_skills:
+        print('True')
+    else:
+        print('False')
+
+# If a person skills has only JavaScript and React, print('He is a front end developer'), if the person skills has Node, Python, MongoDB, print('He is a backend developer'), if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), else print('unknown title') - for more accurate results more conditions can be nested!
+
+list_skills = person['skills']
+
+if 'JavaScript' in list_skills and 'React' in list_skills:
+    print('He is a front end developer')
+    if 'Node' in list_skills and 'MongoDB' in list_skills:
+        if 'Python' in list_skills:
+            print('He is a backend developer')
+        
+        if 'React' in list_skills:
+            print('He is a fullstack developer')
+else:
+    print('unknown title')
 
 
 
