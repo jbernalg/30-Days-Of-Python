@@ -129,6 +129,14 @@ if 'JavaScript' in list_skills and 'React' in list_skills:
 else:
     print('unknown title')
 
+#If the person is married and if he lives in Finland, print the information in the following format:
+married = True
+live = 'Finland'
+
+if married and live == 'Finland':
+    print(f'Gabriel lives in {live}. He is married')
+
+
 
 
 
