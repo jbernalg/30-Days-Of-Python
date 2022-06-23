@@ -14,3 +14,25 @@ while count < 5:
     count += 1
 else:
     print(count)
+
+#-----------------Break and continue-----------------------
+#break: it used break when like to get out of or stop loop
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+    if count == 3:
+        break
+
+#continue: with the continue statement we can skip the current iteration, and continue with the next.
+count = 0
+while count < 5:
+    if count == 3:
+        count += 1
+        continue
+    print(count)
+    count += 1
+
+
+
+
