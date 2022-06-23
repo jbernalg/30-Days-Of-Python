@@ -33,6 +33,26 @@ while count < 5:
     print(count)
     count += 1
 
+#-----------------For loop-----------------------
+#Loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+numbers = [0,1,2,3,4,5]
 
+for i in numbers:
+    print(i)
+
+#for loop with string
+lenguage = 'Python'
+
+for letter in lenguage:
+    print(letter)
+
+for i in range(len(lenguage)):
+    print(lenguage[i])
+
+#for loop with tuple
+numbers = (0,1,2,3,4,5)
+
+for number in numbers:
+    print(number)
 
 
