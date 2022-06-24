@@ -17,3 +17,21 @@ number = 10
 while number > -1:
     print(number)
     number -= 1
+
+#Write a loop that makes seven calls to print(), so we get on the output the following triangle:
+hashtag = '#'
+for element in range(7):
+    print(hashtag)
+    hashtag = hashtag + '#'
+
+#Use nested loops to create the following:
+hashtagH = '#'
+
+for i in range(8):
+    for j in range(8):
+        hashtagH += ' #'
+    print(hashtagH)
+    hashtagH = '#'
+
+
+
