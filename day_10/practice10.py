@@ -135,7 +135,14 @@ for key in person:
         for skill in person['skills']:
             print(skill)
 
+#-----------------------For else------------------------------
+#Used when we like to execute some message when the loop ends.
+for number in range(11):
+    print(number)
+else:
+    print('The loop stops at ', number)
 
-
-
-
+#----------------------Pass----------------------------
+#In python when statement is required (after semicolon), but we don't like to execute any code there, we can write the word pass to avoid errors.
+for number in range(6):
+    pass
