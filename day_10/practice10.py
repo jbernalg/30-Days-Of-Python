@@ -93,12 +93,25 @@ for number in numbers:
         break
 
 #continue is used when we like to skip some of the steps in the iteration of the loop
-
 for number in numbers:
     print(number)
     if number == 3:
         continue
     print('Next number should be ', number + 1) if  number != 5 else print('loop´s end')
 print('outside the loop')
+
+#------------------------The range function-----------------------
+#the range(start, end, step) takes three parameters: starting, ending and increment.
+#Creating sequence using range
+lista = list(range(10))
+print(lista)
+
+lista2 = list(range(1,11))
+print(lista2)
+
+lista3 = set(range(0,11,2))
+print(lista3)
+for element in lista3:
+    print(element)
 
 
