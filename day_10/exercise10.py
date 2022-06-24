@@ -33,5 +33,7 @@ for i in range(8):
     print(hashtagH)
     hashtagH = '#'
 
-
+#Print the following pattern:
+for number in range(11):
+    print(f'{number} x {number} = {number * number}')
 
