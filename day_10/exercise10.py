@@ -37,3 +37,8 @@ for i in range(8):
 for number in range(11):
     print(f'{number} x {number} = {number * number}')
 
+#Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask'] using a for loop and print out the items.
+skills = ['Python', 'Numpy','Pandas','Django', 'Flask']
+for skill in skills:
+    print(skill)
+
