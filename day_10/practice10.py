@@ -77,4 +77,28 @@ for key in person:
 for key, value in person.items():
     print(key, value)
 
+#loops in set
+it_companies = {'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'}
+
+for company in it_companies:
+    print(company)
+
+#-----------------------Break and continue Parte 2----------------------------
+#break is used when we like to stop aur loop before  it is completed
+number = (0,1,2,3,4,5)
+
+for number in numbers:
+    print(number)
+    if number == 3:
+        break
+
+#continue is used when we like to skip some of the steps in the iteration of the loop
+
+for number in numbers:
+    print(number)
+    if number == 3:
+        continue
+    print('Next number should be ', number + 1) if  number != 5 else print('loop´s end')
+print('outside the loop')
+
 
