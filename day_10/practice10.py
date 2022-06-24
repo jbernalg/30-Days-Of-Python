@@ -111,7 +111,31 @@ print(lista2)
 
 lista3 = set(range(0,11,2))
 print(lista3)
-for element in lista3:
-    print(element)
+
+for number in range(0,11,2):
+    print(number)
+    
+
+#-----------------------Nested for loop-----------------------
+person = {
+    'first_name': 'Asabeneh',
+    'last_name': 'Yetayeh',
+    'age': 250,
+    'country': 'Finland',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
+    }
+}
+
+for key in person:
+    if key == 'skills':
+        for skill in person['skills']:
+            print(skill)
+
+
+
 
 
