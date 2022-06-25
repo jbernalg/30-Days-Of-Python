@@ -1,5 +1,8 @@
 #----------------LOOPS----------------
 
+from countries import countries
+
+
 #Iterate 0 to 10 using for loop, do the same using while loop.
 for number in range(11):
     print(number)
@@ -69,7 +72,12 @@ for i in range(101):
         oddSum += i
 print(f'The sum of all evens is {evenSum}. The sum of all odds is {oddSum}')
 
+#Go to the data folder and use the countries.py file. Loop through the countries and extract all the countries containing the word land.
  
+for country in countries:
+    if 'land' in country:
+        print(country)
+
 
 
 
