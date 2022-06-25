@@ -78,6 +78,15 @@ for country in countries:
     if 'land' in country:
         print(country)
 
+#This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits_reverse = list()
+
+for i in range(len(fruits) - 1, -1, -1):
+    fruits_reverse.append(fruits[i])
+
+print(fruits_reverse)
+
 
 
 
