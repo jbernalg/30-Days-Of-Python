@@ -1,6 +1,7 @@
 #----------------LOOPS----------------
 
 from countries import countries
+from countries_data import data
 
 
 #Iterate 0 to 10 using for loop, do the same using while loop.
@@ -87,6 +88,28 @@ for i in range(len(fruits) - 1, -1, -1):
 
 print(fruits_reverse)
 
+#Go to the data folder and use the countries_data.py file
+#What are the total number of languages in the data
+total_language = list()
+i = 0
+proof = list()
+
+while i < len(data):
+
+    for j in data[i]['languages']:
+        total_language.append(j)
+        print(total_language[0])
+
+    for k in total_language:
+        if k in proof:
+            pass
+        else:
+            proof.append(k)
+    
+    total_language = list()
+    i += 1
+   
+print(len(proof))
 
 
 
