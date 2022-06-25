@@ -145,4 +145,4 @@ else:
 #----------------------Pass----------------------------
 #In python when statement is required (after semicolon), but we don't like to execute any code there, we can write the word pass to avoid errors.
 for number in range(6):
-    pass
+    pass 
