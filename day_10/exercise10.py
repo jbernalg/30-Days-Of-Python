@@ -98,8 +98,7 @@ while i < len(data):
 
     for j in data[i]['languages']:
         total_language.append(j)
-        print(total_language[0])
-
+        
     for k in total_language:
         if k in proof:
             pass
@@ -109,7 +108,59 @@ while i < len(data):
     total_language = list()
     i += 1
    
-print(len(proof))
+print(len(total_language))
+
+#Find the ten most spoken languages from the data
+total_language = list() # lista con los lenguajes de todos los paises
+i = 0
+proof = list()          # lista que almacena los lenguaje de un pais momentaneamente
+all_language = list()   # lista que contiene cada lenguaje
+
+while i < len(data):
+
+    for j in data[i]['languages']:
+        proof.append(j)
+        total_language.append(j)
+
+    for k in proof:
+        if k in all_language:
+            pass
+        else:
+            all_language.append(k)
+    
+    proof = list()
+    i += 1
+
+frecuency_languaje = list()
+count = 0
+
+for i in all_language:
+    count = total_language.count(i)
+    frecuency_languaje.append(count)
+    count = 0
+
+max_language = max(frecuency_languaje)
+stop = 0
+band = 0
+
+for i in range(max_language, 0, -1):
+
+    if i in frecuency_languaje:
+        band = frecuency_languaje.index(i)
+        print(all_language[band])
+        stop += 1
+
+    if stop == 10:
+        break
+
+
+
+
+
+ 
+
+
+
 
 
 
