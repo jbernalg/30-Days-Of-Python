@@ -112,9 +112,9 @@ print(len(total_language))
 
 #Find the ten most spoken languages from the data
 total_language = list() # lista con los lenguajes de todos los paises
-i = 0
 proof = list()          # lista que almacena los lenguaje de un pais momentaneamente
 all_language = list()   # lista que contiene cada lenguaje
+i = 0
 
 while i < len(data):
 
@@ -153,6 +153,27 @@ for i in range(max_language, 0, -1):
     if stop == 10:
         break
 
+
+#Find the 10 most populated countries in the world
+print(data[2]['population'])
+countries_population = list()
+for i in data:
+    countries_population.append(i.get('population'))
+
+#print(countries_population)
+countries_population.sort(reverse=True)
+#print(countries_population)
+
+count = 0
+
+for j in countries_population:
+    
+    for i in range(len(data)):
+        if data[i]['population'] == j:
+            print(data[i]['name'])
+            count += 1
+    if count > 9:
+        break
 
 
 
