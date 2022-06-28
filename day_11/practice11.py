@@ -69,8 +69,46 @@ def calculate_age(current_year, birth_year):
 
 print('Age: ', calculate_age(2022, 1994))
 
+def weight_of_object (mass, gravity):
+    weight = str(mass * gravity)+ 'N'
+    return weight
 
+print('Weight of an object in Newtons: ',weight_of_object(90, 9.81))
 
+#---------------Passing arguments with Key and Values---------------------
+def print_fullname(first_name, last_name):
+    space = ' '
+    full_name = first_name + space + last_name
+    return full_name
+
+print(print_fullname(first_name='Daniel', last_name='Vergara'))
+
+def add_two_numbers(num1, num2):
+    total = num1 + num2
+    return total
+
+print(add_two_numbers(num2 = 13, num1 = 2))
+
+#---------------Function Returning a Value----------------------
+#Returning a string
+def print_name(first_name):
+    print(first_name)
+print_name('Gerardo')
+
+#Returning a number:
+def calculate_age(current_year, birth_year):
+    age = current_year - birth_year
+    return age;
+print('Age: ', calculate_age(2022, 2003))
+
+#Returning a boolean
+def is_even(n):
+    if n % 2 == 0:
+        return True
+    return False
+
+print(is_even(10))
+print(is_even(21))       
 
 
 
