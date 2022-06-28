@@ -134,6 +134,30 @@ def calculate_age(birth_year, current_year = 2022):
     return age
 print('Age: ', calculate_age(1900))
 
+#---------------Arbitrary number of arguments-----------------
+def sum_all_nums(*nums):
+    total = 0
+    for num in nums:
+        total += num
+    return total
+print(sum_all_nums(2,3,7,11))
+
+#---------------Default and Arbitrary Number of parameters in Function------------------------
+def generate_groups(team, *args):
+    print(team)
+    for i in args:
+        print(i)
+
+print(generate_groups('Team 1', 'Javier', 'Miguel'))
+
+#----------------Function as a parameters of another function--------------------
+def square_numbers(n):
+    return n * n
+
+def do_something(f, x):
+    return f(x)
+
+print(do_something(square_numbers, 3))
 
 
 
