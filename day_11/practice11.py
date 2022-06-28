@@ -120,5 +120,20 @@ def find_even_numbers(n):
 
 print(find_even_numbers(87))
 
+#---------------Function with default parameters------------------
+#Sometimes we pass default values to parameters, when we invoke the function. 
+#If we do not pass arguments when calling the function, their default values will be used.
+def greetings(name = 'Peter'):
+    message = name + ',Welcome to Python for Everyone!'
+    return message
+print(greetings())
+print(greetings('Samuel'))
+
+def calculate_age(birth_year, current_year = 2022):
+    age = current_year - birth_year
+    return age
+print('Age: ', calculate_age(1900))
+
+
 
 
