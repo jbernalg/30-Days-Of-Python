@@ -36,6 +36,41 @@ def generate_full_name():
 
 print(generate_full_name())
 
+#-------------------Function with parameters----------------------
+#Single parameter
+def greetings(name):
+    message = name + ', welcome to Python for Everyone!'
+    return message
+
+print(greetings('Rivera'))
+
+def square_numbers(x):
+    return x * x
+
+print(square_numbers(22))
+
+def area_of_circle(r):
+    PI = 3.14
+    area = PI*r**2
+    return area
+
+print(area_of_circle(13))
+
+#Two parameters
+def sum_two_numbers(num_one, num_two):
+    sum = num_one + num_two
+    return sum
+
+print('Sum of two number: ',sum_two_numbers(1,16))
+
+def calculate_age(current_year, birth_year):
+    age = current_year - birth_year
+    return age;
+
+print('Age: ', calculate_age(2022, 1994))
+
+
+
 
 
 
