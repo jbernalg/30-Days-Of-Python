@@ -62,7 +62,13 @@ def calculate_slope(t_dep):
 
 print(calculate_slope('2x'))
 
+#Quadratic equation is calculated as follows: ax² + bx + c = 0. Write a function which calculates solution set of a quadratic equation, solve_quadratic_eqn.
+def solve_quadratic_eqn(a,b,c):
+    sol1 = (-b + (b*b - 4*a*c)**0.5)/2*a
+    sol2 = (-b - (b*b - 4*a*c)**0.5)/2*a
+    print(f'solucion 1: {sol1:.3f}. solucion 2: {sol2:.3f}')
 
+print(solve_quadratic_eqn(2,4,2))
 
 
 
