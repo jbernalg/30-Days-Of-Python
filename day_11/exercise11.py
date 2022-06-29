@@ -12,7 +12,18 @@ def area_of_circle(r):
     return area
 print(area_of_circle(12))
 
- 
+#Write a function called add_all_nums which takes arbitrary number of arguments and sums all the arguments. Check if all the list items are number types. If not do give a reasonable feedback.
+def sum_all_nums(*nums):
+    total = 0
+    for num in nums:
+        num2 = str(num)
+        if num2.isnumeric() == True:
+            total += num
+        else:
+            return 'Deben ser numeros y enteros'
+    return total
+
+print(sum_all_nums(3,6,6))
 
 
 
