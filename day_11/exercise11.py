@@ -70,6 +70,14 @@ def solve_quadratic_eqn(a,b,c):
 
 print(solve_quadratic_eqn(2,4,2))
 
+#Declare a function named print_list. It takes a list as a parameter and it prints out each element of the list.
+def print_list(lista):
+    for i in lista:
+        print(i)
+
+cosas = [2, 3, 4, 'queso']
+print(print_list(cosas))
+
 
 
 
