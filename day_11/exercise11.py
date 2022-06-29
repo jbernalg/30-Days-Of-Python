@@ -49,6 +49,21 @@ def check_season(month):
 
 print(check_season('NovieMBre'))
 
+#Write a function called calculate_slope which return the slope of a linear equation
+def calculate_slope(t_dep):
+    a,b = t_dep
+    
+    if a.isnumeric() == True:
+        return 'La pendiente es ', a
+    elif b.isnumeric() == True:
+        return 'La pendiente es ', b
+    else:
+        return 'Ingrese un valor dependiente correcto!'
+
+print(calculate_slope('2x'))
+
+
+
 
 
 
