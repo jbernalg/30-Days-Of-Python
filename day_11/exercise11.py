@@ -78,6 +78,12 @@ def print_list(lista):
 cosas = [2, 3, 4, 'queso']
 print(print_list(cosas))
 
+#Declare a function named reverse_list. It takes an array as a parameter and it returns the reverse of the array (use loops).
+def reverse_list(lista):
+    return lista[::-1]
+print(reverse_list(cosas))
+
+
 
 
 
