@@ -107,4 +107,24 @@ def remove_item(lista, element):
 
 print(remove_item(fruits, 'uva'))
 
+#Declare a function named sum_of_numbers. It takes a number parameter and it adds all the numbers in that range.
+def sum_of_numbers(num):
+    suma = 0
+    for i in range(num + 1):
+        suma += i
+    return suma
+
+print(sum_of_numbers(10))
+
+#Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
+def sum_of_odds(num):
+    sumOdds = 0
+    for i in range(num + 1):
+        if i % 2 != 0:
+            sumOdds += i
+
+    return sumOdds
+
+print(sum_of_odds(10))
+
 
