@@ -83,7 +83,13 @@ def reverse_list(lista):
     return lista[::-1]
 print(reverse_list(cosas))
 
+#Declare a function named capitalize_list_items. It takes a list as a parameter and it returns a capitalized list of items
+def capitalize_list_items(lista):
+    listaM = []
+    for i in lista:
+        listaM.append(i.upper())
+    return listaM
 
-
-
+fruits = ['banana', 'mango', 'uva', 'fresa']
+print(capitalize_list_items(fruits))
 
