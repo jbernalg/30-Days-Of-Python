@@ -100,3 +100,11 @@ def add_item(lista, element):
 
 print(add_item(fruits, 'manzana'))
 
+#Declare a function named remove_item. It takes a list and an item parameters. It returns a list with the item removed from it.
+def remove_item(lista, element):
+    lista.remove(element)
+    return lista
+
+print(remove_item(fruits, 'uva'))
+
+
