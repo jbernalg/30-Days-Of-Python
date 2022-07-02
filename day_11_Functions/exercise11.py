@@ -93,3 +93,10 @@ def capitalize_list_items(lista):
 fruits = ['banana', 'mango', 'uva', 'fresa']
 print(capitalize_list_items(fruits))
 
+#Declare a function named add_item. It takes a list and an item parameters. It returns a list with the item added at the end.
+def add_item(lista, element):
+    lista.append(element)
+    return lista
+
+print(add_item(fruits, 'manzana'))
+
