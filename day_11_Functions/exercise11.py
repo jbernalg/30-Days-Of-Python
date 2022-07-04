@@ -201,22 +201,31 @@ def calculate_median(lista):
         return median
 
 def calculate_mode(lista):
-    index = 0
     count = 0
+    freq = []
 
     for i in lista:
-        for j in range(1, len(lista) + 1):
-            pass 
+        count = lista.count(i)
+        freq.append(count)
+    
+    may = max(freq)
+    if may == 1:
+        return 'todos tienen la misma cantidad'
+    else:
+        band = freq.index(may)
+        return lista[band]
+            
 
 def calculate_range(lista):
     lista.sort()
     rang = lista[len(lista) - 1] - lista[0]
     return rang
 
-numeros = [3,7,12,1,9,5,4]
+numeros = [1,7,12,1,9,4,4]
 print(calculate_mean(numeros))
 print(calculate_median(numeros))
 print(calculate_range(numeros))
+print(calculate_mode(numeros))
 
 
 
