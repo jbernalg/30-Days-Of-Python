@@ -177,4 +177,17 @@ print(is_empty(dictionary))
 lista2 = [3,5,6,8,'hola']
 print(is_empty(lista2))
 
+#Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
+def calculate_mean(lista):
+    sum_total = 0
+    for i in lista:
+        sum_total += i
+
+    mean = sum_total/len(lista)
+    return mean
+
+numeros = [3,7,12,1,9,5]
+print(calculate_mean(numeros))
+ 
+
 
