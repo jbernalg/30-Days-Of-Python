@@ -186,8 +186,23 @@ def calculate_mean(lista):
     mean = sum_total/len(lista)
     return mean
 
-numeros = [3,7,12,1,9,5]
+def calculate_median(lista):
+    lista.sort()
+    n = len(lista)
+
+    if n % 2 == 0:
+        media1 = n//2
+        media2 = media1 - 1
+        median = (lista[media1] + lista[media2])/2
+        return median
+    else:
+        med = n // 2
+        median = lista[med]
+        return median
+
+numeros = [3,7,12,1,9,5,4]
 print(calculate_mean(numeros))
- 
+print(calculate_median(numeros))
+
 
 
