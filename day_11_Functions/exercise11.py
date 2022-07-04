@@ -138,3 +138,20 @@ def sum_of_even(num):
 
 print(sum_of_even(10))
 
+#Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+def evens_and_odds(num):
+    even = 0
+    odds = 0
+    for i in range(num + 1):
+        if i % 2 == 0:
+            even += 1
+        else:
+            odds += 1
+
+    return f'even: {even} odds: {odds}'
+
+print(evens_and_odds(100)) 
+
+
+
+
