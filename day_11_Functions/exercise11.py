@@ -200,9 +200,23 @@ def calculate_median(lista):
         median = lista[med]
         return median
 
+def calculate_mode(lista):
+    index = 0
+    count = 0
+
+    for i in lista:
+        for j in range(1, len(lista) + 1):
+            pass 
+
+def calculate_range(lista):
+    lista.sort()
+    rang = lista[len(lista) - 1] - lista[0]
+    return rang
+
 numeros = [3,7,12,1,9,5,4]
 print(calculate_mean(numeros))
 print(calculate_median(numeros))
+print(calculate_range(numeros))
 
 
 
