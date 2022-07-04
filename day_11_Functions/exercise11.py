@@ -152,6 +152,15 @@ def evens_and_odds(num):
 
 print(evens_and_odds(100)) 
 
+#Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+def factorial(num):
+    fact = 1
+    for i in range(1, num + 1):
+        fact *= i
+
+    return fact
+
+print(factorial(5))
 
 
 
