@@ -162,5 +162,19 @@ def factorial(num):
 
 print(factorial(5))
 
+#Call your function is_empty, it takes a parameter and it checks if it is empty or not
+def is_empty(objeto):
+    band = False
+    if len(objeto) == 0:
+        band = True
+    return band
+
+lista = list()
+print(len(lista))
+print(is_empty(lista))
+dictionary = dict()
+print(is_empty(dictionary))
+lista2 = [3,5,6,8,'hola']
+print(is_empty(lista2))
 
 
