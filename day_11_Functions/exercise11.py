@@ -227,5 +227,20 @@ print(calculate_median(numeros))
 print(calculate_range(numeros))
 print(calculate_mode(numeros))
 
+#Write a function called is_prime, which checks if a number is prime.
+def is_prime(num):
+    band = True
+
+    if num == 1:
+        band = False
+    else:
+        for i in range(2, num):
+            if num % i == 0:
+                band = False
+                break
+
+    return band
+
+print(is_prime(1))
 
 
