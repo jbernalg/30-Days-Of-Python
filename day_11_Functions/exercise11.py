@@ -243,4 +243,19 @@ def is_prime(num):
 
 print(is_prime(1))
 
+#Write a functions which checks if all items are unique in the list.
+def items_unique(lista):
+    band = True
+
+    for item in lista:
+        if lista.count(item) > 1:
+            band = False
+            break
+
+    return band
+
+fruits = ['naranja', 'pera', 'uva', 'mango', 'pera']
+print(items_unique(fruits))
+
+
 
