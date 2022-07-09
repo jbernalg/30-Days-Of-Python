@@ -1,5 +1,7 @@
 #---------------------FUNCTIONS--------------------------------
 
+from countries_data import data
+
 #Declare a function add_two_numbers. It takes two parameters and it returns a sum.
 def add_two_numbers(num1, num2):
     sum = num1 + num2
@@ -271,6 +273,57 @@ def same_type(lista):
 
 print(same_type(fruits))
 
+#Write a function which check if provided variable is a valid python variable
 
+#Go to the data folder and access the countries-data.py file.
+#Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order
+
+def most_spoken_languages(num, data):
+    total_language = list() # lista con los lenguajes de todos los paises
+    proof = list()          # lista que almacena los lenguaje de un pais momentaneamente
+    all_language = list()   # lista que contiene cada lenguaje
+    i = 0
+
+    # loop que almacena cada lenguaje en all_language y todos los lenguajes en total_language 
+    while i < len(data):
+        
+        for j in data[i]['languages']:
+            proof.append(j)
+            total_language.append(j)
+
+        for k in proof:
+            if k in all_language:
+                pass
+            else:
+                all_language.append(k)
+    
+        proof = list()
+        i += 1
+
+    frecuency_languaje = list()   # lista que almacena la frecuencia de los lenguajes
+    count = 0
+
+    for i in all_language:
+        count = total_language.count(i)
+        frecuency_languaje.append(count)
+        count = 0
+
+    max_language = max(frecuency_languaje) # lenguaje con mayor cantidad de paises
+    stop = 0
+    band = 0
+    list_show = [] # lista con los lenguajes mas usados en el mundo
+
+    for i in range(max_language, 0, -1):
+
+        if i in frecuency_languaje:
+            band = frecuency_languaje.index(i)
+            list_show.append(all_language[band])
+            stop += 1
+
+        if stop == num:
+            return list_show
+            break
+
+print(most_spoken_languages(10, data))
 
 
