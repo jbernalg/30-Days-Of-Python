@@ -257,5 +257,20 @@ def items_unique(lista):
 fruits = ['naranja', 'pera', 'uva', 'mango', 'pera']
 print(items_unique(fruits))
 
+#Write a funtion which checks if all the items of the list are of the same data type.c
+def same_type(lista):
+    band = True
+    type1 = type(lista[0]) 
+
+    for item in lista:
+        if type(item) != type1:
+            band = False
+            break
+
+    return band
+
+print(same_type(fruits))
+
+
 
 
