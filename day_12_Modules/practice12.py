@@ -53,3 +53,11 @@ os.rmdir('directory_name')
 #Function sys.argv returns a list of command line arguments passed to a Python script.
 #The item at index 0 in this list is always the name of the script, at index 1 is the argument passed from the command line.
 
+#-----------------Statistics Module---------------------
+#provide functions for mathematical statisticsof numeric data
+from statistics import *
+age = [20, 20, 18, 24, 30, 29, 24, 25, 24, 30]
+print(mean(age))
+print(median(age))
+print(mode(age))
+print(stdev(age))
