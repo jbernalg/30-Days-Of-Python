@@ -79,6 +79,12 @@ print(string.digits)        #digitos
 print(string.punctuation)   #signos de puntuacion
 
 
+#----------------Random Module----------------
+from random import random, randint
+print(random())
+print(randint(5, 20))
+
+
 
 
 
