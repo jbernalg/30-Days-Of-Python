@@ -72,6 +72,12 @@ print(math.floor(9.81))   #rounding to the lowest
 print(math.ceil(9.81))    #rounding to the highest
 print(math.log10(100))    #logarithm
 
+#----------------String Module----------------
+import string
+print(string.ascii_letters) #abecedario
+print(string.digits)        #digitos
+print(string.punctuation)   #signos de puntuacion
+
 
 
 
