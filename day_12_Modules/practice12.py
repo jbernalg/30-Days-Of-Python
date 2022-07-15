@@ -46,3 +46,10 @@ print(os.getcwd())
 
 #Removing a directory
 os.rmdir('directory_name')
+
+
+#-----------------Sys Module------------------
+#provides functions and variables used to manipulate different parts of the Python runtime environment.
+#Function sys.argv returns a list of command line arguments passed to a Python script.
+#The item at index 0 in this list is always the name of the script, at index 1 is the argument passed from the command line.
+
