@@ -56,6 +56,11 @@ def list_of_hexa_colors():
 
 print(list_of_hexa_colors())
 
+#Write a function list_of_rgb_colors which returns any number of RGB colors in an array.
+def list_of_rgb_colors():
+    colorRGB = rgb_color_gen()
+    muest = [colorRGB]
+    return muest
 
-
-
+print(list_of_rgb_colors())
+ 
