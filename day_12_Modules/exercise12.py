@@ -84,6 +84,20 @@ def generate_colors(tipo, cant):
 generate_colors('hexa', 2)
 generate_colors('rgb', 3)
 
+#Write a function which returns an array of seven random numbers in a range of 0-9. All the numbers must be unique.
+def numbers_unique():
+    num = set()
+    list_num = list(string.digits)
+    band = 0
+
+    while band < 7:
+        num.add(random.choice(list_num))
+        band = len(num)
+    
+    num2 = list(num)
+    return num2
+
+print(numbers_unique())
 
 
 
