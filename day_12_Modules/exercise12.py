@@ -63,4 +63,31 @@ def list_of_rgb_colors():
     return muest
 
 print(list_of_rgb_colors())
- 
+
+#Write a function generate_colors which can generate any number of hexa or rgb colors.
+def generate_colors(tipo, cant):
+    colorRGB = list()
+    colorHexa = list()
+
+    if tipo == 'rgb':
+        for i in range(cant):
+            colorRGB.append(list_of_rgb_colors())
+        print(colorRGB)
+
+    elif tipo == 'hexa':
+        for j in range(cant):
+            colorHexa.append(list_of_hexa_colors())
+        print(colorHexa)
+    else:
+        print('Introduce el tipo de color correcto')
+
+generate_colors('hexa', 2)
+generate_colors('rgb', 3)
+
+
+
+
+
+
+
+
