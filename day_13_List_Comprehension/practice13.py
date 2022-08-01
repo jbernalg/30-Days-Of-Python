@@ -27,5 +27,21 @@ print(square)
 numbers_tuples = [(i, i * i) for i in range(11)]
 print(numbers_tuples)
 
-# list  comprehensin can be combined with if expression
+# list comprehension can be combined with if expression
+# Generating  even numbers
+even_numbers = [i for i in range(21) if i % 2 == 0]
+print(even_numbers)
 
+# Generating odd numbers
+odd_numbers = [i for i in range(21) if i % 2 != 0]
+print(odd_numbers)
+
+# Filter numbers:
+numbers = [-8,-5,-4,-3,-1,0,2,4,6,7,8]
+positive_even_numbers = [i for i in numbers if i % 2 == 0 and i > 0]
+print(positive_even_numbers)
+
+# Flattening a three dimensional array
+list_of_list = [[1,2,3],[4,5,6],[7,8,9]]
+flattened_list = [number for row in list_of_list for number in row]
+print(flattened_list)
