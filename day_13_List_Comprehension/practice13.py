@@ -22,3 +22,10 @@ print(numbers)
 # it is possible to do mathematical operations during iteration
 square = [i * i for i in range(11)]
 print(square)
+
+# it is possible  to make a list of tuples
+numbers_tuples = [(i, i * i) for i in range(11)]
+print(numbers_tuples)
+
+# list  comprehensin can be combined with if expression
+
