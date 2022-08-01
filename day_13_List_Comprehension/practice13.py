@@ -45,3 +45,21 @@ print(positive_even_numbers)
 list_of_list = [[1,2,3],[4,5,6],[7,8,9]]
 flattened_list = [number for row in list_of_list for number in row]
 print(flattened_list)
+
+# ------------------- Lambda Function -----------------------
+# is a small anonymous function without a name.
+# It can take any numbers of arguments, but only have one expression
+# We need it when we want to write an anonymous function inside another function
+
+# syntax
+# x = lambda param1, param2, param3 : param1, param2, param3
+
+# Name function
+def add_two_nums(a, b):
+    return a + b
+print(add_two_nums(5,25)) 
+
+# lambda function
+add_two_nums2 = lambda a,b : a + b
+print(add_two_nums2(5,12))
+
