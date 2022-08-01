@@ -63,3 +63,11 @@ print(add_two_nums(5,25))
 add_two_nums2 = lambda a,b : a + b
 print(add_two_nums2(5,12))
 
+# Self invoking lambda function
+print((lambda a,b: a + b)(5,18)) 
+
+square = lambda x : x**2
+print(square(3))
+
+cube = lambda x : x**3
+print(cube(2))
