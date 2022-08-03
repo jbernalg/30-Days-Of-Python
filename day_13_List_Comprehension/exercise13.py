@@ -44,3 +44,12 @@ list_a = [1,2,3,4]
 list_b = [2,3,4,5]
 common = [n for n in list_a if n in list_b]
 print(common)
+
+# Find numbers in sentence
+# Get only the numbers in a sentence like 'In 1984 there were 13 instances 
+# of a protest with over 1000 people attending'.
+sentence = 'In 1984 there were 13 instances of a protest with over 1000 people attending'
+print(word)
+numbers = [n for n in word if not n.isalpha()]
+print(numbers) 
+
