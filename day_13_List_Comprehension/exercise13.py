@@ -32,3 +32,15 @@ sentence = "Yellow Yaks like yelling and yawning and yesturday they yodled while
 consonants = [letter for letter in sentence if letter not in 'a,e,i,o,u," "']
 print(consonants)
 
+# Get index and value from list
+# Get the index and the value as a tuple for items in the list ["hi", 4, 8.99, 'apple', ('t,b','n')].  
+# Result would look like [(index, value), (index, value)]
+list1 = ["hi", 4, 8.99, 'apple', ('t,b','n')]
+result = [(index, item) for index, item in enumerate(list1)]
+print(result)
+
+# Find common numbers in two lists of numbers
+list_a = [1,2,3,4]
+list_b = [2,3,4,5]
+common = [n for n in list_a if n in list_b]
+print(common)
