@@ -1,6 +1,9 @@
 #---------Exercise List Comprehension-----------
 
 #Filter only negative and zero in the list using list comprehension
+from operator import le
+
+
 numbers = [-4, -3, -2, -1, 0, 2, 4, 6]
 filter_numbers = [i for i in numbers if i <= 0]
 print(filter_numbers)
@@ -49,7 +52,28 @@ print(common)
 # Get only the numbers in a sentence like 'In 1984 there were 13 instances 
 # of a protest with over 1000 people attending'.
 sentence = 'In 1984 there were 13 instances of a protest with over 1000 people attending'
-print(word)
+word = sentence.split()
 numbers = [n for n in word if not n.isalpha()]
 print(numbers) 
 
+# Determine even or odd in list of numbers
+# Given numbers = range(20), produce a list containing the word 'even' if a number in the numbers is even, and the word 'odd' if the number is odd.  
+# Result would look like ['odd','odd', 'even']
+result = ['even' if n % 2 == 0 else 'odd' for n in range(10)]
+print(result)
+
+# Common number tuples
+# Produce a list of tuples consisting of only the matching numbers in these lists .  
+# Result would look like (4,4), (12,12)
+list_a = [1, 2, 3, 4, 5, 6, 7, 8, 9] 
+list_b = [2, 7, 1, 12]
+
+result = [(a, b) for a in list_a for b in list_b if a == b]
+print(result)
+
+# Find words with more than 4 letters
+# Find all of the words in a string that are less than 4 letters
+sentence = 'On a summer day somner smith went simming in the sun and his red skin stung'
+examine = sentence.split()
+result = [n for n in examine if len(n) >= 4]
+print(result)
