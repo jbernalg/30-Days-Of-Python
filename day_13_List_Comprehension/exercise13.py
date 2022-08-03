@@ -16,6 +16,19 @@ print(new_list2)
 div7 = [n for n in range(1,100) if n % 7 == 0]
 print(div7)
 
-#Find all of the numbers from 1-100 that have a 3 in them
+# Find all of the numbers from 1-100 that have a 3 in them
 num_3 = [x for x in range(1, 100) if '3' in str(x)]
 print(num_3)
+
+# Count the number of spaces in a string
+stringN = 'hello How are you? fine'
+space = [s for s in stringN if s == ' ']
+print(len(space))
+
+# Consonants in a string: 
+# Create a list of all the consonants in the string "Yellow Yaks like yelling and 
+# yawning and yesturday they yodled while eating yuky yams"
+sentence = "Yellow Yaks like yelling and yawning and yesturday they yodled while eating yuky yams"
+consonants = [letter for letter in sentence if letter not in 'a,e,i,o,u," "']
+print(consonants)
+
