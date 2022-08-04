@@ -2,6 +2,8 @@
 
 #Filter only negative and zero in the list using list comprehension
 from operator import le
+import re
+from tkinter import Y
 
 
 numbers = [-4, -3, -2, -1, 0, 2, 4, 6]
@@ -81,3 +83,24 @@ print(result)
 # Use a nested list comprehension to find all of the numbers from 1-100 that are divisible by any single digit besides 1 (2-9)
 result = [n for n in range(1,100) if True in [True for x in range(2,10) if n % x  == 0]]
 print(result)
+
+# Create a lambda function that adds 15 to a given number passed in as an argument, 
+# also create a lambda function that multiplies argument x with argument y and print the result
+op = lambda x: x + 15
+print(op(10))
+
+mult = lambda x,y: x*y 
+print(mult(2,3))
+
+# create a function that takes one argument, and that argument will be multiplied with an unknown given number.
+def multiplo(n):
+    return lambda x: x*n
+
+result = multiplo(2)
+print('Double the number of 15:',result(15))
+result = multiplo(3)
+print('Triple the number of 15:',result(15))
+result = multiplo(4)
+print('Quadruple the number of 15:',result(15))
+result = multiplo(5)
+print('Quiintuple the number of 15:',result(15))
