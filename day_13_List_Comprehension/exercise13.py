@@ -142,6 +142,16 @@ def name_vowels(x):
 filtered_name = list(filter(name_vowels, names))
 print(filtered_name)
 
+# Write a Python program to square and cube every number in a given list of integers using Lambda.
+# map funciton: used to apply a function to each element in an iterable (such as a list or a dictionary) 
+# and return a new iterator to retrieve the results.
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+square_number = list(map(lambda x: x**2, numbers))
+print(square_number)
+
+cube_numbers = list(map(lambda x: x**3, numbers))
+print(cube_numbers) 
 
 
 
