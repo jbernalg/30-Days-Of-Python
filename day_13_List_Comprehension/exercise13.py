@@ -124,6 +124,28 @@ cellphone = [{'make': 'Nokia', 'model': 216, 'color': 'Black'},
 sorted_cellphone = sorted(cellphone, key = lambda x: x['color'])
 print(sorted_cellphone)
 
+# Write a Python program to filter a list of integers using Lambda. 
+# Filter function: can be used to create a new iterator from an existing iterable (such as a list or dictionary) 
+# that will efficiently filter items using a function that we provide
+list_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even = list(filter(lambda x: x % 2 == 0, list_numbers)) 
+print(even)
+odd = list(filter(lambda x: x % 2 != 0, list_numbers))
+print(odd)
+
+# Filter names starting with a vowel in a given list
+names = ['Sammy', 'Ashley', 'Jo', 'Olly', 'Jackie', 'Charlie']
+
+def name_vowels(x):
+    return x[0].lower() in 'aeiou'
+
+filtered_name = list(filter(name_vowels, names))
+print(filtered_name)
+
+
+
+
+
 
 
 
