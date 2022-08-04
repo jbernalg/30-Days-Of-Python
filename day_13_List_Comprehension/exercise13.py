@@ -4,6 +4,7 @@
 from operator import le
 import re
 from tkinter import Y
+from turtle import st
 
 
 numbers = [-4, -3, -2, -1, 0, 2, 4, 6]
@@ -153,9 +154,23 @@ print(square_number)
 cube_numbers = list(map(lambda x: x**3, numbers))
 print(cube_numbers) 
 
+# Write a Python program to find if a given string starts with a given character using Lambda.
+# The startswith() method returns True if a string starts with the specified prefix(string). If not, it returns False.
+start_with = lambda x: True if x.startswith('P') else False
+print(start_with('Python'))
 
+# Write a Python program to extract year, month, date and time using Lambda. 
+import datetime
+now = datetime.datetime.now()
+print(now)
 
-
-
+year = lambda x: x.year
+month = lambda x: x.month
+day = lambda x: x.day
+t = lambda x: x.time()
+print(year(now))
+print(month(now))
+print(day(now))
+print(t(now))
 
 
