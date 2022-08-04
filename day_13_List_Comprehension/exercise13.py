@@ -104,3 +104,26 @@ result = multiplo(4)
 print('Quadruple the number of 15:',result(15))
 result = multiplo(5)
 print('Quiintuple the number of 15:',result(15))
+
+# Write a Python program to sort a list of tuples using Lambda.
+#sort by number
+items = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]
+items.sort(key = lambda x: x[1])
+print(items)
+
+#sort by name
+items_sort = sorted( items, key = lambda x: x[0])
+print(items_sort)
+
+# Write a Python program to sort a list of dictionaries using Lambda. 
+#sort by color
+cellphone = [{'make': 'Nokia', 'model': 216, 'color': 'Black'}, 
+             {'make': 'Mi Max', 'model': '2', 'color': 'Gold'}, 
+             {'make': 'Samsung', 'model': 7, 'color': 'Blue'}]
+
+sorted_cellphone = sorted(cellphone, key = lambda x: x['color'])
+print(sorted_cellphone)
+
+
+
+
