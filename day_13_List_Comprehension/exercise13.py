@@ -181,7 +181,16 @@ print(is_num('hola mundo.'))
 
 # Write a Python program to create Fibonacci series upto n using Lambda.
 from functools import reduce
-
+# takes as an argument a set of values ​​(a list, a tuple, or any iterable object) and "reduces" it to a single value
 fib_series = lambda n: reduce(lambda x, _: x+[x[-1]+x[-2]], range(n-2), [0,1])
 print(fib_series(5)) 
+
+# Write a Python program to find intersection of two given arrays using Lambda.
+list1 = [1, 2, 3, 5, 7, 8, 9, 10]
+list2 = [1, 2, 4, 8, 9, 14, 15, 16]
+
+result = list(filter(lambda x: x in list1, list2))
+print(result)
+
+
 
