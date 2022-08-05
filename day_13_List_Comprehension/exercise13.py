@@ -1,7 +1,7 @@
 #---------Exercise List Comprehension-----------
 
 #Filter only negative and zero in the list using list comprehension
-from operator import le
+from operator import is_, le
 import re
 from tkinter import Y
 from turtle import st
@@ -173,4 +173,15 @@ print(month(now))
 print(day(now))
 print(t(now))
 
+# Write a Python program to check whether a given string is number or not using Lambda
+is_num = lambda x: x.replace('.', '',1).isdigit()  #type string
+print(is_num('123'))
+print(is_num('4.281'))
+print(is_num('hola mundo.'))
+
+# Write a Python program to create Fibonacci series upto n using Lambda.
+from functools import reduce
+
+fib_series = lambda n: reduce(lambda x, _: x+[x[-1]+x[-2]], range(n-2), [0,1])
+print(fib_series(5)) 
 
