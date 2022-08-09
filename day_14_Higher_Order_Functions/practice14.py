@@ -59,3 +59,37 @@ def add_ten():
 
 closure_result = add_ten()
 print(closure_result(23))
+
+# Python Decorators
+# A decorator is a design pattern in Python that allows a user to add new functionality 
+# to an existing object without modifying its structure. 
+# Decorators are usually called before the definition of a function you want to decorate.
+
+# Creating Decorators
+# To create a decorator function, we need an outer function with an inner wrapper function.
+def greeting(): #normal function
+    return 'Welcome to Python'
+
+def uppercase_decorator(function):
+    def wrapper():
+        func = function()
+        make_uppercase = func.upper()
+        return make_uppercase
+    return wrapper
+
+g = uppercase_decorator(greeting)
+print(g())
+
+## Let us implement with a decorator
+def uppercase_decorator2(function):
+    def wrapper():
+        func = function()
+        make_uppercase = func.upper()
+        return make_uppercase
+    return wrapper
+
+@uppercase_decorator
+def greeting2():
+    return 'Welcome to Python'
+
+print(greeting2())
