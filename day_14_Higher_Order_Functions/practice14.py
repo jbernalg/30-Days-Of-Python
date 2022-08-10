@@ -158,3 +158,7 @@ def change_to_upper(name):
 
 name_upper_cased = map(change_to_upper, names)
 print(list(name_upper_cased))
+
+#example 4: Let us apply it with lambda function
+name_upper_cased = map(lambda name: name.upper(), names)
+print(list(name_upper_cased))
