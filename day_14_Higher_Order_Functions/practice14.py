@@ -206,7 +206,7 @@ print(list(long_names))
 
 # -------------------------Reduce Function---------------------------------
 # is defined in the functools  module and we should import it from this module.
-# Takes tow parameters. However, it does not return another iterable, instead it returns a single value.
+# Takes two parameters. However, it does not return another iterable, instead it returns a single value.
 
 # example 1:
 from functools import reduce
