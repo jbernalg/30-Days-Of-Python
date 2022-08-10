@@ -191,3 +191,29 @@ def is_odd(num):
 
 odd_numbers = filter(is_odd, numbers)
 print(list(odd_numbers))
+
+# example 3: Filter long name
+names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
+
+def is_name_long(name):
+    if len(name) > 7:
+        return True
+    else:
+        return False
+
+long_names = filter(is_name_long, names)
+print(list(long_names))
+
+# -------------------------Reduce Function---------------------------------
+# is defined in the functools  module and we should import it from this module.
+# Takes tow parameters. However, it does not return another iterable, instead it returns a single value.
+
+# example 1:
+from functools import reduce
+number_str = ['1','2','3','4','5']
+
+def add_two_number(x, y):
+    return int(x) + int(y)
+
+total = reduce(add_two_number, number_str)
+print(total)
