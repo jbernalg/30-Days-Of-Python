@@ -131,3 +131,30 @@ def print_full_name(first_name, last_name,country):
     print('I am {} {}. I love to teach.'.format(first_name, last_name, country))
 
 print_full_name('Jeinfferson', 'Bernal', 'Venezuela')
+
+# Built in Higher order functions
+# map function: is a built-in function that takes a function and iterable as parameters
+# syntax: map(function, iterable)
+
+#example: 1
+numbers = [1,2,3,4,5]
+
+def square(x):
+    return x**2
+
+numbers_square = list(map(square, numbers))
+print(numbers_square)
+
+#example 2:
+numbers_str = ['1','2','3','4','5']
+numbers_int = map(int, numbers_str)
+print(list(numbers_int))
+
+#example 3:
+names = ['Gabriel', 'Lily', 'Ermes', 'Abraham']
+
+def change_to_upper(name):
+    return name.upper()
+
+name_upper_cased = map(change_to_upper, names)
+print(list(name_upper_cased))
