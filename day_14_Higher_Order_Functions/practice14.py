@@ -132,8 +132,9 @@ def print_full_name(first_name, last_name,country):
 
 print_full_name('Jeinfferson', 'Bernal', 'Venezuela')
 
-# Built in Higher order functions
-# map function: is a built-in function that takes a function and iterable as parameters
+# -------------------Built in Higher order functions---------------------
+# ----------------------------map function------------------------------------- 
+# is a built-in function that takes a function and iterable as parameters
 # syntax: map(function, iterable)
 
 #example: 1
@@ -162,3 +163,31 @@ print(list(name_upper_cased))
 #example 4: Let us apply it with lambda function
 name_upper_cased = map(lambda name: name.upper(), names)
 print(list(name_upper_cased))
+
+# -------------------------Filter function------------------------------
+# calls the specified function which return boolean for each item of the specified iterable (list)
+# syntax: filter(function, iterable)
+
+#example 1: Lets filter only even numbers
+numbers = [1,2,3,4,5,6,7,8,9]
+
+def is_even(num):
+    if num % 2 == 0:
+        return True
+    else:
+        return False
+
+even_numbers = filter(is_even, numbers)
+print(list(even_numbers))
+
+#example 2: Lets filter only odd numbers
+numbers = [1,4,6,10,11]
+
+def is_odd(num):
+    if num % 2 == 0:
+        return False
+    else:
+        return True
+
+odd_numbers = filter(is_odd, numbers)
+print(list(odd_numbers))
