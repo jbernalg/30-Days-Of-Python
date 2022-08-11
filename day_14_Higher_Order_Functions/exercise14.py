@@ -44,4 +44,12 @@ def is_land(country):
 countries_filter = filter(is_land, countries)
 print(list(countries_filter))
 
-# Use filter to filter out countries having exactly six characters.
+# Use filter to filter out countries having exactly six characters
+def long_names(country):
+    if len(country) == 6:
+        return True
+    else: 
+        return False
+
+countries_filter = filter(long_names, countries)
+print(list(countries_filter))
