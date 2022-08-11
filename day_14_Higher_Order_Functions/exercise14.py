@@ -12,3 +12,20 @@
 # It can access variables present in the scope of the external function
 # Decorator allows to add new functionality to an existing object without modifying its structure
 
+countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
+names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Use map to create a new list by changing each country to uppercase in the countries list
+def uppercase_countries(country):
+    return country.upper()
+
+countries_upper = list(map(uppercase_countries, countries))
+print(countries_upper )
+
+# Use map to create a new list by changing each number to its square in the numbers list
+def square(num):
+    return num**2
+
+number_square = map(square, numbers)
+print(list(number_square))
