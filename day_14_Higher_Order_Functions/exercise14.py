@@ -17,10 +17,10 @@ names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # Use map to create a new list by changing each country to uppercase in the countries list
-def uppercase_countries(country):
-    return country.upper()
+def uppercase_word(word):
+    return word.upper()
 
-countries_upper = list(map(uppercase_countries, countries))
+countries_upper = list(map(uppercase_word, countries))
 print(countries_upper )
 
 # Use map to create a new list by changing each number to its square in the numbers list
@@ -29,3 +29,19 @@ def square(num):
 
 number_square = map(square, numbers)
 print(list(number_square))
+
+# Use map to change each name to uppercase in the names list
+names_upper = map(uppercase_word, names)
+print(list(names_upper))
+
+# Use filter to filter out countries containing 'land'
+def is_land(country):
+    if 'land' in country:
+        return True
+    else:
+        return False
+
+countries_filter = filter(is_land, countries)
+print(list(countries_filter))
+
+# Use filter to filter out countries having exactly six characters.
