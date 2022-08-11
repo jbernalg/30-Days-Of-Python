@@ -53,3 +53,23 @@ def long_names(country):
 
 countries_filter = filter(long_names, countries)
 print(list(countries_filter))
+
+# Use filter to filter out countries containing six letters and more in the country list.
+def long_name2(country):
+    if len(country) >= 6:
+        return True
+    else:
+        return False
+
+countries_filter2 = filter(long_name2, countries)
+print(list(countries_filter2))
+
+# Use filter to filter out countries starting with an 'E'
+def initial_country(country):
+    if country[0] == 'E':
+        return True
+    else:
+        return False
+
+countries_filter3 = filter(initial_country, countries)
+print(list(countries_filter3))
