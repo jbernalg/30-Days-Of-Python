@@ -12,6 +12,9 @@
 # It can access variables present in the scope of the external function
 # Decorator allows to add new functionality to an existing object without modifying its structure
 
+from itertools import count
+
+
 countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
 names = ['Asabeneh', 'Lidiya', 'Ermias', 'Abraham']
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -73,3 +76,7 @@ def initial_country(country):
 
 countries_filter3 = filter(initial_country, countries)
 print(list(countries_filter3))
+
+# Chain two or more list iterators (eg. arr.map(callback).filter(callback).reduce(callback))
+chain_iterators = map(filter(long_name2, countries), countries)
+print(list(chain_iterators))
