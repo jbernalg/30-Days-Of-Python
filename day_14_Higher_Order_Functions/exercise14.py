@@ -78,5 +78,14 @@ countries_filter3 = filter(initial_country, countries)
 print(list(countries_filter3))
 
 # Chain two or more list iterators (eg. arr.map(callback).filter(callback).reduce(callback))
-chain_iterators = map(filter(long_name2, countries), countries)
-print(list(chain_iterators))
+
+# Declare a function called get_string_lists which takes a list as a parameter and then returns a list containing only string items.
+def get_string_lists(lista):
+    if isinstance(lista, str):
+        return True
+    else:
+        return False
+
+elementos = [1, 'hola', 1.14, 'Adios']
+result = filter(get_string_lists, elementos)
+print(list(result))
