@@ -13,6 +13,7 @@
 # Decorator allows to add new functionality to an existing object without modifying its structure
 
 from itertools import count
+from ntpath import join
 
 
 countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
@@ -89,3 +90,20 @@ def get_string_lists(lista):
 elementos = [1, 'hola', 1.14, 'Adios']
 result = filter(get_string_lists, elementos)
 print(list(result))
+
+# Use reduce to sum all the numbers in the numbers list.
+from functools import reduce
+
+def sum_all_numbers(a, b):
+    return a + b
+
+sum_total = reduce(sum_all_numbers, numbers)
+print(sum_total)
+
+# Use reduce to concatenate all the countries and to produce this sentence: 
+# Estonia, Finland, Sweden, Denmark, Norway, and Iceland are north European countries
+def concatenar(lista):
+    sentence_concatenate = ", ".join(lista)
+    return sentence_concatenate
+
+
