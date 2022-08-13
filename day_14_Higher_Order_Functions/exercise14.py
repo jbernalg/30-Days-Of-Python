@@ -110,7 +110,7 @@ def func_max(a, b):
 print('The Minimum is: ',reduce(func_min, numbers))
 print('The Maximum is: ', reduce(func_max, numbers))
 
-#Checking if all values are true
+# Checking if all values are true
 def both_true(a, b):
     return bool(a and b)
 
@@ -119,4 +119,11 @@ lista2 = [1,1,2,2,3,4]
 
 print(reduce(both_true, lista1))
 print(reduce(both_true, lista2))
+
+# Checking if any value is true
+def any_true(a, b):
+    return bool(a or b)
+
+lista3 = [0,0,1,0,0,0]
+print(reduce(any_true, lista3))
 
