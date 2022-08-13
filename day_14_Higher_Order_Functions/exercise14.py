@@ -100,10 +100,12 @@ def sum_all_numbers(a, b):
 sum_total = reduce(sum_all_numbers, numbers)
 print(sum_total)
 
-# Use reduce to concatenate all the countries and to produce this sentence: 
-# Estonia, Finland, Sweden, Denmark, Norway, and Iceland are north European countries
-def concatenar(lista):
-    sentence_concatenate = ", ".join(lista)
-    return sentence_concatenate
+# Finding the minimum and maximum value of the number list with reduce
+def func_min(a, b):
+    return a if a < b else b
 
+def func_max(a, b):
+    return a if a > b else b
 
+print('The Minimum is: ',reduce(func_min, numbers))
+print('The Maximum is: ', reduce(func_max, numbers))
