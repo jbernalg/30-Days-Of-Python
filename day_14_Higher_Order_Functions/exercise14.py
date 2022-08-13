@@ -127,3 +127,7 @@ def any_true(a, b):
 lista3 = [0,0,1,0,0,0]
 print(reduce(any_true, lista3))
 
+# Multiply the elements of the numbers list 
+product = reduce(lambda x,y: x*y, numbers)
+print(product)
+  
