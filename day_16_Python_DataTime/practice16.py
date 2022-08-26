@@ -20,3 +20,31 @@ timestamp = now.timestamp()  #  timestamp is the number of seconds elapsed from 
 print(day, month, year, hour, minute)
 print(timestamp)
 print(f'{day}/{month}/{year}, {hour}:{minute}')
+
+#-----------Formating Date Output using strftime------------
+new_year = datetime(2022, 1, 1) #add datetime
+print(new_year)
+
+day = new_year.day
+month = new_year.month
+year = new_year.year
+hour = new_year.hour
+minute = new_year.minute
+second = new_year.second
+
+print(day, month, year, hour, minute)
+
+#current date and time
+now = datetime.now()
+
+# H:M:S format
+t = now.strftime('%H:%M:%S')
+print('time: ', t)
+
+# mm/dd/YY H:M:S format
+time_one = now.strftime('%m/%d/%Y, %H:%M:%S')
+print('time one: ', time_one)
+
+# dd/mm/YY H:M:S format
+time_two = now.strftime('%d/%m/%Y, %H:%M:%S')
+print('time two: ', time_two)
