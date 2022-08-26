@@ -48,3 +48,10 @@ print('time one: ', time_one)
 # dd/mm/YY H:M:S format
 time_two = now.strftime('%d/%m/%Y, %H:%M:%S')
 print('time two: ', time_two)
+
+#----------------String to time using strptime-----------------
+date_string = '26 August, 2022'
+print('date string =' ,date_string)
+
+date_object = datetime.strptime(date_string, '%d %B, %Y')
+print('date object = ', date_object)
