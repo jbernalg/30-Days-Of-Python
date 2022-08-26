@@ -92,6 +92,15 @@ print(d)
 #-------------Difference between two points in time using-----------------
 today = date(year=2022, month=8, day=26)
 new_year = date(year=2023, month=1, day=1)
+
 time_left_for_new_year = new_year - today
 print(time_left_for_new_year)
+
+#------------Difference between two points in time using timedelta
+from datetime import timedelta
+
+t1 = timedelta(weeks=12, days=10, hours=4, seconds=20)
+t2 = timedelta(days=7, minutes=5, seconds=30)
+t3 = t1 - t2
+print(t3)
 
