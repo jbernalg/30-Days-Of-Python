@@ -21,3 +21,29 @@ number = [1,2,3,4,5]
 # ModuleNotFoundError: No module named 'maths'
 # I added an extra s to math deliberately and ModuleNotFoundError was raised.
 
+#-------------AttributeError---------------
+import math
+# print(math.PI)
+# AttributeError: module 'math' has no attribute 'PI'
+#  It raised an attribute error, it means, that the function does not exist in the module. Lets fix it by changing from PI to pi.
+
+#-------------KeyError--------------
+users = {'name':'Asab', 'age':250, 'country':'Finland'}
+print(users['name'])
+# print(users['county'])
+# KeyError: 'county'
+# there was a typo in the key used to get the dictionary value.
+
+#------------TypeError-------------
+# print(4 + '3')
+# TypeError: unsupported operand type(s) for +: 'int' and 'str'
+# a TypeError is raised because we cannot add a number to a string
+
+#------------ValueError------------
+# print(int('a12'))
+# ValueError: invalid literal for int() with base 10: 'a12'
+# In this case we cannot change the given string to a number, because of the 'a' letter in it.
+
+#------------ZeroDivisionError-------------
+# print(1/0)
+# ZeroDivisionError: division by zero
