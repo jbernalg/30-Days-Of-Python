@@ -70,3 +70,22 @@ print('current year: ', today.year)
 print('current month: ', today.month)
 print('current day : ', today.day)
 
+#--------------Time objects to represent time-------------
+from datetime import time
+
+#time (H=0, M=0, S=0)
+a = time()
+print(a)
+
+#time(hour, minute, second)
+b = time(10, 30, 50)
+print(b)
+
+#time(hour, minute, second)
+c = time(hour=12, minute=23, second= 48)
+print(c)
+
+#time(hour, minute, second, microsecond)
+d = time(8, 10, 22, 23142)
+print(d)
+
