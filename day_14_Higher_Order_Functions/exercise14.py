@@ -78,8 +78,6 @@ def initial_country(country):
 countries_filter3 = filter(initial_country, countries)
 print(list(countries_filter3))
 
-# Chain two or more list iterators (eg. arr.map(callback).filter(callback).reduce(callback))
-
 # Declare a function called get_string_lists which takes a list as a parameter and then returns a list containing only string items.
 def get_string_lists(lista):
     if isinstance(lista, str):
@@ -130,4 +128,5 @@ print(reduce(any_true, lista3))
 # Multiply the elements of the numbers list 
 product = reduce(lambda x,y: x*y, numbers)
 print(product)
+
   
