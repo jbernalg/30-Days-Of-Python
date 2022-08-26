@@ -55,3 +55,18 @@ print('date string =' ,date_string)
 
 date_object = datetime.strptime(date_string, '%d %B, %Y')
 print('date object = ', date_object)
+
+#---------------Using date from datetime----------------
+from datetime import date
+d = date(2022, 1, 1) #show date
+print(d)
+
+#current day
+print('current date: ', d.today())
+
+#date object of today's date
+today = date.today()
+print('current year: ', today.year)
+print('current month: ', today.month)
+print('current day : ', today.day)
+
