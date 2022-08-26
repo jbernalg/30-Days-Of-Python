@@ -89,3 +89,9 @@ print(c)
 d = time(8, 10, 22, 23142)
 print(d)
 
+#-------------Difference between two points in time using-----------------
+today = date(year=2022, month=8, day=26)
+new_year = date(year=2023, month=1, day=1)
+time_left_for_new_year = new_year - today
+print(time_left_for_new_year)
+
