@@ -16,3 +16,7 @@ timestamp = now.timestamp()
 
 print(day, month, year, hour, minute, second)
 print('timestamp', timestamp)
+
+# Format the current date using this format: "%m/%d/%Y, %H:%M:%S")
+t = now.strftime('%m/%d/%Y, %H:%M:%S')
+print(t)
