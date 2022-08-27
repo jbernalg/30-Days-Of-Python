@@ -35,3 +35,10 @@ new_year = date(year=2023, month=1, day=1)
 
 time_left_for_new_year = new_year - today
 print(time_left_for_new_year)
+
+# Calculate the time difference between 1 January 1970 and now.
+other_day = date(year=1970, month=1, day=1)
+
+difference_between_two_year = today - other_day
+print(difference_between_two_year)
+
