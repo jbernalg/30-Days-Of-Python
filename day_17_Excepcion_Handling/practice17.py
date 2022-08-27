@@ -59,3 +59,12 @@ else:
     print('I usually run with the try block')
 finally:
     print('I always run')
+
+# it shorted the above code
+try:
+    name = input('Enter your name: ')
+    year_born = input('year you were born: ')
+    age = 2022 - int(year_born)
+    print(f'You are {name}. And you age is {age}')
+except Exception as e:
+    print(e)
