@@ -26,3 +26,12 @@ date_string = '5 December, 2019'
 
 date_object = datetime.strptime(date_string, '%d %B, %Y')
 print('date: ', date_object)
+
+# Calculate the time difference between now and new year.
+from datetime import date
+
+today = date(year=2022, month=8, day=27)
+new_year = date(year=2023, month=1, day=1)
+
+time_left_for_new_year = new_year - today
+print(time_left_for_new_year)
