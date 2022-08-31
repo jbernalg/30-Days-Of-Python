@@ -127,3 +127,13 @@ def packing_person_info(**kwargs):
 print(packing_person_info(name="Javier",
       country="Finland", city="PAris", age=25))
 
+#-----------------Spreading in Python--------------------
+lst_one = [1,2,3]
+lst_two = [4,5,6,7]
+lst = [0, *lst_one, *lst_two]
+print(lst)
+
+country_lst_one = ['Finland', 'Sweden', 'Norway']
+country_lst_two = ['Denmark', 'Iceland']
+nordic_countries = [*country_lst_one, *country_lst_two]
+print(nordic_countries)
