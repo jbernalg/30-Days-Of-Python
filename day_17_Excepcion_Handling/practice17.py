@@ -117,3 +117,13 @@ def sum_all(*arg):
 
 print(sum_all(1,2,3))
 print(sum_all(5,2,8))
+
+# Packing dictionaries
+def packing_person_info(**kwargs):
+    for key in kwargs:
+        print("{key} = {kwargs[key]}")
+    return kwargs
+
+print(packing_person_info(name="Javier",
+      country="Finland", city="PAris", age=25))
+
