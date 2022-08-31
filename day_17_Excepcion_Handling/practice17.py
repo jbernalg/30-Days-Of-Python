@@ -104,3 +104,16 @@ def unpacking_person_info(name, country, city, age):
 dct = {'name':'Jose', 'country':'Colombia', 'city':'Medellin', 'age':30}
 print(unpacking_person_info(**dct))
 
+#---------------Packing--------------
+# Sometimes we never know how many  arguments need to be passed to a python function.
+# We can use the packing  method  to allow our function to take unlimited number or arbitrary number of arguments.
+
+# Packing list
+def sum_all(*arg):
+    s = 0
+    for i in arg:
+        s += i
+    return s
+
+print(sum_all(1,2,3))
+print(sum_all(5,2,8))
