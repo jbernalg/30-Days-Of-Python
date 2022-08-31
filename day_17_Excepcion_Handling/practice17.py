@@ -95,3 +95,12 @@ print(fin, nor, sw, rest)
 numbers = [1,2,3,4,5,6,7]
 one, *middle, last = numbers
 print(middle)
+
+
+# unpacking dictionaries
+def unpacking_person_info(name, country, city, age):
+    return f'{name} lives in {country}, {city}. He is {age} year old.'
+
+dct = {'name':'Jose', 'country':'Colombia', 'city':'Medellin', 'age':30}
+print(unpacking_person_info(**dct))
+
