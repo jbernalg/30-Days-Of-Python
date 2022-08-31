@@ -16,6 +16,10 @@
 #   {Always run this code}
 
 # example 1:
+from pickletools import read_string1
+from platform import java_ver
+
+
 try:
     print(10 + '5')
 except:
@@ -68,3 +72,26 @@ try:
     print(f'You are {name}. And you age is {age}')
 except Exception as e:
     print(e)
+
+#----------------Packing and unpacking arguments in Python-------------------
+# We use two operators:
+# * for tuples
+# ** for dictionaries
+
+#----------------Unpacking------------------
+# unpacking list
+def sum_of_five_numbers(a,b,c,d,e):
+    return a + b + c + d + e
+
+lst = [1,2,3,4,5]
+
+print(sum_of_five_numbers(*lst))
+
+# a list o tuple can also be unpacked like this:
+countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
+fin, sw, nor, *rest = countries
+print(fin, nor, sw, rest)
+
+numbers = [1,2,3,4,5,6,7]
+one, *middle, last = numbers
+print(middle)
