@@ -18,3 +18,7 @@ print(match)
 span = match.span()
 print(span) # get the starting and ending position of the match as tuple
 
+start, end = span  # find the start and stop position from the span
+print(start, end) 
+substring = txt[start:end]
+print(substring)
