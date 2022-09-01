@@ -23,11 +23,12 @@ print(start, end)
 substring = txt[start:end]
 print(substring)
 
-# The match function returns an object only if the text starts  with the pattern
+# The match function returns an object only if the text starts with the pattern
 match = re.match('I like to teach', txt, re.I)
 print(match)
 
 # -------------------Search----------------------
+# Returns a match object if there is one anywhere in the string, including multiline strings 
 txt = '''Python is the most beautifull language that a human being has ever created
 I recommend python for a first programming language'''
 
@@ -42,3 +43,9 @@ print(start, end)
 
 substring = txt[start:end]
 print(substring)
+
+#-------------------findball------------------
+# Return all the matches as a list
+matches = re.findall('language', txt, re.I)
+print(matches)
+
