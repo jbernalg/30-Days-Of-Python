@@ -44,8 +44,15 @@ print(start, end)
 substring = txt[start:end]
 print(substring)
 
-#-------------------findball------------------
+#-------------------findall------------------
 # Return all the matches as a list
 matches = re.findall('language', txt, re.I)
 print(matches)
 
+matches = re.findall('Python', txt, re.I)
+print(matches)
+# since we are using re.I both lowercase and uppercase letters are included
+# If we do not have the re.I flag , then will have to write our pattern differently
+
+matches = re.findall('Python|python', txt)
+print(matches) 
