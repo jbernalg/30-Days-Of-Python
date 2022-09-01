@@ -9,7 +9,7 @@ import re
 #--------------------Methods in re Module-------------------
 # to find a patterns we use different set of re character sets that allow to search for a macth in a string
 
-# Match
+# -------------------Match--------------------
 # seaches only in the beginning of the first line of the string and return matched objects if found
 txt = 'I love to teach python'
 match = re.match('I love to teach', txt, re.I)
@@ -20,5 +20,25 @@ print(span) # get the starting and ending position of the match as tuple
 
 start, end = span  # find the start and stop position from the span
 print(start, end) 
+substring = txt[start:end]
+print(substring)
+
+# The match function returns an object only if the text starts  with the pattern
+match = re.match('I like to teach', txt, re.I)
+print(match)
+
+# -------------------Search----------------------
+txt = '''Python is the most beautifull language that a human being has ever created
+I recommend python for a first programming language'''
+
+match = re.search('first', txt, re.I)
+print(match)
+
+span = match.span()
+print(span)
+
+start, end = span
+print(start, end)
+
 substring = txt[start:end]
 print(substring)
