@@ -137,3 +137,26 @@ country_lst_one = ['Finland', 'Sweden', 'Norway']
 country_lst_two = ['Denmark', 'Iceland']
 nordic_countries = [*country_lst_one, *country_lst_two]
 print(nordic_countries)
+
+
+#-----------------Enumerate--------------------
+# we use enumerate function to get  the index  of each  item  in the list
+for index, item in enumerate([20, 30, 40]):
+    print(index, item)
+
+for index, i in enumerate(nordic_countries):
+    print('hi')
+    if i == 'Finland':
+        print(f'The country {i} has been found at index {index}')
+
+# ----------------Zip---------------------
+# Sometime we would like to combine lists when looping through them.
+fruits = ['banana', 'orange', 'mango', 'lemon', 'lime']                    
+vegetables = ['Tomato', 'Potato', 'Cabbage','Onion', 'Carrot']
+
+fruits_and_veges = []
+
+for f, v in zip(fruits, vegetables):
+    fruits_and_veges.append({'fruit':f, 'veg':v})
+
+print(fruits_and_veges)
