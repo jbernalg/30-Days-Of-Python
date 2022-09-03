@@ -76,3 +76,13 @@ print(matches)
 txt = '''I am teacher and I love teaching.
 There is nothing as rewarding as educating and empowering people'''
 print(re.split('\n', txt))
+
+#----------------Writing RegEx patterns------------------
+regex_pattern = r'apple'
+txt = 'Apple and bananas are fruits. An old cliche says an apple'
+matches = re.findall(regex_pattern, txt, re.I)
+print(matches)
+
+regex_pattern = r'[Aa]pple'
+matches = re.findall(regex_pattern, txt)
+print(matches)
