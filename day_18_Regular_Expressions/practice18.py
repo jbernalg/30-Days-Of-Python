@@ -71,3 +71,8 @@ D%o%es thi%s m%ot%iv%a%te %y%o%u to b%e a t%e%a%cher?'''
 
 matches = re.sub('%', '', txt)
 print(matches)
+
+#------------Splitting text using regEx split----------------
+txt = '''I am teacher and I love teaching.
+There is nothing as rewarding as educating and empowering people'''
+print(re.split('\n', txt))
