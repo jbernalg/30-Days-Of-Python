@@ -86,3 +86,19 @@ print(matches)
 regex_pattern = r'[Aa]pple'
 matches = re.findall(regex_pattern, txt)
 print(matches)
+
+#--------------Square bracket---------------
+#use to include lower and upper case
+regex_pattern = r'[Aa]pple|[Bb]anana'
+matches = re.findall(regex_pattern, txt)
+print(matches)
+
+#-------------Escape character (\)-------------------
+regex_pattern = r'\d' #d is a special character which mean digits
+txt = 'This regular expression example was made on December 6,  2019 and revised on July 8, 2021'
+matches = re.findall(regex_pattern, txt)
+print(matches)
+
+regex_pattern = r'\d+'  # + mean one or more times
+matches = re.findall(regex_pattern, txt)
+print(matches)
