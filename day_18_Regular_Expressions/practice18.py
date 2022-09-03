@@ -102,3 +102,13 @@ print(matches)
 regex_pattern = r'\d+'  # + mean one or more times
 matches = re.findall(regex_pattern, txt)
 print(matches)
+
+#------------Period (.)-------------
+regex_pattern = r'[a].' # this square brackets means a and . means any character except new line
+txt = 'Apple and banana are fruits'
+matches = re.findall(regex_pattern, txt)
+print(matches)
+
+regex_pattern = r'[a].+' # . any character, + any character one or more times
+matches = re.findall(regex_pattern, txt)
+print(matches)
