@@ -134,3 +134,14 @@ print(matches)
 regex_pattern = r'\d{1,4}'
 matches = re.findall(regex_pattern, txt)
 print(matches)
+
+#---------------cart ^----------------
+# start with
+regex_pattern = r'^This' # ^ means starts with
+matches = re.findall(regex_pattern, txt)
+print(matches) 
+
+#--------------Negation----------------
+regex_pattern = r'[^A-Za-z ]+'  # ^ in set character means negation, not A to Z, no space
+matches = re.findall(regex_pattern, txt)
+print(matches)
