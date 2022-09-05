@@ -124,3 +124,13 @@ Some people write it as email others may write it as Email or E-mail.'''
 regex_pattern = r'[Ee]-?mail' # ? means here that '-' is optional
 matches = re.findall(regex_pattern, txt)
 print(matches)
+
+#---------------Quantifier in regEx-----------------
+txt = 'This regular expression example was made on December 6,  2019 and revised on July 8, 2021'
+regex_pattern = r'\d{4}' # digit exactly four times
+matches = re.findall(regex_pattern, txt)
+print(matches)
+
+regex_pattern = r'\d{1,4}'
+matches = re.findall(regex_pattern, txt)
+print(matches)
