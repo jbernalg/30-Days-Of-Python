@@ -142,3 +142,16 @@ def text_match(text):
 
 print(text_match('The quick brown the lazy'))
 print(text_match('Python exercise'))
+
+# Write a Python program that matches a word containing 'z', not at the start or end of the word.
+def text_match(text):
+   patterns = '\Bz\B'
+   if re.search(patterns, text):
+       return 'Found a match!'
+   else:
+       return 'Not matched!'
+
+print(text_match('The quick brown the lazy'))
+print(text_match('The zafari'))
+print(text_match('The ratioz'))
+
