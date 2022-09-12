@@ -177,3 +177,7 @@ def match_num(string):
 print(match_num('5-231 2343'))
 print(match_num('18-232'))
 
+# Write a Python program to remove leading zeros from an IP address
+ip = "216.08.04.106"
+string = re.sub('\.[0]*','.', ip)
+print(string)
