@@ -14,7 +14,16 @@
 
 #----------------Opening files for reading ----------------------
 # the deafult mode of open is reading
-# To open file I have created and saved a file named reading_file.txt in the file directory
+# To open file I have created and saved a file named reading_file.txt in the current directory
 f = open('./reading_file.txt')
 print(f) 
- 
+
+#----------------Reading Methods--------------------
+# read(): read the whole text as string
+# If we want to limit the number of character we want to read, we can limit it by passing int value
+# to the read(number) method.
+txt = f.read()
+print(type(txt))
+print(txt)
+f.close()
+
