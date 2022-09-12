@@ -165,3 +165,15 @@ def text_match(text):
 
 print(text_match('The quick brown the lazy'))
 print(text_match('Python_exercise_12'))
+
+# Write a Python program where a string will start with a specific number
+def match_num(string):
+   text = re.compile(r"^5")
+   if text.match(string):
+       return 'True'
+   else:
+       return 'False'
+
+print(match_num('5-231 2343'))
+print(match_num('18-232'))
+
