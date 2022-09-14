@@ -27,3 +27,14 @@ print(type(txt))
 print(txt)
 f.close()
 
+# let us print the first 10 characters of the text file.
+f = open('./reading_file.txt')
+txt = f.read(10)
+print(txt)
+f.close()
+
+# readlines(): read all text line by line and returns a list of lines
+f = open('./reading_file.txt')
+lines = f.readlines()
+print(lines)
+f.close()
