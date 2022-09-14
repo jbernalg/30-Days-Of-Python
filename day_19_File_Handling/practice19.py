@@ -50,4 +50,12 @@ with open('./reading_file.txt') as f:
     lines = f.read().splitlines()
     print(lines)
 
- 
+# ------------------Opening Files for writing and updating--------------------
+# To write to an existing file, we must add a mode as parameters to the open() function:
+# a : will append to the end of the file, if the file does not it creates a new file
+# w : will overwrite any existing content, if the file does not exist it creates
+
+# append some text to the file 
+with open('./reading_file.txt', 'a') as f:
+    f.write(' Texto agregado externamente')
+
