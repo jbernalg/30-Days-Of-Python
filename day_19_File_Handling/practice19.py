@@ -44,3 +44,10 @@ f = open('./reading_file.txt')
 lines = f.read().splitlines()
 print(lines)
 f.close()
+
+# There is a new way of opening files using with - closes the files by itself
+with open('./reading_file.txt') as f:
+    lines = f.read().splitlines()
+    print(lines)
+
+ 
