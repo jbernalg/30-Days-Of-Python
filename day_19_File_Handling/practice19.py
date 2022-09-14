@@ -59,3 +59,7 @@ with open('./reading_file.txt') as f:
 with open('./reading_file.txt', 'a') as f:
     f.write(' Texto agregado externamente')
 
+# creates a new file, if the file does not exist:
+with open('./file_example.txt', 'w') as f:
+    f.write(' Nueva oracion para el nuevo archivo')
+
