@@ -63,3 +63,13 @@ with open('./reading_file.txt', 'a') as f:
 with open('./file_example.txt', 'w') as f:
     f.write(' Nueva oracion para el nuevo archivo')
 
+# --------------Deleting Files---------------
+# if we want to remove a file we use os module.
+import os
+os.remove('./file_example.txt')
+
+# If the file does not exist, the remove method will raise an error, so it is good to use a condition like this:
+if os.path.exists('./example.txt'):
+    os.remove('./exmple.txt')
+else:
+    print('The file does not exist')
