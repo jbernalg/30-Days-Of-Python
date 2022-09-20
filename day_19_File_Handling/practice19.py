@@ -123,8 +123,23 @@ person = {
     "city": "Helsinki",
     "skills": ["JavaScrip", "React", "Python"]
 }
-# let's convert it to  json
+# let's convert it to json
 person_json = json.dumps(person, indent=4) # indent could be 2, 4, 8. It beautifies the json
 print(type(person_json))
 print(person_json)
 
+#------------------Saving as JSON File----------------------
+# Let us save it as a json file using the following steps. For writing a json file, we use the json.dump() method,
+# it can take dictionary, output file, ensure_ascii and indent.
+
+#python dictionary
+person = {
+    'name' : 'Jose',
+    'country' : 'Colombia',
+    'city' : 'Medellin',
+    'skills' : ['Python', 'SQL', 'Excel']
+}
+
+with open('./json_example.json', 'w', encoding='utf-8') as f:
+    json.dump(person, f, ensure_ascii=False, indent=4)  #indent make the json file easy to read
+    
