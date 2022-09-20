@@ -142,4 +142,22 @@ person = {
 
 with open('./json_example.json', 'w', encoding='utf-8') as f:
     json.dump(person, f, ensure_ascii=False, indent=4)  #indent make the json file easy to read
-    
+
+#----------------File with csv Extension-----------------------
+# CSV stands for comma separated values. CSV is a simple file format used to store tabular data, 
+# such as a spreadsheet or database. CSV is a very common data format in data science.
+
+import csv
+
+with open('./csv_example.csv') as f:
+    csv_reader = csv.reader(f, delimiter=',')
+    line_count = 0
+    for row in csv_reader:
+        if line_count == 0:
+            print(f'Columns name are: {", ".join(row)}')
+            line_count += 1
+        else:
+            print(f'\t{row[0]} is a teacher. He lives in {row[1]}, {row[2]}')
+            line_count += 1
+    print(f'Number of line: {line_count}')
+
