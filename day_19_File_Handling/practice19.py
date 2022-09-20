@@ -98,3 +98,33 @@ person_json = '''{
 }'''
  
 # Changing JSON to dictionary
+# To change a JSON to a dictionary, first we import the json module and then we use loads method.
+import json
+
+person_json = '''{
+    "name": "Asabeneh",
+    "country": "Finland",
+    "city": "Helsinki",
+    "skills": ["JavaScrip", "React", "Python"]
+}'''
+# let's change JSON to dictionary
+person_dct = json.loads(person_json)
+print(type(person_dct))
+print(person_dct)
+print(person_dct['name'])
+
+# Changing dictionary to JSON
+# To change a dictionary to a JSON we use dumps method from the json module.
+import json
+# python dictionary
+person = {
+    "name": "Asabeneh",
+    "country": "Finland",
+    "city": "Helsinki",
+    "skills": ["JavaScrip", "React", "Python"]
+}
+# let's convert it to  json
+person_json = json.dumps(person, indent=4) # indent could be 2, 4, 8. It beautifies the json
+print(type(person_json))
+print(person_json)
+
