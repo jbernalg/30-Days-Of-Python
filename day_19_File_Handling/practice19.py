@@ -161,3 +161,11 @@ with open('./csv_example.csv') as f:
             line_count += 1
     print(f'Number of line: {line_count}')
 
+#-----------------File with xlsx extension-------------------
+# o read excel files we need to install xlrd package.
+# We will cover this after we cover package installing using pip.
+
+# import xlrd
+# excel_book = xlrd.open_workbook('example.xls')
+# print(excel_book.nsheets)
+
