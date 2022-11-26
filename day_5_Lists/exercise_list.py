@@ -53,3 +53,12 @@ def match_word(words):
 
 print(match_word(['abc', 'xyz', 'aba', '1221']))
 
+# Escriba un programa en Python para obtener una lista, ordenada en orden creciente 
+# por el último elemento de cada tupla de una lista dada de tuplas no vacías
+def ultimo(n) :
+    return n[-1]
+
+def sort_list_tuples(lista):
+    return sorted(lista, key=ultimo) #key:Una función a ejecutar para decidir el orden.
+
+print(sort_list_tuples([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]))
