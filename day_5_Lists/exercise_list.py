@@ -70,3 +70,12 @@ def delete_dupl(lista):
     return lista
 
 print(delete_dupl([1,2,2,4,5,3,1]))
+
+# Escriba un programa en Python para comprobar si una lista está vacía o no.
+def empty_list(lista):
+    if len(lista) == 0:
+        return True
+    else:
+        return False
+
+print(empty_list([1,2,3]))
