@@ -62,3 +62,11 @@ def sort_list_tuples(lista):
     return sorted(lista, key=ultimo) #key:Una función a ejecutar para decidir el orden.
 
 print(sort_list_tuples([(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]))
+
+# Escriba un programa de Python para eliminar duplicados de una lista
+def delete_dupl(lista):
+    lista1 = set(lista)
+    lista = list(lista1)
+    return lista
+
+print(delete_dupl([1,2,2,4,5,3,1]))
