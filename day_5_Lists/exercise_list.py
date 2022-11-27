@@ -86,3 +86,13 @@ def copy_list(lista):
     return lista1
 
 print(copy_list([1,2,3,4]))
+
+# 10. Escriba un programa de Python para encontrar la lista
+# de palabras que son más largas que n de una oracion dada
+def word_long(oracion, n):
+    txt = oracion.split(' ')
+    word_list = [word for word in txt if len(word) > n]
+    return word_list
+
+oracion = 'Adios mundo cruel sol de oro y miel'
+print(word_long(oracion, 3))
