@@ -133,3 +133,9 @@ def delete_pair(lista):
     return numbers_odd
 
 print(delete_pair([1,3,4,5,7,8,10,11]))
+
+# 15. Escriba un programa de Python para mezclar e imprimir una lista específica.
+from random import shuffle
+color = ['naranja', 'rosado', 'azul', 'morado', 'verde']
+shuffle(color)
+print(color)
