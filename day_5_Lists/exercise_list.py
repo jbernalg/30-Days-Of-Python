@@ -125,3 +125,11 @@ print(remove_index([1,3,4,5,7,9,10,12]))
 # 13. Escriba un programa Python para generar una matriz 3D de 3*4*6 cuyos elementos sean *
 array = [[['*' for col in range(6)] for col in range(4)] for row in range(3)]
 print(array)
+
+# 14. Escriba un programa Python para imprimir los números de una lista específica 
+# después de eliminar los números pares de ella
+def delete_pair(lista):
+    numbers_odd = [odd for odd in lista if odd % 2 != 0]
+    return numbers_odd
+
+print(delete_pair([1,3,4,5,7,8,10,11]))
