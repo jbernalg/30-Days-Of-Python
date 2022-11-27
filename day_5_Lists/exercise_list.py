@@ -96,3 +96,19 @@ def word_long(oracion, n):
 
 oracion = 'Adios mundo cruel sol de oro y miel'
 print(word_long(oracion, 3))
+
+# Escriba una función de Python que tome dos listas y devuelva True 
+# si tienen al menos un miembro común.
+def compare_list(lista1, lista2):
+
+    for i in lista1:
+        if i in lista2:
+            return True
+            break
+        else:
+            continue
+    return False
+
+numbers = [1,3,5,7,9]
+numbers2 = [2,4,5,8,10]
+print(compare_list(numbers, numbers2))
