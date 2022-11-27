@@ -139,3 +139,14 @@ from random import shuffle
 color = ['naranja', 'rosado', 'azul', 'morado', 'verde']
 shuffle(color)
 print(color)
+
+# 16. Escriba un programa Python para generar e imprimir una lista de los primeros y últimos 
+# 5 elementos donde los valores son cuadrados de números entre 1 y 30 (ambos incluidos)
+def print_values():
+    lista = []
+    for i in range(1,31):
+        lista.append(i**2)
+    print(lista[:5])
+    print(lista[-5:])
+
+print_values()
