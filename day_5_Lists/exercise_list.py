@@ -112,3 +112,12 @@ def compare_list(lista1, lista2):
 numbers = [1,3,5,7,9]
 numbers2 = [2,4,5,8,10]
 print(compare_list(numbers, numbers2))
+
+# Escriba un programa de Python para imprimir una lista específica después de 
+# eliminar los elementos 0, 4 y 5
+def remove_index(lista):
+    del lista[0]
+    del lista[3:5]
+    return lista
+
+print(remove_index([1,3,4,5,7,9,10,12]))
