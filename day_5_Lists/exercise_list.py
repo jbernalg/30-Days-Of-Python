@@ -121,3 +121,7 @@ def remove_index(lista):
     return lista
 
 print(remove_index([1,3,4,5,7,9,10,12]))
+
+# 13. Escriba un programa Python para generar una matriz 3D de 3*4*6 cuyos elementos sean *
+array = [[['*' for col in range(6)] for col in range(4)] for row in range(3)]
+print(array)
