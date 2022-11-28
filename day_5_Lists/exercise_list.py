@@ -181,3 +181,19 @@ def difference_lists(lista1, lista2):
     return difference
 
 print(difference_lists(lista1, lista2))
+
+# 20. Escriba un programa de Python para acceder al índice de una lista.
+def index_value(lista, value):
+    if value in lista:
+        return lista.index(value)
+    else:
+        return 'El elemento no esta en la lista'
+
+print(index_value([1,2,3,4,5,6], 10))
+
+# Otra alternativa
+def index_values(lista):
+    for num_index, num_val in enumerate(lista):
+        print(num_index, num_val)
+
+index_values([1,4,12,78,32,9])
