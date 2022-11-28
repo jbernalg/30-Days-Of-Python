@@ -150,3 +150,13 @@ def print_values():
     print(lista[-5:])
 
 print_values()
+
+# 17. Escriba un programa en Python para generar e imprimir una lista a excepción de los primeros
+#  5 elementos, donde los valores son cuadrados de números entre 1 y 30 (ambos incluidos).
+def print_values2():
+    lista = []
+    for i in range(1,31):
+        lista.append(i**2)
+    print(lista[5:])
+    
+print_values2()
