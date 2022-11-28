@@ -160,3 +160,12 @@ def print_values2():
     print(lista[5:])
     
 print_values2()
+
+# 18. Escriba un programa en Python para generar todas las permutaciones de una lista en Python.
+import itertools
+
+def permut_list(lista):
+    return list(itertools.permutations(lista))
+
+number = [1,2,3]
+print(permut_list(number))
