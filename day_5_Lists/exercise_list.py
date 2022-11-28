@@ -169,3 +169,15 @@ def permut_list(lista):
 
 number = [1,2,3]
 print(permut_list(number))
+
+# 19. Escriba un programa Python para obtener la diferencia entre dos listas.
+lista1 = [4,8,12,3,6]
+lista2 = [5,3,7,9,14]
+
+def difference_lists(lista1, lista2):
+    lista1_menos_lista2 = list(set(lista1) - set(lista2))
+    lista2_menos_lista1 = list(set(lista2) - set(lista1))
+    difference = lista1_menos_lista2 + lista2_menos_lista1
+    return difference
+
+print(difference_lists(lista1, lista2))
