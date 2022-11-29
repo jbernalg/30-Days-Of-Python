@@ -222,3 +222,11 @@ def merged_list(lista):
 
 matrix = [[1,2,3], [5], [32, 91], [14, 20]]
 print(merged_list(matrix))
+
+# 24. Escriba un programa Python para agregar una lista a la segunda lista.
+def combine_lists(lista1, lista2):
+    return lista1 + lista2
+
+numbers = [2,4,6]
+numbers_odd = [7,9,1]
+print(combine_lists(numbers, numbers_odd))
