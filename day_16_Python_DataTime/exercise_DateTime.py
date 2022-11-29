@@ -42,3 +42,8 @@ def año_bisiesto(año):
 
 result = año_bisiesto(1995)
 print(result)
+
+# 3. Escriba un programa de Python para convertir una cadena en fecha y hora
+from datetime import datetime
+date_convert = datetime.strptime('Aug 2 2016 8:48 pm', '%b %d %Y %I:%M %p')
+print(date_convert)
