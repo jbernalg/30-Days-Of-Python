@@ -41,4 +41,3 @@ other_day = date(year=1970, month=1, day=1)
 
 difference_between_two_year = today - other_day
 print(difference_between_two_year)
-
