@@ -197,3 +197,10 @@ def index_values(lista):
         print(num_index, num_val)
 
 index_values([1,4,12,78,32,9])
+
+# 21. Escriba un programa en Python para convertir una lista de caracteres en una cadena
+def list_to_string(lista):
+    text = ' '.join(lista)
+    return text
+
+print(list_to_string(['hola','nuevo','mundo']))
