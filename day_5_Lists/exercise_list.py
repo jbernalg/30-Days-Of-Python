@@ -204,3 +204,21 @@ def list_to_string(lista):
     return text
 
 print(list_to_string(['hola','nuevo','mundo']))
+
+# 22. Escriba un programa Python para encontrar el índice de un elemento en una lista específica.
+def index_value(lista, value):
+    if value in lista:
+        return lista.index(value)
+    else:
+        return 'El elemento no esta en la lista'
+
+print(index_value([1,2,3,4,5,6], 1))
+
+# 23. Escriba un programa Python para aplanar una lista poco profunda
+import itertools
+
+def merged_list(lista):
+    return list(itertools.chain(*lista))
+
+matrix = [[1,2,3], [5], [32, 91], [14, 20]]
+print(merged_list(matrix))
