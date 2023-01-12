@@ -21,4 +21,11 @@ def fibonacci(num):
         band += 1
 
 
+def fibonacci2(num):
+    a, b = 0, 1
+    for i in range(1,num):
+        print(a)
+        a, b = b, a+b
+
 print(fibonacci(50))
+print(fibonacci2(50))
