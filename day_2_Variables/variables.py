@@ -3,7 +3,10 @@
 from ast import keyword
 from cmath import pi
 
-
+'''
+* Se escriben todas en minuscula (snake case)
+* Por lo general son cortas
+'''
 name = 'Jeinfferson'
 last_name = 'Bernal'
 name_complet = 'Jose Gimenez'
