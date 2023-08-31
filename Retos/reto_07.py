@@ -19,3 +19,17 @@ def invert_string(string_phrase):
     return word_invert
 
 print(invert_string('hola mundo'))
+
+
+#------------ Forma eficiente de resolverlo ---------------------
+def reverse_string(string):
+    
+    reversed_string = ''
+    str_len = len(string)-1
+
+    for i in range(str_len, -1, -1):
+        reversed_string += string[i]
+
+    return reversed_string
+
+print(reverse_string('hola mundo')) 
