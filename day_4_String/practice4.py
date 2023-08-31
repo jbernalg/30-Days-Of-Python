@@ -1,16 +1,18 @@
 #------------------Escape Sequences in String-------------------------
-#new line
-print('I am Happy.\nAnd you?')
+#new line \n
+text = 'I am Happy.\nAnd you?'
 
-#Tab means
-print('Days\tTopic\tExercises')
-print('Day 1\t3\t5')
+#Tab means \t
+text2 = 'Days\tTopic\tExercises'
+text3 = 'Day 1\t3\t5'
 
-#Back Slash
-print('This is a backslash symbol (\\)')
+#Back Slash. Colocar \ en una cadena
+text4 = 'This is a backslash symbol (\\)'
 
-#Single quote
-print('En cada lenguaje de rogramacion se comienza con  \"Hello Word\"')
+#Single quote. Colocar "" en una cadena de texto
+text5 = 'En cada lenguaje de rogramacion se comienza con  \"Hello Word\"'
+
+print(text5)
 
 #-----------------------String formatting---------------------------------
 #old style string formatting
@@ -18,99 +20,106 @@ print('En cada lenguaje de rogramacion se comienza con  \"Hello Word\"')
 first_name ='Jose'
 last_name = 'Bernal'
 language = 'Python'
-formated_string = 'I am %s %s. I teach %s' %(first_name, last_name, language)
-print(formated_string)
-#other alternative
-print('I am %s %s. I teach %s' %(first_name, last_name, language))
 
+formated_string = 'I am %s %s. I teach %s' %(first_name, last_name, language)
+
+#other alternative
+#print('I am %s %s. I teach %s' %(first_name, last_name, language))
 
 #Strings and numbers
 radius = 10
 pi = 3.14
 area = pi*radius**2
-formated_string = 'El area del circulo con radio %s es %.3f' %(radius, area)
-print(formated_string)
+formated_string2 = 'El area del circulo con radio %s es %.3f' %(radius, area)
 
 #list Strings
 python_libraries = ['Django', 'Flask', 'Numpy', 'Pandas']
-formated_string = 'Las siguientes librerias son de Python: %s' %(python_libraries)
-print(formated_string)
+formated_string3 = 'Las siguientes librerias son de Python: %s' %(python_libraries)
 
-#New style string formatting
-#only string
-formated_string = 'I am {} {}. I teach {}'.format(first_name,last_name,language)
-print(formated_string)
+#New style string formatting. Only string
+formated_string4 = 'I am {} {}. I teach {}'.format(first_name,last_name,language)
+
 #other alternative
-print('I am {} {}. I teach {}'.format(first_name,last_name,language))
+#print('I am {} {}. I teach {}'.format(first_name,last_name,language))
 
 #only numbers
 a = 4
 b = 3
-print('{} + {} = {}'.format(a, b, a + b))
-print('{} / {} = {:.4f}'.format(a, b, a / b))
+#print('{} + {} = {}'.format(a, b, a + b))
+#print('{} / {} = {:.4f}'.format(a, b, a / b))
 
 #Strings and numbers
-print('El area del circulo con radio {} es {:.2f}'.format(radius, area))
+formated_string5 = 'El area del circulo con radio {} es {:.2f}'.format(radius, area)
 
 #f-Strings
-print(f'{a}/{b} = {a / b:.3f}')
-print(f'{a}**{b} = {a**b:.2f}')
+formated_string6 = f'{a}/{b} = {a / b:.3f}'
+formated_string7 = f'{a}**{b} = {a**b:.2f}'
+
+print(formated_string7)
 
 #-----------------Python string as sequences of characters------------------------------
 #unpacking characters
 language = 'python'
 a,b,c,d,e,f = language
-print(a)
-print(b)
-print(c)
-print(d)
-print(e)
-print(f)
+#print(a)
+#print(b)
+#print(c)
+#print(d)
+#print(e)
+#print(f)
 
 #Accessing characters in string by index
 first_letter = language[0]
-print(first_letter)
 
 last_letter = language[-1]
-print(last_letter)
 
 #Slicing  python string
-print(language[3:6])
-print(language[-3:])
+#print(language[3:6])
+#print(language[-3:])
 
 #Reversing a string
-greeting = 'Hello Word'
-print(greeting[::-1])
+invert_language = language[::-1]
 
 #Skipping Characters While Slicing
-print(greeting[0:10:2])
+character_odd = language[0:6:2]
+
+print(character_odd)
 
 #----------------String Methods-----------------------
-#capitalize(): Converts the first charactersof the string to capital letter
+# Los metodos en python se aplican seguidos del objeto. Ej: objeto.metodo()
+# Las funciones en python se aplican teniendo al objeto como parametro. Ej: funcion(objeto)
+
+#dir(): muestra todos los metodos que se pueden aplicar al objeto pasado
+#print(dir('hello world'))
+
 challenge = 'thirty days of python'
-print(challenge.capitalize())
+
+#capitalize(): Converts the first charactersof the string to capital letter
+primer_letra_mayusc = challenge.capitalize()
 
 #count(): return occurrences of substring in string. count(substring,start,end)
-print(challenge.count('y'))
-print(challenge.count('y',7,14))
-print(challenge.count('th'))
+n_y = challenge.count('y')
+#numero de y en un rango de busqueda
+n_y_range = challenge.count('y',7,14)
+#numero de th
+n_th = challenge.count('th')
 
-#endswith(): Checks if a string ends with a specified ending
-print(challenge.endswith('on'))
-print(challenge.endswith('ty'))
+#endswith(): Checks if a string ends with a specified ending. Return True or False
+end_on = challenge.endswith('on')
+end_ty = challenge.endswith('ty')
 
 #expandtabs(): Replaces tab character with spaces, default tab size is 8.
 challenge = 'thirty\tdays\tof\tpython'
-print(challenge.expandtabs())
-print(challenge.expandtabs(10))
+tab_8 = challenge.expandtabs()
+tab_10 = challenge.expandtabs(10)
 
 #find(): Return the index of the first occurrence of a substring
 challenge = 'thirty days of python'
-print(challenge.find('y'))
-print(challenge.find('da'))
+find_y = challenge.find('y')
+find_da = challenge.find('da')
 
 #rfind(): Return the index of the last occurence oh a substring
-print(challenge.rfind('y'))
+index_y = challenge.rfind('y')
 
 #index(): Returns the lowest index of a substring, additional arguments indicate starting and ending index 
 print(challenge.index('of'))
