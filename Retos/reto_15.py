@@ -11,16 +11,27 @@ num = 153
 
 def is_num_armstrong(num):
     
-    #convertir en string para listar cada numero
+    # Convertir en string para listar cada numero
     list_num = list(str(num))
 
+    # calculamos el exponente de la potencia
     exponente = len(list_num)
 
-suma = 0
-for nume in list_num:
-    suma += int(nume)**exponente
+    # sumamo cada numero elevado a la potencia dada
+    suma = 0
+    for nume in list_num:
+        suma += int(nume)**exponente
 
-if suma == num:
-    print(True)
-else:
-    print(False)
+    # True si es un numero armstrong. Caso contrario False
+    if suma == num:
+        return True
+    else:
+        return False
+    
+print(is_num_armstrong(num))
+print(is_num_armstrong(100))
+print(is_num_armstrong(1634))
+
+'''
+Cuantos numeros de armstrong estan contenidos en el rango de 1 a 1000?
+'''
