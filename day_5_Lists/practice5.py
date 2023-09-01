@@ -186,7 +186,7 @@ print(fruits)
 ['Aguacate', 'Apple', 'mango', 'lemon', 'mango', 'cereza']
 '''
 
-######## Metodo insert: Selecciona por medio del indice la ubicascion del nuevo elemento
+######## Metodo insert: Selecciona por medio del indice la ubicacion del nuevo elemento
 ########
 fruits = ['Aguacate', 'Apple', 'mango', 'lemon', 'mango', 'cereza']
 fruits.insert(2, 'apple')
@@ -202,7 +202,8 @@ print(fruits)
 ['Aguacate', 'Apple', 'apple', 'lime', 'mango', 'lemon', 'mango', 'cereza']
 '''
 
-# Metodo tradicional. Agregar el elemento al final de la lista
+####### Metodo tradicional. Agregar el elemento al final de la lista
+#######
 fruits = ['Aguacate', 'Apple', 'apple', 'lime', 'mango', 'lemon', 'mango', 'cereza']
 fruits = fruits + ['uva']
 '''
