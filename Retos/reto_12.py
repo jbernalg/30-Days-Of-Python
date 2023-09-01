@@ -10,10 +10,14 @@ texto2 = 'mundo'
 
 def del_character_common(texto1, texto2):
     
+    # convertimos los textos en set
     set1 = set(texto1)
     set2 = set(texto2)
+    
+    # intersectamos para obtener los elementos comunes en ambos
     set_inter = set1.intersection(set2)
 
+    # eliminamos los elementos comunes en ambos
     for elem in set_inter:
         salida1 = texto1.replace(elem,'')
         salida2 = texto2.replace(elem,'')
