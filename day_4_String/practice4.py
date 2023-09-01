@@ -153,11 +153,14 @@ print(character_odd)
 
 #----------------String Methods-----------------------
 '''
-Los metodos en python se aplican seguidos del objeto. Ej: objeto.metodo()
-Las funciones en python se aplican teniendo al objeto como parametro. Ej: funcion(objeto)
+- Los metodos en python se aplican seguidos del objeto. Ej: objeto.metodo()
+- Las funciones en python se aplican teniendo al objeto como parametro. Ej: funcion(objeto)
+- Todos los metodos son funciones pero no todas las funciones son metodos
+- los metodos son funciones especificas de un objeto. En caso de no ser una funcion de un 
+objeto, entonces no es un metodo
 '''
 
-###### dir(): muestra todos los metodos que se pueden aplicar al objeto pasado
+###### dir(): Es una funcion. Muestra todos los metodos que se pueden aplicar al objeto pasado
 '''
 print(dir('hello world'))
 ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__',
@@ -174,22 +177,26 @@ print(dir('hello world'))
  'zfill']
 ''' 
 
-challenge = 'thirty days of python'
-
 ######## capitalize(): Converts the first charactersof the string to capital letter
+#######
+challenge = 'thirty days of python'
 primer_letra_mayusc = challenge.capitalize()
 '''
 Thirty days of python
 '''
 
-######## count(): return occurrences of substring in string. count(substring,start,end)
+######## count(): return occurrences of substring in string. count(substring,start,end). Devuelve cero si no encuentra coincidencias
+########
+# numeros de y en la cadena
+challenge = 'thirty days of python'
 n_y = challenge.count('y')
 '''
 print(n_y)
 3
 '''
 
-#numero de y en un rango de busqueda
+#numero de y en un rango de la cadena
+challenge = 'thirty days of python'
 n_y_range = challenge.count('y',7,14)
 '''
 print(n_y_range)
@@ -197,19 +204,31 @@ print(n_y_range)
 '''
 
 #numero de th en challenge
+challenge = 'thirty days of python'
 n_th = challenge.count('th')
 '''
 print(n_th)
 2
 '''
+######## len(): Es una funcion que cuenta los caracteres que posse una cadena
+########
+challenge = 'thirty days of python'
+n_caractteres = len(challenge)
+'''
+print(n_caractteres)
+21
+'''
 
 ######## endswith(): Checks if a string ends with a specified ending. Return True or False
+########
+challenge = 'thirty days of python'
 end_on = challenge.endswith('on')
 '''
 print(end_on)
 True
 '''
 
+challenge = 'thirty days of python'
 end_ty = challenge.endswith('ty')
 '''
 print(end_ty)
@@ -217,6 +236,7 @@ False
 '''
 
 ######## expandtabs(): Replaces tab character with spaces, default tab size is 8.
+########
 challenge = 'thirty\tdays\tof\tpython'
 tab_8 = challenge.expandtabs()
 '''
@@ -231,6 +251,7 @@ thirty    days      of        python
 '''
 
 ######### find(): Return the index of the first occurrence of a substring
+#########
 challenge = 'thirty days of python'
 find_y = challenge.find('y')
 '''
@@ -245,13 +266,15 @@ print(find_da)
 '''
 
 ######## rfind(): Return the index of the last occurence oh a substring
+########
 index_y = challenge.rfind('y')
 '''
 print(index_y)
 16
 '''
 
-######### index(): Returns the lowest index of a substring 
+######### index(): Returns the lowest index of a substring. Si no hay coincidencias arroja una excepcion
+########
 challenge = 'thirty days of python of year'
 index_of = challenge.index('of')
 '''
@@ -266,6 +289,7 @@ print(index_of2)
 '''
 
 ######### rindex(): Returns the highest index of a substring, additional arguments indicate starting and ending index
+#########
 challenge = 'thirty days of python of year'
 '''
 print(challenge.rindex('of'))
@@ -273,6 +297,7 @@ print(challenge.rindex('of'))
 '''
 
 ######### isalnum(): Checks alphanumeric character
+#########
 challenge = 'thirty days of python of year'
 '''
 print(challenge.isalnum())
@@ -292,6 +317,7 @@ True
 '''
 
 ####### isalpha(): Checks if all string elements are alphabet character(a - z). space not allowed
+#######
 challenge = 'DaysThirtyOfPython'
 '''print(challenge.isalpha())
 True
@@ -304,6 +330,7 @@ False
 '''
 
 ######## isdecimal(): Checks if all string elements are decimal (0 - 9)
+########
 challenge = '123'
 '''
 print(challenge.isdecimal())
@@ -317,6 +344,7 @@ False
 '''
 
 ######## isdigit(): Checks if all characters in a string are numbers (0-9 and some other unicode characters for numbers)
+########
 challenge = 'two'
 '''
 print(challenge.isdigit())
@@ -330,6 +358,7 @@ True
 '''
 
 ###### isnumeric(): Checks if al characters in a string are numbers or number related (just like isdigit(), just accepts more symbols, like ½)
+######
 num = '12'
 '''
 print(num.isnumeric())
@@ -343,6 +372,7 @@ True
 '''
 
 ###### isidentifier(): Checks for a valid identifier - it checks if a string is a valid variable name
+######
 challenge = '30daysofpython'
 '''
 print(challenge.isidentifier())
@@ -356,6 +386,7 @@ True
 '''
 
 ######## isupper(): Checks if all alphabet characters in the string are uppercase
+########
 challenge = 'thirtydaysofython'
 '''
 print(challenge.isupper())
@@ -363,6 +394,7 @@ False
 '''
 
 ######## islower(): Checks if all alphabet characters in the string are lowercase
+########
 challenge = 'thirtydaysofython'
 '''
 print(challenge.islower())
@@ -370,6 +402,7 @@ True
 '''
 
 ######## join(): Returns a concatenated string
+########
 web_tech = ['HTML', 'CSS', 'Javascript', 'React']
 '''
 print(' '.join(web_tech))
@@ -377,6 +410,7 @@ HTML CSS Javascript Reac
 '''
 
 ######## strip(): Removes all given characters starting from the beginning and end of the string
+########
 challenge = 'thirty days of pythooon'
 '''
 print(challenge.strip('noth'))
@@ -384,6 +418,7 @@ irty days of py
 '''
 
 ######## replace(): Replaces substring with a given string
+########
 challenge = 'thirty days of python'
 '''
 print(challenge.replace('python', 'coding'))
@@ -391,6 +426,7 @@ thirty days of coding
 '''
 
 ######## split(): Splits the string, using given string or space as a separator. Return a list
+########
 challenge = 'thirty days of python'
 '''
 print(challenge.split())
@@ -398,6 +434,7 @@ print(challenge.split())
 '''
 
 ######## title(): Returns a title cased string
+########
 challenge = 'thirty days of python'
 '''
 print(challenge.title())
@@ -405,6 +442,7 @@ Thirty Days Of Python
 '''
 
 ######## swapcase(): Converts all uppercase characters to lowercase and all lowercase characters to uppercase characters
+########
 challenge = 'thirty days of python'
 '''
 print(challenge.swapcase())
@@ -412,6 +450,7 @@ THIRTY DAYS OF PYTHON
 '''
 
 ########## startswith(): Checks if String Starts with the Specified String
+##########
 challenge = 'thirty days of python'
 '''
 print(challenge.startswith('thirty'))
