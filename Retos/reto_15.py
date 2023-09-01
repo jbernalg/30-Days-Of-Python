@@ -35,3 +35,10 @@ print(is_num_armstrong(1634))
 '''
 Cuantos numeros de armstrong estan contenidos en el rango de 1 a 1000?
 '''
+count = 0
+for i in range(1001):
+    if is_num_armstrong(i):
+        print(i)
+        count += 1
+
+print(f'Existen {count} de numeros de armstrong en el rango dado')
