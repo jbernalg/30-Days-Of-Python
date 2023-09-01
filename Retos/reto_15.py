@@ -37,7 +37,7 @@ Cuantos numeros de armstrong estan contenidos en el rango de 1 a 1000?
 '''
 count = 0
 for i in range(1001):
-    if is_num_armstrong(i):
+    if is_num_armstrong(i): 
         print(i)
         count += 1
 
