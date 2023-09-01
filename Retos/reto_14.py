@@ -12,3 +12,19 @@ def factorial(n):
 
 print(factorial(5))
 
+'''
+Calcular el n-ésimo número de la secuencia de Fibonacci utilizando recursividad.
+'''
+def fibonacci(n):
+    # caso base
+    if n <= 1:
+        return n
+    # caso recursivo
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+    
+print(fibonacci(3))
+
+'''
+
+'''
