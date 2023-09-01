@@ -19,8 +19,7 @@ def decoder(string):
     # alfabeto de codigo morse
     natural = '·-'
 
-    # variables que almacena la decodificacion
-    code_morse = ''
+    # variable que almacena la decodificacion
     decoder_text = ''
 
     # mensaje en lenguaje natural
