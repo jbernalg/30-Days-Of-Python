@@ -30,39 +30,29 @@ def days_year_min(days_min:int, month_min:int, year:int):
     days_year = [31,28,31,30,31,30,31,31,30,31,30,31]
 
     if esBisiesto(year):
-        
         days_year[1] = 29
-        sum_days_year = sum(days_year)
 
-        if month_min > 1:
-            sum_days_month = sum(days_year[:month_min-1])
-            sum_days_total = sum_days_year - sum_days_month - days_min 
-        else:
-            sum_days_month = days_min
-            sum_days_total = sum_days_year - sum_days_month
-    else:
-        sum_days_year = sum(days_year)
+    sum_days_year = sum(days_year)
+    sum_days_month = sum(days_year[:month_min-1])        
+    sum_days_total = sum_days_year - sum_days_month - days_min 
+    return sum_days_total
+#print(days_year_min(32,1,2021))
+        
+# funcion que calcula los dias del año mayor
+def days_year_maj(days_maj:int, month_maj:int, year:int):
 
-        if month_min > 1:
-            sum_days_month = sum(days_year[:month_min-1])
-            sum_days_total = sum_days_year - sum_days_month - days_min 
-        else:
-            sum_days_month = days_min
-            sum_days_total = sum_days_year - sum_days_month
+    days_year = [31,28,31,30,31,30,31,31,30,31,30,31]
+
+    if esBisiesto(year):
+        days_year[1] = 29
+
+    sum_days_month = sum(days_year[:month_maj-1])
+    sum_days_total = sum_days_month + days_maj    
 
     return sum_days_total
-
-print(days_year_min(31,12,2020))
-        
-
-#days_year = [31,28,31,30,31,30,31,31,30,31,30,31]
-#proof = sum(days_year[:2])
-#print(proof)
+#print(days_year_maj(27,2,2023))
 
 
-
-
-# funcion que calcula los dias del año mayor
 
 # funcion que calcula los dias que hay entre la diferencia
 # de los años mayor y menor
