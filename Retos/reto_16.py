@@ -31,7 +31,7 @@ def days_year_min(days_min:int, month_min:int, year:int):
     sum_days_month = sum(days_year[:month_min-1])        
     sum_days_total = sum_days_year - sum_days_month - days_min 
     return sum_days_total
-#print(days_year_min(32,1,2021))
+#print(days_year_min(1,1,1900))
         
 # funcion que calcula los dias del año mayor
 def days_year_maj(days_maj:int, month_maj:int, year:int):
@@ -45,7 +45,7 @@ def days_year_maj(days_maj:int, month_maj:int, year:int):
     sum_days_total = sum_days_month + days_maj    
 
     return sum_days_total
-#print(days_year_maj(27,2,2023))
+#print(days_year_maj(18,4,2022))
 
 # validacion de fechas
 def validate_num_date(int_day, int_month, int_year):
@@ -86,8 +86,7 @@ def date_min_maj(day1, month1,year1,day2,month2,year2):
 
 def validate_date(fecha):
     
-    list_fecha = fecha.split('/')
-    print(len(list_fecha))    
+    list_fecha = fecha.split('/')  
 
     if len(list_fecha) == 3: 
         int_month = int(list_fecha[1])
@@ -106,16 +105,10 @@ def validate_date(fecha):
 
 def days_year_difference(year1:int, year2:int):
 
-    if year1 > year2:
-        year_min = year2
-        year_max = year1
-    else:
-        year_min = year1
-        year_max = year2
+    year_min = year1
+    year_max = year2
 
-    if year_max - year_min == 0:
-        return 0
-    elif year_max - year_min == 1:
+    if year_max - year_min == 0 or year_max - year_min == 1:
         return 0
     else:
         sum_days = 0
@@ -137,8 +130,8 @@ def sum_days_total(sum_year_maj, sum_year_min, sum_dif_years):
 
 ############################################################
 
-fecha1 = '18/04/2022'
-fecha2 = '01/01/2022'
+fecha1 = '1/1/1'
+fecha2 = '18/04/2022'
 
 if validate_date(fecha1) == False:
     print('Primera fecha erronea. Corrija y vuelva a introducir')
@@ -146,14 +139,20 @@ else:
     day1, month1, year1 = validate_date(fecha1)
 
 if validate_date(fecha2) == False:
-    print('Primera fecha erronea. Corrija y vuelva a introducir')
+    print('Segunda fecha erronea. Corrija y vuelva a introducir')
 else:
     day2, month2, year2 = validate_date(fecha2)
 
 day1, month1, year1, day2, month2, year2 = date_min_maj(day1,month1,year1,day2,month2,year2)
 
-sum_days_year_min = days_year_min(day1,month1,year1)
-sum_days_year_max = days_year_maj(day2,month2,year2)
-sum_days_year = days_year_difference(year1,year2)
-total_days = sum_days_total(sum_days_year_min, sum_days_year_max, sum_days_year)
-print(total_days)
+if year2 - year1 != 0:
+    sum_days_year_min = days_year_min(day1,month1,year1)
+    sum_days_year_max = days_year_maj(day2,month2,year2)
+    sum_days_year = days_year_difference(year1,year2)
+    total_days = sum_days_total(sum_days_year_min, sum_days_year_max, sum_days_year)
+    print(total_days)
+else:
+    sum_days_year1 = days_year_maj(day1,month1,year1)
+    sum_days_year2 = days_year_maj(day2,month2,year2)
+    total_days = abs(sum_days_year2 - sum_days_year1)
+    print(total_days)
