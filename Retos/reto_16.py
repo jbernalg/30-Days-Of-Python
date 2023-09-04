@@ -65,7 +65,7 @@ def validate_num_date(int_day, int_month, int_year):
         return int_day, int_month, int_year
 #print(validate_date(3,12,-1))
 
-# funcion que calculo la fecha menor y mayor
+# funcion que determina la fecha menor y mayor
 def date_min_maj(day1, month1,year1,day2,month2,year2):
     
     if year1 > year2:
@@ -84,6 +84,7 @@ def date_min_maj(day1, month1,year1,day2,month2,year2):
     return day1, month1, year1, day2, month2, year2
 #print(date_min_maj(2,2,2022,1,1,2020))
 
+# funcion que valida el formato y valor de fecha
 def validate_date(fecha):
     
     list_fecha = fecha.split('/')  
@@ -103,6 +104,7 @@ def validate_date(fecha):
 #fecha = '01/02/2023'
 #print(f'Validacion hecha: {validate_date(fecha)}')
 
+# funcion que cuenta los dias que hay entre la diferencia de años
 def days_year_difference(year1:int, year2:int):
 
     year_min = year1
@@ -124,7 +126,7 @@ def days_year_difference(year1:int, year2:int):
     return sum_days
 #print(days_year_difference(2019, 2021))           
 
-# funcion que calcula la diferencia en dias entre ambas fechas
+# funcion que suma todos los dias
 def sum_days_total(sum_year_maj, sum_year_min, sum_dif_years):
     return sum_year_maj + sum_dif_years + sum_year_min
 
@@ -150,9 +152,9 @@ if year2 - year1 != 0:
     sum_days_year_max = days_year_maj(day2,month2,year2)
     sum_days_year = days_year_difference(year1,year2)
     total_days = sum_days_total(sum_days_year_min, sum_days_year_max, sum_days_year)
-    print(total_days)
 else:
     sum_days_year1 = days_year_maj(day1,month1,year1)
     sum_days_year2 = days_year_maj(day2,month2,year2)
     total_days = abs(sum_days_year2 - sum_days_year1)
-    print(total_days)
+    
+print(total_days)
