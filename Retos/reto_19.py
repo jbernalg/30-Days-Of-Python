@@ -71,8 +71,20 @@ def result_game(matrix):
 
 #################################
 # Test
-print(result_game(matrix))   
-# matrix = ['X','X','X'] --> Nulo
+print(result_game(['X','X','X']))   
+# ['X','X','X'] --> Nulo
 
+print(result_game([['X','X','X'],
+                   ['O','O','O'], 
+                   ['X','O','X']]))
 
+#[['X','X','X'],
+#['O','O','O'], 
+#['X','O','X']] --> Nulo
 
+print(result_game([['O','X','X'],
+                   ['','O',''], 
+                   ['X','O','O']]))
+#[['O','X','X'],
+#['','O',''], 
+#['X','O','O']] --> O
