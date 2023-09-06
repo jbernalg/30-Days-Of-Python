@@ -63,6 +63,26 @@ None
 250
 '''
 
+#------------ Metodo item para iterar un diccionario --------------
+persona = {
+    'nombre': 'Manuel',
+    'apellido': 'Mesa',
+    'edad': 22,
+    'peso': 88,
+    'altura': 1.80 
+}
+'''
+Esto no es un iterable
+print(persona)
+{'nombre': 'Manuel', 'apellido': 'Mesa', 'edad': 22, 'peso': 88, 'altura': 1.8}
+'''
+
+'''
+Esto si es un iterable
+print(persona.items())
+dict_items([('nombre', 'Manuel'), ('apellido', 'Mesa'), ('edad', 22), ('peso', 88), ('altura', 1.8)])
+'''
+
 #------------Adding items to a dictionary----------------
 #adding new key and value pair
 person['job_title'] = 'Instructor'
@@ -84,24 +104,62 @@ print('skills' in person)
 print('Color' in person)
 
 #-----------Removing key and value pairs from a dictionary---------------
-#using pop(key) method. Removes the item with the specified key name
-person.pop('first_name')
-print(person)
 
-#using popitem() method. Removes the last item
-person.popitem()
+####### pop(key) method: Removes the item with the specified key name
+#######
+person = {
+    'nombre': 'Manuel',
+    'apellido': 'Mesa',
+    'edad': 22,
+    'peso': 88,
+    'altura': 1.80 
+}
+
+person.pop('nombre') # remueve de 1 en 1
+'''
 print(person)
+{'apellido': 'Mesa', 
+'edad': 22, 
+'peso': 88, 
+'altura': 1.8}
+'''
+
+person.pop("peso")
+'''
+print(person)
+{'apellido': 'Mesa', 
+'edad': 22, 
+'altura': 1.8}
+'''
+
+###### popitem() method: Removes the last item
+######
+person = {
+    'nombre': 'Manuel',
+    'apellido': 'Mesa',
+    'edad': 22,
+    'peso': 88,
+    'altura': 1.80 
+}
+person.popitem()
+'''
+print(person)
+{'nombre': 'Manuel', 
+'apellido': 'Mesa', 
+'edad': 22, 
+'peso': 88}
+'''
 
 #using del. Removes an item with specified key name
-del person['is_marred']
-print(person)
+#del person['is_marred']
+#print(person)
 
-person.pop('skills')
-print(person)
+#person.pop('skills')
+#print(person)
 
 #-----------Changing dictionary to a list of items--------------
 #using items()
-print(person.items())
+#print(person.items())
 
 #-----------Clearing a dictionary--------------
 
