@@ -20,6 +20,7 @@ person = {
         }
     }
 
+
 '''
 print(person)
 {'first_name': 'Asabeneh', 'last_name': 'Yetayeh', 'age': 250, 'country': 'Finland', 
@@ -84,24 +85,84 @@ dict_items([('nombre', 'Manuel'), ('apellido', 'Mesa'), ('edad', 22), ('peso', 8
 '''
 
 #------------Adding items to a dictionary----------------
-#adding new key and value pair
-person['job_title'] = 'Instructor'
-print(person.get('job_title'))
 
-#adding new value a key existent using append() method
-person['skills'].append('HTML')
-print(person['skills'])
+###### adding new key and value pair
+######
+persona = {
+    'nombre': 'Manuel',
+    'apellido': 'Mesa',
+    'edad': 22,
+    'peso': 88,
+    'altura': 1.80 
+}
+
+persona['trabajo'] = 'Instructor'
+'''
+print(persona.get('trabajo'))
+Instructor
+'''
+
+###### Adding new value a key existent using append() method
+###### Solo funciona para agregar un valor a un value de tipo lista
+######
+persona = {
+    'nombre': 'Manuel',
+    'apellido': 'Mesa',
+    'edad': 22,
+    'peso': 88,
+    'altura': [1.80, 1.79, 1.82] 
+}
+
+persona['altura'].append(1.81)
+'''
+print(persona['altura'])
+[1.8, 1.79, 1.82, 1.81]
+'''
+
+###### si no es de tipo lista, detiene el programa y arroja error
+######
+'''
+persona['edad'].append(19)
+print(persona['edad'])
+AttributeError: 'int' object has no attribute 'append'
+'''
 
 #-----------Modifying items in a dictionary-------------
-person['first_name'] = 'Jose'
-print(person['first_name'])
+persona = {
+    'nombre': 'Manuel',
+    'apellido': 'Mesa',
+    'edad': 22,
+    'peso': 88,
+    'altura': 1.80 
+}
 
-person['age'] = '20'
-print(person)
+persona['edad'] = 19
+'''
+print(persona['edad'])
+19
+'''
+
+persona['nombre'] = 'Maria'
+'''
+print(persona)
+{'nombre': 'Maria', 'apellido': 'Mesa', 'edad': 19, 'peso': 88, 'altura': 1.8}
+'''
 
 #-----------Checking keys in a dictionary------------
-print('skills' in person)
-print('Color' in person)
+persona = {
+    'nombre': 'Manuel',
+    'apellido': 'Mesa',
+    'edad': 22,
+    'peso': 88,
+    'altura': 1.80 
+}
+
+'''
+print('nombre' in persona)
+print('Color' in persona)
+True
+False
+'''
 
 #-----------Removing key and value pairs from a dictionary---------------
 
@@ -158,8 +219,21 @@ print(person)
 #print(person)
 
 #-----------Changing dictionary to a list of items--------------
-#using items()
-#print(person.items())
+
+##### Using items()
+#####
+persona = {
+    'nombre': 'Manuel',
+    'apellido': 'Mesa',
+    'edad': 22,
+    'peso': 88,
+    'altura': 1.80 
+}
+'''
+print(persona.items())
+dict_items([('nombre', 'Manuel'), ('apellido', 'Mesa'), ('edad', 22), ('peso', 88), ('altura', 1.8)])
+'''
+
 
 #-----------Clearing a dictionary--------------
 
@@ -181,17 +255,31 @@ print(dictionary)
 del person
 
 #-----------Copy a dictionary-------------
-#using copy() method. We can avoid mutation of the original dictionary.
+
+###### copy() method: We can avoid mutation of the original dictionary.
+######
 dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 dct_copy = dct.copy()
+'''
 print(dct_copy)
+{'key1': 'value1', 'key2': 'value2', 'key3': 'value3', 'key4': 'value4'}
+'''
 
 #-----------Getting dictionary keys as a list----------------
-#using keys() method
+
+####### keys() method
+#######
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 keys = dct.keys()
+'''
 print(keys)
+dict_keys(['key1', 'key2', 'key3', 'key4'])
+'''
 
 #-----------Getting dictionary values as a list--------------
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 values = dct.values()
+'''
 print(values)
-
+dict_values(['value1', 'value2', 'value3', 'value4'])
+'''
