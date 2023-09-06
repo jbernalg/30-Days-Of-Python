@@ -7,10 +7,6 @@ Crea una función que analice una matriz 3x3 compuesta por "X" y "O" y retorne l
 Nota: La matriz puede no estar totalmente cubierta.Se podría representar con un vacío "", por ejemplo.
 '''
 
-matrix = [['X','X','X'],
-          ['O','O','O'], 
-          ['X','O','X']]
-
 def result_game(matrix):
     
     # validacion de la matriz
@@ -34,31 +30,31 @@ def result_game(matrix):
     elif count_o == 0 and count_x == 0:
         return 'Nulo'
 
-    # Buscar ganador
+    # buscar ganador mediante la comparacion de los elementos
     list_win = []
 
     for i in range(len(matrix)):
         # rows
         if matrix[i][0] == matrix[i][1] and matrix[i][0] == matrix[i][2]:
-            if matrix[i][0] == 'X' or matrix[i][0] == 'O':
+            if matrix[i][0] in 'XO':
                 list_win = list_win + [matrix[i][0]]
         
     
         # colums
         if matrix[0][i] == matrix[1][i] and matrix[0][i] == matrix[2][i]:
-            if matrix[0][i] == 'X' or matrix[0][i] == 'O':
+            if matrix[0][i] in 'XO':
                 list_win = list_win + [matrix[0][i]]
 
     # cruz
     if matrix[0][0] == matrix[1][1] and matrix[0][0] == matrix[2][2]:
-        if matrix[0][0] == 'X' or matrix[0][0] == 'O':
+        if matrix[0][0] in 'XO':
             list_win = list_win + [matrix[0][0]]
 
     if matrix[0][2] == matrix[1][1] and matrix[0][2] == matrix[2][0]:
-        if matrix[0][2] == 'X' or matrix[0][2] == 'O':
+        if matrix[0][2] in 'XO':
             list_win = list_win + [matrix[0][2]]
 
-
+    # retornar resultados
     if len(list_win) == 2:
         return 'Nulo'
     elif len(list_win) == 1:
@@ -69,22 +65,23 @@ def result_game(matrix):
     else:
         return 'Nulo'
 
+
 #################################
 # Test
-print(result_game(['X','X','X']))   
-# ['X','X','X'] --> Nulo
+print(result_game(['X','X','X']))   # --> Nulo
 
 print(result_game([['X','X','X'],
                    ['O','O','O'], 
-                   ['X','O','X']]))
-
-#[['X','X','X'],
-#['O','O','O'], 
-#['X','O','X']] --> Nulo
+                   ['X','O','X']])) # --> Nulo
 
 print(result_game([['O','X','X'],
                    ['','O',''], 
-                   ['X','O','O']]))
-#[['O','X','X'],
-#['','O',''], 
-#['X','O','O']] --> O
+                   ['X','O','O']])) # --> O
+
+print(result_game([['O','O','X'],
+                   ['X','X','O'], 
+                   ['O','X','O']])) # --> Empate
+
+print(result_game([['','',''],
+                   ['','X',''], 
+                   ['','','']])) # --> Nulo
