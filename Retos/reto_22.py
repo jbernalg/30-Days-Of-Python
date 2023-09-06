@@ -10,17 +10,18 @@ Lee el fichero "Challenge21.txt" incluido en el proyecto, calcula su resultado e
 
 def operation_arithem(string):
     
+    # guardamos el archivo abierto
     f = open(f'./{string}')
 
-
+    # creamos una lista con los valores de cada linea como elemento
     list_txt = f.read().splitlines()
+    
+    # guardamos primer valor y vamos realizando las operaciones
     result = 0
-
     if list_txt[0].isnumeric():
         result = float(list_txt[0])
     else:
         return 'No ha podido resolver la operacion. Verifique la expresion'
-
 
     for i in range(1, len(list_txt), 2):
 
@@ -46,4 +47,4 @@ def operation_arithem(string):
 
     return str(result)
 
-print(operation_arithem('reto_22.txt'))
+print(operation_arithem('reto_22.txt')) # --> 18.5
