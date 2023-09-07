@@ -17,3 +17,8 @@ while(cont < 101):
     num += cont
     cont += 1
 print(num)
+
+# con formula
+# n(n + 1)/2 , donde n es el numero hasta donde queremos sumar
+n = 100
+print(n*(n + 1)//2)
