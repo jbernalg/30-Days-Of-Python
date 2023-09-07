@@ -38,13 +38,26 @@ print(mcm(3, -11)) # --> None
 print(mcm(11, 15)) # --> 165
 
 
-print(5%2)
-
 def mcd(num1:int, num2:int):
 
-    if num1 > num2:
-        num1, num2 = num2, num1
-    
-    resto = num2 % num1
+    if num1 < 1 or num2 < 1:
+        return None 
+    else:
+        nume = num1
+        deno = num2
+        resto = 1
 
-    
+        while(resto != 0):
+            resto = nume % deno
+        
+            if resto != 0:
+                nume, deno = deno, resto
+
+        return deno
+
+##### Test
+print(mcd(14, 27)) # --> 1
+print(mcd(27, 14)) # --> 1
+print(mcd(14, 0)) # --> None
+print(mcd(14, -27)) # --> none
+print(mcd(14,28)) # --> 14
