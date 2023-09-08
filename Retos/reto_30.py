@@ -249,3 +249,24 @@ print(merge_sort([3,1,2,2,5,4,6], 'daesc'))
 # [3,1,2,2,5,4,6], 'Asc' --> [1, 2, 2, 3, 4, 5, 6]
 # [3,1,2,2,15,4,6], 'Desc' --> [15, 6, 4, 3, 2, 2, 1]
 # [3,1,2,2,5,4,6], 'daesc' --> Ingrese orden correcto!
+
+
+
+#--------------- Ordenamiento Rapido
+
+def pivot_sort(lista:list):
+
+    if len(lista) <= 1:
+        return lista
+    
+    pivot = -1
+    list2 = [lista[pivot]]
+    list1 = lista[:pivot]
+
+    print(list1, list2)
+
+    list2 = pivot_sort(list2)
+    list1 = pivot_sort(list1)
+
+print([3,1,5,4,9,8])
+print(pivot_sort([3,1,5,4,9,8]))
