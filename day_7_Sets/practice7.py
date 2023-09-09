@@ -1,34 +1,94 @@
 #-------------------SET----------------------
-
+'''
+- Pueden contener datos que sean inmutable. Una lista por ejemplo, no la puede contener
+ya que es mutable. Una tupla si la puede contener debido a que es inmutable
+'''
 #-----------Creating a Set-----------------
 st = {}
+'''
 print(st)
+{}
+'''
 st = set()
+'''
 print(st)
+set()
+'''
 
-#Creating a set with initial items
+##### Creating a set with initial items
 fruits = {'bananas', 'orange', 'mango', 'lemon'}
+'''
 print(fruits)
+{'bananas', 'mango', 'lemon', 'orange'}
+'''
+
+#----------Datos inmutables---------------
+conjunto = set(['dato1', 'dato2'])
+'''
+print(conjunto)
+{'dato2', 'dato1'}
+'''
+
+#### Lista dentro de un set
+'''
+conjunto = set(['dato1', ['dato2', 'dato3']])
+TypeError: unhashable type: 'list'
+'''
+
+#### tupla dentro de un set
+conjunto = set(['dato1', ('dato2', 'dato3')])
+'''
+print(conjunto)
+{('dato2', 'dato3'), 'dato1'}
+'''
+
+#### Diccionario dentro de un set
+'''
+conjunto = set(['dato1', {'dato2', 'dato3'}])
+TypeError: unhashable type: 'set'
+'''
+
+#### Conjunto dentro de otro conjunto
+conjunto1 = frozenset(['dato1', 'dato2']) # crea un conjunto inmutable
+conjunto2 = {conjunto1, 'dato3'}
+'''
+print(conjunto2)
+{frozenset({'dato2', 'dato1'}), 'dato3'}
+'''
 
 #----------Getting set's length------------
+'''
 print(len(fruits))
+4
+'''
 
 #----------Accessing items in a set-----------
 #We use loop to access items
 
 #----------Checking an items----------------
+fruits = {'bananas', 'orange', 'mango', 'lemon'}
+'''
 print('mango' in fruits)
+True
+'''
 
 #----------Adding items to a set-----------
-#usind add()
-fruits.add('lime')
-print(fruits)
-
-#Using update(). Add multiple items
+##### Usind add(). Se agrega el elemento en una posicion indeterminada 
 fruits = {'bananas', 'orange', 'mango', 'lemon'}
-vegetables = {'tomato', 'potato', 'cabbage', 'onio', 'carrot'}
-fruits.update(vegetables)
+fruits.add('lime')
+'''
 print(fruits)
+{'lime', 'orange', 'lemon', 'mango', 'bananas'}
+'''
+
+##### Using update(). Add multiple items. Elementos repetidos no se agregan
+fruits = {'bananas', 'orange', 'mango', 'lemon'}
+vegetables = {'tomato', 'potato', 'cabbage', 'lemon', 'carrot'}
+fruits.update(vegetables)
+'''
+print(fruits)
+{'tomato', 'lemon', 'cabbage', 'potato', 'mango', 'orange', 'bananas', 'carrot'}
+'''
 
 #----------Removing items from a set------------------
 #using remove(). To check the item exist in the set.
@@ -66,7 +126,7 @@ fruits = set(fruits)
 print(fruits)
 
 #--------------Joining Sets--------------------
-#Using union() method. Return a new set
+#### Using union() method. Return a new set
 fruits = {'banana', 'orange', 'mango', 'lemon'}
 vegetables = {'tomato', 'potato', 'cabbage','onion', 'carrot'}
 print(fruits.union(vegetables))
@@ -97,7 +157,65 @@ print(whole_numbers.symmetric_difference(some_numbers))
 #We can check if two sets are joint or disjoint using isdisjoint() method
 even_numbers = {0, 2, 4 ,6, 8}
 odd_numbers = {1, 3, 5, 7, 9}
-print(even_numbers.isdisjoint(odd_numbers))
+result = even_numbers.isdisjoint(odd_numbers)
+'''
+print(result)
+True
+'''
 
+conjunto1 = {1,3,5,7,9}
+conjunto2 = {2,5,6}
+result = conjunto1.isdisjoint(conjunto2)
+'''
+print(result)
+False
+'''
 
+result = conjunto2.isdisjoint(conjunto1)
+'''
+print(result)
+False
+'''
 
+#------------Checking Sets------------------
+
+##### Verificar si un conjunto es un subconjunto de otro
+conjunto1 = {1,3,5,7,9}
+conjunto2 = {1,3,7}
+result = conjunto2.issubset(conjunto1)
+'''
+print(result)
+True
+'''
+
+result = conjunto1.issubset(conjunto2)
+'''
+print(result)
+False
+'''
+##### Otra forma de verificar si un conjunto es un subconjunto de otro
+result = conjunto2 <= conjunto1
+'''
+print(result)
+True
+'''
+
+result = conjunto1 <= conjunto2
+'''
+print(result)
+False
+'''
+
+##### Verificar si un conjunto es un superconjunto de otro
+result = conjunto1.issuperset(conjunto2)
+'''
+print(result)
+True
+'''
+
+#### Otra forma de verificar si un conjunto es un superconjunto de otro
+result = conjunto1 > conjunto2
+'''
+print(result)
+True
+'''
