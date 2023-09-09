@@ -23,7 +23,10 @@ print(fruits)
 '''
 ##### Elementos repetidos se eliminan del set
 fruits = {'bananas', 'orange', 'mango', 'lemon', 'lemon', 'mango'}
+'''
 print(fruits)
+{'lemon', 'bananas', 'mango', 'orange'}
+'''
 
 #----------Datos inmutables---------------
 conjunto = set(['dato1', 'dato2'])
@@ -159,28 +162,50 @@ print(fruits)
 #### Using union() method. Return a new set
 fruits = {'banana', 'orange', 'mango', 'lemon'}
 vegetables = {'tomato', 'potato', 'cabbage','onion', 'carrot'}
-print(fruits.union(vegetables))
+union_set = fruits.union(vegetables)
+'''
+print(union_set)
+{'mango', 'cabbage', 'tomato', 'onion', 'banana', 'potato', 'lemon', 'orange', 'carrot'}
+'''
 
-#Using Update() method. Insert a set into a given set
-fruits.update(vegetables)
-print(fruits)
+#### Using Update() function. Insert a set into a given set
+conjunto1 = {1,3,5,7,9}
+conjunto2 = {'banana','apple','orange'}
+conjunto2.update(conjunto1)
+'''
+print(conjunto2)
+{1, 'banana', 3, 5, 7, 'apple', 9, 'orange'}
+'''
 
 #--------------finding intersection items-----------------
-#Intersection return a set of items which are in both the set
+##### Intersection: return a set of items which are in both the set
 whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 even_numbers = {0, 2, 4, 6, 8, 10}
-print(whole_numbers.intersection(even_numbers))
+intersection_set = whole_numbers.intersection(even_numbers)
+'''
+print(intersection_set)
+{0, 2, 4, 6, 8, 10}
+'''
 
 #--------------Checking the difference between two Sets-----------------
-#Return a set with the difference between two sets
-print(whole_numbers.difference(even_numbers))
+##### Return a set with the difference between two sets
+whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+even_numbers = {0, 2, 4, 6, 8, 10}
+difference_set = whole_numbers.difference(even_numbers)
+'''
+print(difference_set)
+{1, 3, 5, 7, 9}
+'''
 
 #--------------Finding symmetric difference between two sets-----------------
-#Return a set that contains all items from both sets, except items that 
-#are present in both sets.
+##### Return a set that contains all items from both sets, except items that are present in both sets.
 whole_numbers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 some_numbers = {1, 2, 3, 4, 5, 11}
-print(whole_numbers.symmetric_difference(some_numbers))
+dif_sim_set = whole_numbers.symmetric_difference(some_numbers)
+'''
+print(dif_sim_set)
+{0, 6, 7, 8, 9, 10, 11}
+'''
 
 #-------------Disjoint Sets-------------------
 #If two sets do not have a common item we call them disjoint sets
