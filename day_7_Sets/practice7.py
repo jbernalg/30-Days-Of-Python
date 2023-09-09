@@ -21,6 +21,9 @@ fruits = {'bananas', 'orange', 'mango', 'lemon'}
 print(fruits)
 {'bananas', 'mango', 'lemon', 'orange'}
 '''
+##### Elementos repetidos se eliminan del set
+fruits = {'bananas', 'orange', 'mango', 'lemon', 'lemon', 'mango'}
+print(fruits)
 
 #----------Datos inmutables---------------
 conjunto = set(['dato1', 'dato2'])
@@ -91,27 +94,48 @@ print(fruits)
 '''
 
 #----------Removing items from a set------------------
-#using remove(). To check the item exist in the set.
-fruits.remove('tomato')
+##### Using remove(). To check the item exist in the set.
+fruits = {'bananas', 'orange', 'mango', 'lemon'}
+fruits.remove('orange')
+'''
 print(fruits)
-#fruits.remove('piña') #If the items is not found, the method will raise errors
-#print(fruits)
+{'bananas', 'mango', 'lemon'}
+'''
 
-#Using discard(). This method doesn't raise any errors
-fruits.discard('potato')
+##### If the items is not found, the method will raise errors
+'''
+fruits.remove('piña') 
 print(fruits)
-fruits.discard('piña') #This method doesn't raise any errors if the item is not exist
-print(fruits)
+KeyError: 'piña'
+'''
 
-#Using pop() method. Remove a random item a list and it return the removed item
+##### Using discard(). This method doesn't raise any errors
+fruits = {'bananas', 'orange', 'mango', 'lemon'}
+fruits.discard('piña')
+'''
+print(fruits)
+{'lemon', 'mango', 'bananas', 'orange'}
+'''
+
+##### Using pop() method. Remove a random item a list and it return the removed item
+fruits = {'bananas', 'orange', 'mango', 'lemon'}
 remove_item = fruits.pop()
-print(fruits)
+'''
 print(remove_item)
+orange
+
+print(fruits)
+{'mango', 'lemon', 'bananas'}
+'''
 
 #-------------Clearing items in a set------------------
-#clear() method. Clear or empty the set
+##### clear() method. Clear or empty the set
+fruits = {'bananas', 'orange', 'mango', 'lemon'}
 fruits.clear()
+'''
 print(fruits)
+set()
+'''
 
 #-------------Delete a Set-----------------
 fruits = {'banana', 'orange', 'mango', 'lemon'}
@@ -120,10 +144,16 @@ del fruits
 #-------------Converting list to set------------------
 fruits = {'banana', 'orange', 'mango', 'lemon'}
 fruits = list(fruits)
+'''
 print(fruits)
+['orange', 'mango', 'lemon', 'banana']
+'''
 
 fruits = set(fruits)
+'''
 print(fruits)
+{'orange', 'mango', 'lemon', 'banana'}
+'''
 
 #--------------Joining Sets--------------------
 #### Using union() method. Return a new set
