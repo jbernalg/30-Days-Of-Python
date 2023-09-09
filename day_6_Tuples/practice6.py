@@ -1,16 +1,59 @@
 #-----------------TUPLES-------------------------
+'''
+- Manejan mejor la memoria por lo que son recomendadas para leer datos fijos inmutables.
+- Las listas ocupan dos espacios de memoria: uno donde almacena y otro donde guarda las
+modificaciones
+- Las tuplas solo ocupan un espacio en memoria por lo que son mas optimas 
+'''
+
 
 #----------------Create a Tuple-------------------
-#Empty tuple
+##### Empty tuple
 empty_tuple = ()
+'''
 print(empty_tuple)
+()
+'''
 
 empty_tuple = tuple()
+'''
 print(empty_tuple)
+()
+'''
 
-#tuple with initial values
+##### Tuple with initial values
 fruits = ('banana', 'orange', 'mango', 'lemon', 2)
+'''
 print(fruits)
+('banana', 'orange', 'mango', 'lemon', 2)
+'''
+
+###### Creando una tupla a partir de una lista
+vegetable = tuple(['tomate', 'cebolla', 'pepino', 'lechuga'])
+'''
+print(vegetable)
+print(type(vegetable))
+('tomate', 'cebolla', 'pepino', 'lechuga')
+<class 'tuple'>
+'''
+
+##### Crear tuplas sin parentesis
+tupla = 'dato1', 'dato2', 'dato3'
+'''
+print(tupla)
+print(type(tupla))
+('dato1', 'dato2', 'dato3')
+<class 'tuple'>
+'''
+
+##### Crear tuplas sin parentesis de un solo valor
+tupla = 'dato1',
+'''
+print(tupla)
+print(type(tupla))
+('dato1',)
+<class 'tuple'>
+'''
 
 #---------------Tuple Length--------------------
 print(len(fruits))
