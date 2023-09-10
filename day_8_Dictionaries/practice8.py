@@ -1,12 +1,26 @@
 #-------------DICTIONARY----------------
 
 #-------------Creating a dictionary----------------
+#### Creando un diccionario vacio
 empty_dict = {}
 '''
 print(empty_dict)
 {}
+
+print(type(empty_dict))
+<class 'dict'>
 '''
 
+empty_dict2 = dict()
+'''
+print(empty_dict2)
+{}
+
+print(type(empty_dict2))
+<class 'dict'>
+'''
+
+#### Creando un diccionario con valores
 person = {
     'first_name':'Asabeneh',
     'last_name':'Yetayeh',
@@ -19,14 +33,70 @@ person = {
         'zipcode':'02210'
         }
     }
-
-
 '''
 print(person)
 {'first_name': 'Asabeneh', 'last_name': 'Yetayeh', 'age': 250, 'country': 'Finland', 
  'is_marred': True, 'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'], 
  'address': {'street': 'Space street', 'zipcode': '02210'}}
 '''
+
+#### Otra forma de crear diccionarios con valores
+mi_info = dict(mi_nombre='Mateo', mi_edad=34)
+'''
+print(mi_info)
+{'mi_nombre': 'Mateo', 'mi_edad': 34}
+'''
+
+#### Las listas no pueden ser claves ya que son mutables
+'''
+diccionario = {['nombre', 'apellido']: 'Mateo Gaviria'}
+TypeError: unhashable type: 'list'
+'''
+
+#### Las tuplas si pueden ser claves ya que son inmutables
+diccionario = {('nombre', 'apellido'): 'Mateo Gaviria'}
+'''
+print(diccionario)
+{('nombre', 'apellido'): 'Mateo Gaviria'}
+'''
+
+#### Los conjuntos no pueden ser claves ya que son mutables
+'''
+diccionario = {{'nombre', 'apellido'}: 'Mateo Gaviria'}
+TypeError: unhashable type: 'set'
+'''
+
+#### Un conjunto de tipo frozenset pueden ser claves
+diccionario = {frozenset(['nombre', 'apellido']): 'Mateo Gaviria'}
+'''
+print(diccionario)
+{frozenset({'apellido', 'nombre'}): 'Mateo Gaviria'}
+'''
+
+#### Creando un diccionario con el mismo valor para diferentes claves
+#### Toma como clave los elementos del iterable que se pasa como parametro
+diccionario = dict.fromkeys('nombre','saludos')
+'''
+print(diccionario)
+{'n': 'saludos', 'o': 'saludos', 'm': 'saludos', 'b': 'saludos', 'r': 'saludos', 'e': 'saludos'}
+'''
+
+#### si se pasa un valor que no sea un iterable arroja error
+'''
+diccionario = dict.fromkeys(1,'saludos')
+TypeError: 'int' object is not iterable
+'''
+
+#### Crear un diccionario donde todos los valores sean vacios
+diccionario = dict.fromkeys(['nombre','saludos'])
+'''
+print(diccionario)
+{'nombre': None, 'saludos': None}
+'''
+#### Crear un diccionario donde todas las llaves tengan el mismo valor
+diccionario = dict.fromkeys(['carlos','pedro','samuel'], 32)
+print(diccionario)
+
 
 #------------Dictionary length--------------
 '''

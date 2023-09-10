@@ -254,19 +254,32 @@ print(merge_sort([3,1,2,2,5,4,6], 'daesc'))
 
 #--------------- Ordenamiento Rapido
 
-def pivot_sort(lista:list):
+def quick_sort(lista:list):
 
     if len(lista) <= 1:
         return lista
     
-    pivot = -1
-    list2 = [lista[pivot]]
-    list1 = lista[:pivot]
+    # seleccion del pivot. Ultimo elemento de la lista 
+    pivot = lista.pop()
 
-    print(list1, list2)
+    # Sublistas: menores y mayores que el pivot
+    less_than_pivot = []
+    greater_than_pivot = []
 
-    list2 = pivot_sort(list2)
-    list1 = pivot_sort(list1)
+    # particionar la lista
+    for element in lista:
+        if element <= pivot:
+            less_than_pivot.append(element)
+        else:
+            greater_than_pivot.append(element)
+
+    # aplicar recursivamente Quick sort a las sublistas
+    sorted_less = quick_sort(less_than_pivot)
+    sorted_greater = quick_sort(greater_than_pivot)
+
+    # combinar las sublistas ordenadas
+    return sorted_less + [pivot] + sorted_greater
+
 
 print([3,1,5,4,9,8])
-print(pivot_sort([3,1,5,4,9,8]))
+print(quick_sort([3,1,5,4,9,8])) 
