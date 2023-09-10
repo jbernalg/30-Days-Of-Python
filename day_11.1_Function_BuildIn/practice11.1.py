@@ -1,4 +1,5 @@
 #------------------Function Build In ----------------------
+
 #### max(): encuentra el valor mayor de un iterable. aplcia para valores numericos
 numeros = [2,45,21,67,33]   #lista
 num_mayor = max(numeros)
