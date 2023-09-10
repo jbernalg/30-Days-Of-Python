@@ -73,7 +73,7 @@ print(diccionario)
 {frozenset({'apellido', 'nombre'}): 'Mateo Gaviria'}
 '''
 
-#### Creando un diccionario con el mismo valor para diferentes claves
+#### fromkeys(): Crear un diccionario con el mismo valor para diferentes claves
 #### Toma como clave los elementos del iterable que se pasa como parametro
 diccionario = dict.fromkeys('nombre','saludos')
 '''
@@ -95,7 +95,10 @@ print(diccionario)
 '''
 #### Crear un diccionario donde todas las llaves tengan el mismo valor
 diccionario = dict.fromkeys(['carlos','pedro','samuel'], 32)
+'''
 print(diccionario)
+{'carlos': 32, 'pedro': 32, 'samuel': 32}
+'''
 
 
 #------------Dictionary length--------------
