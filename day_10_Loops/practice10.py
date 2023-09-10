@@ -30,7 +30,7 @@ else:
 5
 '''
 
-#-----------------Break and continue-----------------------
+#-----------------Break and continue in While -----------------------
 #### break: it used break when like to get out of or stop loop
 count = 0
 while count < 5:
@@ -88,7 +88,7 @@ o
 n
 '''
 
-#### for loop with tuple
+#------------------ for loop with tuple ---------------------------
 numbers = (0,1,2,3,4,5)
 
 for number in numbers:
@@ -158,7 +158,7 @@ Llave:address     Valor:{'street': 'Space street', 'zipcode': '02210'}
 '''
 
 
-#---------------- loops in set ------------------------------- 
+#---------------- for loops with set ------------------------------- 
 #### recorre el set con los elementos sin orden definido
 it_companies = {'Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'}
 for company in it_companies:
@@ -212,7 +212,7 @@ recorriendo lista1 : tigre
 recorriendo lista2 : 8
 '''
 
-#-----------------------Break and continue Parte 2----------------------------
+#-----------------------Break and continue en bucle For----------------------------
 #break is used when we like to stop aur loop before it is completed
 number = (0,1,2,3,4,5)
 
@@ -354,7 +354,18 @@ else:
 termino el programa
 '''
 
+#------------------ for en una sola linea de codigo ----------------------
+#### Util para simplificar codigo
+numeros = [2,3,5,6,8]
+# vamos a duplicar los valores de la lista
+numeros_duplicados = [x*2 for x in numeros]
+'''
+print(numeros_duplicados)
+[4, 6, 10, 12, 16]
+'''
+
 #-----------------------Nested for loop-----------------------
+#### Recorre una lista dada como valor en un diccionario
 person = {
     'first_name': 'Asabeneh',
     'last_name': 'Yetayeh',
@@ -372,6 +383,13 @@ for key in person:
     if key == 'skills':
         for skill in person['skills']:
             print(skill)
+'''
+JavaScript
+React
+Node
+MongoDB
+Python
+'''
 
 
 #----------------------Pass----------------------------
