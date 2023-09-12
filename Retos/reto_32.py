@@ -3,12 +3,6 @@ Crea una función que imprima los 30 próximos años bisiestos siguientes a uno 
 - Utiliza el menor número de líneas para resolver el ejercicio.
 '''
 
-def es_bisiesto2(year):
-    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-        return True
-    else:
-        return False
-
 def esBisiesto(year:int):
     
     if year % 4 == 0 and year % 100 != 0:
@@ -17,7 +11,6 @@ def esBisiesto(year:int):
         return True
     else:
         return False
-
 
 def next_bisiesto(year:int):
 
