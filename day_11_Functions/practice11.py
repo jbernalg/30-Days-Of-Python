@@ -112,7 +112,7 @@ print(print_fullname(first_name='Daniel', last_name='Vergara'))
 Daniel Vergara
 '''
 
-#### el orden en que se pasan los valores no importan siempre que se declaren
+#### el orden en que se pasan los valores no importan siempre que se declaren 
 def add_two_numbers(num1, num2):
     total = num1 + num2
     return total
