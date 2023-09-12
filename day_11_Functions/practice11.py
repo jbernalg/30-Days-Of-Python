@@ -1,7 +1,7 @@
 #-------------------FUNCTION-----------------------
 '''
 - Nos ayuda a evitar repetir codigo
-- Mofularidad: nos permite separar el programa en partes mas pequeñas para luego
+- Modularidad: nos permite separar el programa en partes mas pequeñas para luego
 solucionarlo, modificarlo, hacer pruebas y luego integrarlas de vuelta al programa
 - Permite que el codigo sea mantenible y mas sencillo de depurar. Creamos el cambio en
 la funcion y este se vera reflejado en todo el codigo
@@ -89,14 +89,18 @@ print('Sum of two number: ',sum_two_numbers(1,16))
 def calculate_age(current_year, birth_year):
     age = current_year - birth_year
     return age
-
+'''
 print('Age: ', calculate_age(2022, 1994))
+Age:  28
+'''
 
 def weight_of_object (mass, gravity):
     weight = str(mass * gravity)+ 'N'
     return weight
-
+'''
 print('Weight of an object in Newtons: ',weight_of_object(90, 9.81))
+Weight of an object in Newtons:  882.9000000000001N
+'''
 
 #---------------Passing arguments with Key and Values---------------------
 def print_fullname(first_name, last_name):
@@ -115,7 +119,7 @@ print(add_two_numbers(num2 = 13, num1 = 2))
 #---------------Function Returning a Value----------------------
 #Returning a string
 def print_name(first_name):
-    print(first_name)
+    return first_name
 print_name('Gerardo')
 
 #Returning a number:
@@ -142,6 +146,33 @@ def find_even_numbers(n):
     return even
 
 print(find_even_numbers(87))
+
+#------------------- Desempaquetando valores de una funcion----------------------
+def value_oro_plata(p_petroleo):
+    val_oro = p_petroleo*2.5
+    val_plata = val_oro + p_petroleo
+    return val_oro,val_plata
+
+# valor solo del oro
+'''
+print(round(value_oro_plata(1.44)[0],2))
+3.6
+'''
+
+# valor solo de la plata
+'''
+print(round(value_oro_plata(1.48)[1], 2))
+5.18
+'''
+
+# desempaquetando valores de la funcion
+valor_oro, valor_plata = value_oro_plata(1.44)
+'''
+print(f'Valor del oro: {round(valor_oro,2)}')
+print(f'Valor de la plata: {round(valor_plata,2)}')
+Valor del oro: 3.6
+Valor de la plata: 5.04
+'''
 
 #---------------Function with default parameters------------------
 #Sometimes we pass default values to parameters, when we invoke the function. 
