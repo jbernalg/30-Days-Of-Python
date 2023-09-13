@@ -1,77 +1,156 @@
 # ------------------Exception Handling---------------------
+'''
+Python uses try and except to handle errors gracefully The cause of an exception 
+is often external to the program itself. Por example: incorrect input, wrong file name, 
+unable to find a file, malfuntioning IO device
+Graceful handling of errors prevents our applications from crashing. 
 
-# Python uses try and except to handle errors gracefully
-# The cause of an exception is often external to the program itself. Por example:
-# incorrect input, wrong file name, unable to find a file, malfuntioning IO device
-# Graceful handling of errors prevents our applications from crashing. 
+syntax
 
-# syntax
-# try:
-#   {run this code}
-# except:
-#   {Execute this code when there is an exception}
-# else:
-#   {No exception? execute this code}
-# finally:
-#   {Always run this code}
+try:
+  {run this code}
+except:
+  {Execute this code when there is an exception}
+else:
+  {No exception? execute this code}
+finally:
+  {Always run this code}
+'''
 
-# example 1:
 from pickletools import read_string1
 from platform import java_ver
 
+#### example 1:
+# funcion que suma dos numeros
+def sumas_dos():
+    
+    while True:
+        a = input('Numero 1: ')
+        b = input('Numero 2: ')
+        try:
+            result = int(a) + int(b)
+        except:
+            print('Ingresa un valor correcto')
+        else:
+            break
+    return result
+'''
+print(sumas_dos())
+Numero 1: 3
+Numero 2: 2
+5
+'''
+'''
+print(sumas_dos())
+Numero 1: hola
+Numero 2: 2
+Ingresa un valor correcto
+Numero 1: 
+'''
 
-try:
-    print(10 + '5')
-except:
-    print('Something went wrong')
+#### example 2:
+# funcion nombre edad
+def name_age():
+    try:
+        name = input('Enter your name: ')
+        year_born = input('year you were born: ')
+        age = 2022 - int(year_born)
 
-# example 2:
-try:
-    name = input('Enter your name: ')
-    year_born = input('year you were born: ')
-    age = 2022 - year_born
-    print(f'You are {name}. And you age is {age}')
-except:
-    print('Something went wrong')
+        if name.isalpha() and type(age) == int:    
+            print(f'You are {name}. And you age is {age}')
+    except:
+        print('Something went wrong')
+'''
+name_age()
+Enter your name: jose
+year you were born: 1990
+You are jose. And you age is 32 
+'''
 
-# example 3:
-try:
-    name = input('Enter your name: ')
-    year_born = input('year you were born: ')
-    age = 2022 - year_born
-    print(f'You are {name}. And you age is {age}')
-except TypeError:
-    print('Type error occured')
-except ValueError:
-    print('Value error occured')
-except ZeroDivisionError:
-    print('zero division error occured')
+'''
+Enter your name: jose
+year you were born: jose
+Something went wrong
+'''
 
-# example 4:
-try:
-    name = input('Enter your name: ')
-    year_born = input('year you were born: ')
-    age = 2022 - int(year_born)
-    print(f'You are {name}. And you age is {age}')
-except TypeError:
-    print('Type error occured')
-except ValueError:
-    print('Value error occured')
-except ZeroDivisionError:
-    print('zero division error occured')
-else:
-    print('I usually run with the try block')
-finally:
-    print('I always run')
+#### example 3:
+# funcion name_age2
+def name_age2():
+    try:
+        name = input('Enter your name: ')
+        if name.isalpha() == False:
+            raise TypeError
+        
+        year_born = input('year you were born: ')
+        age = 2022 - int(year_born)
+        print(f'You are {name}. And you age is {age}')
+    
+    except TypeError:
+        print('Type error occured')
+    
+    except ValueError:
+        print('Value error occured')
+    
+    except ZeroDivisionError:
+        print('zero division error occured')
+'''
+name_age2()
+Enter your name: 23
+Type error occured
+'''
 
-# it shorted the above code
-try:
-    name = input('Enter your name: ')
-    year_born = input('year you were born: ')
-    age = 2022 - int(year_born)
-    print(f'You are {name}. And you age is {age}')
-except Exception as e:
-    print(e)
+#### example 4:
+def name_age3():
+    try:
+        name = input('Enter your name: ')
+        if name.isalpha() == False:
+            raise ValueError
+        year_born = input('year you were born: ')
+        age = 2022 - int(year_born)
+        print(f'You are {name}. And you age is {age}')
+    except TypeError:
+        print('Type error occured')
+    except ValueError:
+        print('Value error occured')
+    except ZeroDivisionError:
+        print('zero division error occured')
+    else:
+        print('I usually run with the try block')
+    finally:
+        print('I always run')
+'''
+name_age3()
+Enter your name: Daniel
+year you were born: 2002
+You are Daniel. And you age is 20
+I usually run with the try block
+I always run
+'''
+
+'''
+name_age3()
+Enter your name: Jose
+year you were born: j
+Value error occured
+I always run
+'''
+
+##### it shorted the above code
+def name_age4():
+    try:
+        name = input('Enter your name: ')
+        year_born = input('year you were born: ')
+        age = 2022 - int(year_born)
+        print(f'You are {name}. And you age is {age}')
+    except Exception as e:
+        print(e)
+
+'''
+name_age4()
+Enter your name: miguel
+year you were born: 1979
+You are miguel. And you age is 43
+'''
 
 #----------------Packing and unpacking arguments in Python-------------------
 # We use two operators:
