@@ -2,8 +2,6 @@
 Dado un listado de números, encuentra el SEGUNDO más grande.
 '''
 
-
-
 def quick_Sort(lista):
 
     # utilizamos el ordenamiento rapido para ordenar la lista de menor a mayor
@@ -28,8 +26,10 @@ def quick_Sort(lista):
     sorted_less = quick_Sort(less_than_pivot)
     sorted_greater = quick_Sort(greater_than_pivot)
 
+
     # combinar las sublistas ordenadas
     return  sorted_less + [pivot] + sorted_greater
+
 
 def second_largest(lista):
     
@@ -42,8 +42,7 @@ def second_largest(lista):
     
     return lista_sorted[-2]
 
-lista = [5,1,7,9,10,23,14,2]
-
+# Test
 print(second_largest([5,1,7,9,10,23,14,2]))
 print(second_largest([-2,-15,-13,-20]))
 print(second_largest([5]))
