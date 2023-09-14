@@ -72,7 +72,7 @@ print('--------------------------------')
 ##### Busqueda Exponencial
 
 def exponential_search(lista, elemento):
-
+    # si el elemento coincide con el primer valor de la lista, retornar 0
     if lista[0] == elemento:
         return 0
     
@@ -108,3 +108,43 @@ print('--------------------------------')
 # [1,4,6,9,12,23,32,45,47,49], 45 --> 7
 # [1,4,6,9,12,23,32,45,47,49], 44 --> -1
 # [1,4,6,9,12,23,32,45,47,49], 49 -->
+
+
+############# Busqueda de Saltos
+import math
+
+def jump_search(lista, elemento):
+    # si el elemento coincide con el primer valor de la lista, retornar 0
+    if lista[0] == elemento:
+        return 0
+    elif lista[len(lista)-1] == elemento:
+        return len(lista)-1
+    
+    # calculo del size del bloque
+    n = len(lista)
+    size_block = int(math.sqrt(n))
+
+    # iniciamos en cero el indice
+    i = 0
+
+    # determinamos el ancho del bloque
+    while i < n and lista[i] < elemento:
+        i += size_block
+
+    # aplicar la busqueda lineal al bloque determinado
+    block_init = i - size_block
+
+    for j in range(block_init, min(i, n - 1)):
+        if lista[j] == elemento:
+            return j
+
+    return -1
+
+# Test
+print(jump_search([1,4,6,9,12,23,32,45,47,49], 49))
+print(jump_search([1,4,6,9,12,23,32,45,47,49], 1))
+print(jump_search([1,4,6,9,12,23,32,45,47,49], 50))
+
+# [1,4,6,9,12,23,32,45,47,49], 49 --> 9
+# [1,4,6,9,12,23,32,45,47,49], 1 --> 0
+# [1,4,6,9,12,23,32,45,47,49], 50 --> -1
